@@ -1,0 +1,233 @@
+name: Daily AI Short
+
+on:
+  schedule:
+    # Poll every 15 minutes, then gate to exactly one AM/PM IST slot run.
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}   # lets you run it manually from the Actions tab anytime
+
+permissions:
+  actions: read    # needed to inspect recent workflow runs for slot de-dup
+  contents: write   # commit the anti-repetition history back
+  issues: write     # open an issue if a run fails (failure alerting)
+
+concurrency:
+  group: daily-short
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.decision.outputs.should_run }}
+      reason: ${{ steps.decision.outputs.reason }}
+      slot_key: ${{ steps.decision.outputs.slot_key }}
+    steps:
+      - name: Decide whether this run should publish
+        id: decision
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+          BRANCH: ${{ github.ref_name }}
+          WORKFLOW_FILE: daily-short.yml
+          SLOT_TOLERANCE_MINUTES: "180"
+        shell: bash
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            {
+              echo "should_run=true"
+              echo "reason=manual_dispatch"
+              echo "slot_key=manual"
+            } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          gh api "repos/$REPO/actions/workflows/$WORKFLOW_FILE/runs?event=schedule&branch=$BRANCH&per_page=100" > runs.json
+
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timedelta, timezone
+
+          IST = timezone(timedelta(hours=5, minutes=30))
+          tolerance_minutes = int(os.getenv("SLOT_TOLERANCE_MINUTES", "180"))
+          tolerance = timedelta(minutes=tolerance_minutes)
+
+          def in_window(ts: datetime, start: datetime, end: datetime) -> bool:
+              return start <= ts < end
+
+          def get_active_slot(now_ist: datetime):
+              morning = now_ist.replace(hour=9, minute=0, second=0, microsecond=0)
+              evening = now_ist.replace(hour=21, minute=0, second=0, microsecond=0)
+              morning_end = morning + tolerance
+              evening_end = evening + tolerance
+
+              if in_window(now_ist, morning, morning_end):
+                  return {
+                      "slot_key": f"{morning.date().isoformat()}-AM",
+                      "start": morning,
+                      "end": morning_end,
+                  }
+              if in_window(now_ist, evening, evening_end):
+                  return {
+                      "slot_key": f"{evening.date().isoformat()}-PM",
+                      "start": evening,
+                      "end": evening_end,
+                  }
+              return None
+
+          now_ist = datetime.now(timezone.utc).astimezone(IST)
+          active_slot = get_active_slot(now_ist)
+
+          if active_slot is None:
+              with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+                  out.write("should_run=false\n")
+                  out.write("reason=outside_target_window\n")
+                  out.write("slot_key=none\n")
+              raise SystemExit(0)
+
+          current_slot = active_slot["slot_key"]
+          slot_start = active_slot["start"]
+          slot_end = active_slot["end"]
+
+          with open("runs.json", "r", encoding="utf-8") as f:
+              runs = json.load(f).get("workflow_runs", [])
+
+          already_succeeded = False
+          for run in runs:
+              if run.get("conclusion") != "success":
+                  continue
+              created_at = run.get("created_at")
+              if not created_at:
+                  continue
+              run_dt = datetime.fromisoformat(created_at.replace("Z", "+00:00")).astimezone(IST)
+              if slot_start <= run_dt < slot_end:
+                  already_succeeded = True
+                  break
+
+          should_run = not already_succeeded
+          reason = "slot_open" if should_run else "slot_already_completed"
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"should_run={'true' if should_run else 'false'}\n")
+              out.write(f"reason={reason}\n")
+              out.write(f"slot_key={current_slot}\n")
+          PY
+
+  test:
+    needs: gate
+    if: needs.gate.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install dependencies
+        run: pip install -r requirements.txt -r requirements-dev.txt
+      - name: Run unit tests
+        run: python -m pytest -q
+
+  publish:
+    needs: [gate, test]
+    if: needs.gate.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      YT_PRIVACY: ${{ vars.YT_PRIVACY || 'public' }}
+      REVIEW_BEFORE_PUBLISH: ${{ vars.REVIEW_BEFORE_PUBLISH || 'false' }}
+      # Failure alerting (GITHUB_REPOSITORY is provided automatically by Actions)
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      # Optional feature flags (set as repo Variables, or leave defaults)
+      TOPIC_STRATEGY: ${{ vars.TOPIC_STRATEGY || 'rotate' }}
+      AB_TESTING: ${{ vars.AB_TESTING || 'true' }}
+      LANGUAGE: ${{ vars.LANGUAGE || 'English' }}
+      ENABLE_ANALYTICS: ${{ vars.ENABLE_ANALYTICS || 'false' }}
+      YT_DATA_API_KEY: ${{ secrets.YT_DATA_API_KEY }}
+      # Render performance profile (free runner optimized)
+      REMOTION_CONCURRENCY: ${{ vars.REMOTION_CONCURRENCY || '2' }}
+      REMOTION_SCALE: ${{ vars.REMOTION_SCALE || '0.75' }}
+      REMOTION_IMAGE_FORMAT: ${{ vars.REMOTION_IMAGE_FORMAT || 'jpeg' }}
+      REMOTION_JPEG_QUALITY: ${{ vars.REMOTION_JPEG_QUALITY || '68' }}
+      REMOTION_CODEC: ${{ vars.REMOTION_CODEC || 'h264' }}
+      REMOTION_CRF: ${{ vars.REMOTION_CRF || '24' }}
+      REMOTION_X264_PRESET: ${{ vars.REMOTION_X264_PRESET || 'veryfast' }}
+      REMOTION_PIXEL_FORMAT: ${{ vars.REMOTION_PIXEL_FORMAT || 'yuv420p' }}
+      REMOTION_AUDIO_CODEC: ${{ vars.REMOTION_AUDIO_CODEC || 'aac' }}
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install ffmpeg (Remotion encoder)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+
+      # Cache Remotion deps AND the Chrome Headless Shell it downloads.
+      - name: Cache Remotion deps + browser
+        id: remotion-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            remotion/node_modules
+            ~/.remotion
+            ~/.cache/remotion
+          key: remotion-${{ runner.os }}-${{ hashFiles('remotion/package-lock.json') }}
+
+      - name: Install Remotion deps
+        if: steps.remotion-cache.outputs.cache-hit != 'true'
+        run: npm ci || npm install
+        working-directory: remotion
+
+      - name: Ensure Chrome Headless Shell (no-op once cached)
+        run: npx remotion browser ensure
+        working-directory: remotion
+
+      - name: Generate script
+        run: python -m pipeline.run --stage script
+
+      - name: Generate voice + captions
+        run: python -m pipeline.run --stage voice
+
+      - name: Render video
+        run: python -m pipeline.run --stage render
+
+      - name: Upload to YouTube
+        run: python -m pipeline.run --stage upload
+
+      - name: Persist anti-repetition history
+        if: success() && !cancelled()
+        run: |
+          git config user.name "ai-shorts-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state/history.json || true
+          git commit -m "chore: update history [skip ci]" || echo "no changes"
+          git push || echo "nothing to push"
+
+  skip-info:
+    needs: gate
+    if: needs.gate.outputs.should_run != 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log skip reason
+        run: |
+          echo "Skipping publish for this run."
+          echo "slot_key=${{ needs.gate.outputs.slot_key }}"
+          echo "reason=${{ needs.gate.outputs.reason }}"

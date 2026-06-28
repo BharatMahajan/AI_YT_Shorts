@@ -1,0 +1,31 @@
+name: Weekly Credential Health Check
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"   # Mondays 04:00 UTC — well before the daily run needs it
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write   # open an issue if a credential is failing
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+      - name: Validate YouTube token + Gemini key
+        run: python -m pipeline.healthcheck

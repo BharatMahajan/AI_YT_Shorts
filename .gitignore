@@ -1,0 +1,27 @@
+# Secrets
+.env
+client_secret*.json
+token.json
+*.pickle
+
+# Build artifacts
+build/
+out/
+*.mp4
+*.mp3
+*.wav
+*.json.tmp
+
+# Node / Remotion
+remotion/node_modules/
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

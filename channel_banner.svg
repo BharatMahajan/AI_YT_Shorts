@@ -1,0 +1,68 @@
+<svg width="2560" height="1440" viewBox="0 0 2560 1440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f9fc"/>
+      <stop offset="0.55" stop-color="#eef3fb"/>
+      <stop offset="1" stop-color="#e3ecfa"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="22" flood-color="#1e3a8a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="2560" height="1440" fill="url(#bg)"/>
+
+  <!-- soft decorative shapes (outside safe area, decorative only) -->
+  <circle cx="240" cy="240" r="320" fill="#dbe8ff" opacity="0.6"/>
+  <circle cx="2360" cy="1240" r="380" fill="#d4f1f7" opacity="0.6"/>
+  <circle cx="2300" cy="180" r="120" fill="#c7dbff" opacity="0.5"/>
+
+  <!-- faint grid dots -->
+  <g fill="#c3d4ef" opacity="0.5">
+    <circle cx="180" cy="700" r="6"/><circle cx="260" cy="700" r="6"/><circle cx="340" cy="700" r="6"/>
+    <circle cx="180" cy="780" r="6"/><circle cx="260" cy="780" r="6"/><circle cx="340" cy="780" r="6"/>
+    <circle cx="2220" cy="640" r="6"/><circle cx="2300" cy="640" r="6"/><circle cx="2380" cy="640" r="6"/>
+    <circle cx="2220" cy="720" r="6"/><circle cx="2300" cy="720" r="6"/><circle cx="2380" cy="720" r="6"/>
+  </g>
+
+  <!-- ============ SAFE AREA CONTENT (centered) ============ -->
+  <!-- Safe area: x 507-2053, y 508-932 -->
+
+  <!-- Left: AI + timer emblem -->
+  <g transform="translate(560, 600)" filter="url(#soft)">
+    <rect x="0" y="0" width="240" height="240" rx="54" fill="url(#accent)"/>
+    <text x="120" y="138" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="800" fill="#ffffff" text-anchor="middle">AI</text>
+    <!-- timer ring -->
+    <circle cx="120" cy="180" r="26" fill="none" stroke="#ffffff" stroke-width="9" opacity="0.95"/>
+    <line x1="120" y1="180" x2="120" y2="162" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+    <line x1="120" y1="180" x2="135" y2="186" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right: text block -->
+  <g transform="translate(870, 0)">
+    <!-- DAILY badge -->
+    <g>
+      <rect x="0" y="556" width="196" height="64" rx="32" fill="url(#accent2)"/>
+      <circle cx="34" cy="588" r="10" fill="#7ee787"/>
+      <text x="60" y="600" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="4" fill="#ffffff">DAILY</text>
+    </g>
+
+    <!-- Channel name -->
+    <text x="0" y="712" font-family="Arial, Helvetica, sans-serif" font-size="118" font-weight="800" fill="#0f172a">Bharat Mahajan</text>
+
+    <!-- Tagline -->
+    <text x="2" y="800" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="700" fill="#2563eb">AI News in <tspan fill="#06b6d4">60 Seconds</tspan></text>
+
+    <!-- subtext -->
+    <text x="4" y="864" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="500" fill="#475569">The latest in AI, Copilot, Claude &amp; Cursor — every single day</text>
+  </g>
+</svg>

@@ -1,0 +1,2 @@
+# Development / CI-only dependencies (production deps live in requirements.txt)
+pytest>=8.0.0
