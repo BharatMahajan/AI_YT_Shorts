@@ -1,554 +1,588 @@
-# 🎬 Daily AI YouTube Shorts — Autopilot
+<div align="center">
 
-> A fully automated, zero-touch pipeline that researches, scripts, narrates, animates, and publishes one ~50–60 second vertical YouTube Short **every day at 9:00 AM IST and 9:00 PM IST** — rotating across four AI/developer themes, using **only free tools**.
+# 🎬 YT AI Shorts — Autonomous YouTube Shorts Factory
 
----
+**A zero-cost, fully-automatic pipeline that researches, scripts, narrates, renders, and publishes a vertical AI-news Short to YouTube — twice a day, with no human in the loop.**
 
-## Table of Contents
+`Python` · `Remotion (React + TypeScript)` · `GitHub Actions` · `Gemini` · `edge-tts` · `YouTube Data API v3`
 
-1. [Project Overview](#1-project-overview)
-2. [Architecture Overview](#2-architecture-overview)
-3. [Technology Stack](#3-technology-stack)
-4. [Key Features](#4-key-features)
-5. [Repository Structure](#5-repository-structure)
-6. [Getting Started (Developers)](#6-getting-started-developers)
-7. [Module & Interface Overview](#7-module--interface-overview)
-8. [Content & Rendering Workflow](#8-content--rendering-workflow)
-9. [Deployment & Environments](#9-deployment--environments)
-10. [Logging & Monitoring](#10-logging--monitoring)
-11. [Known Challenges / Constraints](#11-known-challenges--constraints)
-12. [Contributing Guidelines](#12-contributing-guidelines)
-13. [Troubleshooting Guide](#13-troubleshooting-guide)
-14. [For Product Managers (Non-Technical Summary)](#14-for-product-managers-non-technical-summary)
-15. [Future Enhancements / Roadmap](#15-future-enhancements--roadmap)
+![Stack](https://img.shields.io/badge/runtime-GitHub_Actions-2088FF) ![Python](https://img.shields.io/badge/Python-3.11-3776AB) ![Node](https://img.shields.io/badge/Node-20-339933) ![Cost](https://img.shields.io/badge/cost-%240%2Fmonth-success) ![Cadence](https://img.shields.io/badge/publishes-2%C3%97%2Fday-E17055) ![Tests](https://img.shields.io/badge/tests-15_suites-blue)
+
+</div>
+
+> **📋 This document is intended for team review.** It captures the full architecture, data flow, setup, run, and operational model of the project. Diagrams use a mix of ASCII (quick scan) and Mermaid (GitHub-rendered).
 
 ---
 
-## 1. Project Overview
+## Table of contents
 
-**What it is.** An unattended "content factory" for a YouTube channel. Once configured, it runs on a schedule with **no human in the loop**: it pulls the latest AI/developer news, writes an original short-form script, generates an Indian-male voiceover, renders a polished vertical motion-graphics video, and uploads it to YouTube.
-
-**Business problem it solves.** Publishing consistently on YouTube Shorts is the single biggest driver of channel growth, but daily production (research → script → voice → edit → upload) is time-consuming and easy to abandon. This system removes the manual effort entirely and guarantees a fresh, on-brand video every single day.
-
-**Key outcomes delivered:**
-
-- **Consistency** — one new Short per day, automatically, at a fixed time.
-- **Freshness** — scripts are built from live news feeds, not static templates.
-- **Originality** — rotating hook styles plus a 60-entry "anti-repetition" memory keep videos from feeling templated.
-- **Zero marginal cost** — every component runs on a free tier (GitHub Actions, Google Gemini free tier, Microsoft `edge-tts`, open-source Remotion).
-
-> ⚠️ **Honest scope note.** This system *produces and publishes* videos. It does **not** and cannot automate monetization — earning revenue still requires passing the YouTube Partner Program thresholds, which no tool can bypass. See [Known Challenges](#11-known-challenges--constraints).
+1. [At a glance](#-at-a-glance)
+2. [What it does](#-what-it-does)
+3. [System architecture](#-system-architecture)
+4. [End-to-end flow](#-end-to-end-flow)
+5. [The pipeline, stage by stage](#-the-pipeline-stage-by-stage)
+6. [The Python ↔ Remotion contract](#-the-python--remotion-contract)
+7. [The visual layer (Remotion)](#-the-visual-layer-remotion)
+8. [Topic engine](#-topic-engine)
+9. [Scheduling & the publish gate](#-scheduling--the-publish-gate)
+10. [Repository layout](#-repository-layout)
+11. [Setup](#-setup)
+12. [Running it](#-running-it)
+13. [Configuration reference](#-configuration-reference)
+14. [Render performance profile](#-render-performance-profile)
+15. [CI/CD (GitHub Actions)](#-cicd-github-actions)
+16. [Testing](#-testing)
+17. [Reliability & error handling](#-reliability--error-handling)
+18. [Operational runbook & troubleshooting](#-operational-runbook--troubleshooting)
+19. [Invariants — do not break these](#-invariants--do-not-break-these)
 
 ---
 
-## 2. Architecture Overview
+## ⚡ At a glance
 
-The system has three cooperating layers: a **Python orchestration pipeline** (the brain), a **Remotion/TypeScript renderer** (the visuals), and **GitHub Actions** (the scheduler/runtime). There is **no web server, no HTTP API, and no database** — state is a single JSON file committed back to the repository.
+| | |
+|---|---|
+| **What** | Fully-automatic YouTube Shorts publisher for daily AI/dev news |
+| **Cadence** | Twice daily — **09:00 IST** (morning) and **21:00 IST** (evening) |
+| **Cost** | **$0/month** — every dependency runs on a free tier |
+| **Topics** | `ai_news` · `copilot` · `claude` · `cursor` (rotating) |
+| **Video spec** | 1080×1920, 30 fps, ~50–62 s vertical motion graphics |
+| **Brain** | Python (`pipeline/`) — research → script → voice → orchestrate → upload |
+| **Visuals** | Remotion / React + TypeScript (`remotion/`) → `build/out.mp4` |
+| **Runtime** | GitHub Actions (`.github/workflows/`) — scheduler + compute |
+| **Durable state** | A single committed file: `state/history.json` |
+| **No** | web server · API · database |
 
-### Data flow
+---
+
+## 🎯 What it does
+
+Each scheduled run performs the entire content lifecycle unattended:
 
 ```
-                  ┌──────────────────────────────────────────────────────┐
-                  │ GitHub Actions: poll + gate + test ──▶ publish steps   │
-                  │ targets: 09:00 IST and 21:00 IST (delay-tolerant)      │
-                  └───────────────────────────┬──────────────────────────┘
-                                              │ run.py stage commands
-                       weights + perf hint    ▼
-   ┌──────────────┐◀────────────────┌──────────────────┐
-   │ analytics.py │  (optional:      │  topic_select.py │  rotate | trending
-   │ (YT stats)   │   ENABLE_…)      │                  │────┐
-   └──────────────┘                 └──────────────────┘    │ topic of the day
-                                                            ▼
-                       ┌────────────┐   items+image  ┌─────────────────┐
-                       │ fetch_news │───(RSS + ─────▶│ generate_script │
-                       │   .py      │   Google News) │  .py (Gemini)   │
-                       └────────────┘                └────────┬────────┘
-                                          narration            │ script + variants
-                                   ┌──────────────┐◀───────────┤
-                                   │   tts.py     │  (per-topic voice)
-                                   │ (edge-tts)   │
-                                   └──────┬───────┘
-              voice.mp3 + captions        │   render_props.py (theme + hero + A/B title)
-              + render-props.json ───────▶▼
-                                   ┌───────────────────────┐
-                                   │  Remotion (Short.tsx)  │  → build/out.mp4
-                                   │  React/TS + ffmpeg     │   (+ thumb.png, A/B layout)
-                                   └───────────┬───────────┘
-                                               ▼
-                                   ┌───────────────────────┐
-                                   │  upload_youtube.py     │ → 📺 YouTube
-                                   │  (resumable, retried)  │
-                                   └───────────┬───────────┘
-                                               │ video_id + variants
-                                               ▼
-                                   ┌───────────────────────┐
-                                   │ state/history.json     │  anti-repetition +
-                                   │  committed back to git │  performance memory
-                                   └───────────────────────┘
+ pick a topic  →  research fresh news  →  write a 50–60s script (LLM)
+       →  narrate it (TTS)  →  render a vertical video  →  upload to YouTube
+              →  commit anti-repetition history back to git
 ```
 
-### Sequence flow (end-to-end run)
-
-```
-GitHub Actions   topics   fetch_news   generate_script   tts   Remotion   upload   YouTube
-      │            │           │              │            │       │          │         │
-      │─ trigger ─▶│           │              │            │       │          │         │
-      │  pick topic│           │              │            │       │          │         │
-      │────────────┼─ fetch ──▶│              │            │       │          │         │
-      │            │   items ◀─┤              │            │       │          │         │
-      │────────────┼───────────┼─ generate ──▶│            │       │          │         │
-      │            │           │   script.json◀┤            │       │          │         │
-      │────────────┼───────────┼──────────────┼─ speak ───▶│       │          │         │
-      │            │           │  voice + captions ◀────────┤       │          │         │
-      │────────────┼───────────┼──────────────┼────────────┼ render▶│          │         │
-      │            │           │            out.mp4 ◀───────┼───────┤          │         │
-      │────────────┼───────────┼──────────────┼────────────┼───────┼─ upload ▶│         │
-      │            │           │              │            │       │  id ◀────┼─publish▶│
-      │◀─ commit history.json ─┴──────────────┴────────────┴───────┴──────────┘         │
-```
-
-**Key design decisions (inferred from the code):**
-
-- **Stateless except for one JSON file.** No database is needed; `state/history.json` is the only persistent state and is version-controlled, making every run reproducible and auditable.
-- **Python ↔ Remotion contract via `build/render-props.json`.** The Python layer never touches React; it hands the renderer a single typed JSON props file (validated by a `zod` schema in `Short.tsx`). This cleanly decouples content logic from animation.
-- **Audio is the source of truth for video length.** `Short.tsx` computes `durationInFrames` from `durationSeconds`, so the animation always matches the real voiceover length.
-- **Resilience first.** Dead RSS feeds are skipped silently, a Google News search is always added as a fallback, Gemini falls back across multiple models, and short/broken audio aborts the run before anything is uploaded.
-- **Fail loud, fail early, alert.** A preflight stage validates credentials and binaries before any slow work; each stage raises a typed exception; the orchestrator returns precise exit codes and fires a best-effort failure notification (GitHub issue / Slack).
-- **Tested logic, gated releases.** Pure logic is covered by a `pytest` suite that runs as a CI job which must pass before the publish job runs.
+The system is deliberately **stateless except for one JSON file**. There is no database, no server, and no manual step in the happy path. Everything required to reproduce a run lives in the repo plus a handful of secrets.
 
 ---
 
-## 3. Technology Stack
+## 🏗 System architecture
 
-| Layer | Technology | Purpose |
-|---|---|---|
-| **Orchestration / Runtime** | GitHub Actions (cron) | Schedules and runs the daily job on free cloud runners |
-| **Pipeline language** | Python 3.11 | End-to-end content pipeline (`pipeline/`) |
-| **News ingestion** | `feedparser`, Google News RSS | Pulls fresh, topic-specific source material |
-| **Script generation** | Google Gemini (free tier) via `google-genai` | Writes original, non-repetitive 50–60s scripts |
-| **Text-to-speech** | Microsoft `edge-tts` (free) | Indian-male voiceover + word-level caption timings |
-| **Audio inspection** | `mutagen` | Reads true MP3 length to size the video |
-| **Thumbnail** | `Pillow` (PIL) | Generates a themed 1280×720 thumbnail |
-| **Video rendering** | Remotion 4 (React 18 + TypeScript), `ffmpeg` | Sleek vertical motion graphics → MP4 |
-| **Schema validation** | `zod` | Validates render props passed into the composition |
-| **Publishing** | YouTube Data API v3 via `google-api-python-client` | Uploads the video + sets the thumbnail |
-| **Auth** | Google OAuth 2.0 refresh token (`google-auth-oauthlib`) | Hands-off, long-lived upload credentials |
-| **State store** | JSON file in Git (`state/history.json`) | Anti-repetition memory (no DB) |
-| **HTTP client** | `requests` | Timed, retried feed downloads |
-| **Config loading** | `python-dotenv` | Loads `.env` for local development |
-| **Testing** | `pytest` | Unit tests for pure logic (CI-gated) |
-| **Fonts / Assets** | Poppins (bundled), logo/banner SVG+PNG | Brand styling for video and thumbnail |
+Three decoupled layers communicate through **typed JSON files** — never direct calls. Python never touches React; the only bridge is `build/render-props.json`.
 
----
+```mermaid
+flowchart TB
+    subgraph CI["⏱ Layer 3 — GitHub Actions (scheduler + runtime)"]
+        direction LR
+        SCHED["daily-short.yml\npoll every 15 min"] --> GATE{"Gate job\none publish\nper IST slot"}
+        HEALTH["healthcheck.yml\nweekly Mon 04:00 UTC"]
+    end
 
-## 4. Key Features
+    subgraph PY["🐍 Layer 1 — Python pipeline (the brain)"]
+        direction TB
+        A[topic_select] --> B[fetch_news]
+        B --> C[generate_script\nGemini]
+        C --> D[tts\nedge-tts]
+        D --> E[render_props + thumbnail]
+        E -. writes .-> CONTRACT[("build/render-props.json\nbuild/voice.mp3")]
+        UP[upload_youtube]
+        HIST[("state/history.json")]
+    end
 
-**User-facing (channel) capabilities**
+    subgraph RM["🎨 Layer 2 — Remotion (the visuals)"]
+        direction TB
+        ROOT[Root.tsx\nComposition + defaults] --> SHORT[Short.tsx\nscene composition + zod schema]
+        SHORT --> OUT[("build/out.mp4")]
+    end
 
-- Publishes one ~50–60s vertical Short twice per day, fully automatically (9 AM and 9 PM IST).
-- Rotates across four themes on a fixed daily cycle: **AI news → GitHub/Microsoft Copilot → Claude (Anthropic) → Cursor**.
-- Indian-male narration tuned for an **energetic, enthusiastic delivery** with clear pronunciation.
-- Polished motion graphics: animated topic chip, two-tone gradient background, animated key-point cards, a boxes-and-arrows "flow" diagram, and a progress bar.
-- Auto-generated SEO-friendly title, description with hashtags, and tags.
-- Themed custom thumbnail per video.
+    GATE -->|stage: script/voice/render/upload| PY
+    CONTRACT --> RM
+    OUT --> UP
+    UP -->|publishes| YT["📺 YouTube"]
+    UP --> HIST
+    HIST -->|committed back| CI
 
-**Technical / backend capabilities**
+    style CONTRACT fill:#1f2430,stroke:#E17055,color:#fff
+    style YT fill:#c4302b,stroke:#fff,color:#fff
+    style HIST fill:#1f2430,stroke:#00B894,color:#fff
+```
 
-- **Anti-repetition engine** — rotating hook styles + a 60-entry history of past titles/hooks fed back into the prompt.
-- **Robust news pooling** — pulls a few items from many sources (per-topic RSS + multiple Google News searches), filters narrow topics by keyword so broad feeds can't flood them, applies a 30-day freshness cutoff, de-dupes, and hands the model an 18-item candidate pool.
-- **Model fallback** — tries several Gemini models and retries transient rate limits.
-- **Fail-safe rendering/upload** — aborts on clearly-broken audio; resumable YouTube upload retries transient 5xx/network errors; thumbnail upload degrades gracefully if the channel isn't verified.
-- **Configurable** via environment variables (voice, rate/pitch/volume, model, privacy, review-before-publish, log level, schedule).
-
-**Reliability & operations**
-
-- **Preflight checks** — required env vars and binaries (`ffmpeg`, `node`, `npx`) are validated up front with actionable error messages.
-- **Structured logging** — timestamped, levelled logs (`LOG_LEVEL`) across every stage.
-- **Typed errors + exit codes** — `0` success, `2` configuration error, `1` other failure.
-- **Failure notifications** — opens a GitHub issue (and/or posts to Slack) when a run fails.
-- **Weekly credential health check** — a separate scheduled job validates the YouTube token + Gemini key before the daily run needs them.
-- **Atomic writes** — generated JSON files are written via temp-file + rename, so a crashed run never leaves a half-written `history.json` or `render-props.json`.
-- **CI-gated tests** — a `pytest` job must pass before publishing.
-
-**Optimization & growth features**
-
-- **Smarter topic selection** — `TOPIC_STRATEGY=trending` picks the topic with the most fresh news right now (with a cooldown to keep variety); `rotate` keeps the fixed daily cycle.
-- **A/B titles & thumbnails** — the model proposes alternate titles and the pipeline rotates the active title + thumbnail layout per day, recording which variant ran for later analysis.
-- **Analytics loop** — optionally pulls public view counts for past uploads and feeds the best-performing styles back into the script prompt and the topic weights.
-- **Multi-voice / multi-language** — per-topic voice overrides and a `LANGUAGE` setting (e.g. English, Hindi, Hinglish).
-- **Richer visuals** — per-topic background pattern + 2-tone gradient, and an optional faint hero image pulled from the source article.
-
----
-
-## 5. Repository Structure
+### The same picture as an ASCII block diagram
 
 ```
-Youtube_AI_Shorts/
-├── .github/workflows/
-│   ├── daily-short.yml         # GitHub Actions: test → publish daily, commit history
-│   └── healthcheck.yml         # Weekly credential health check
-├── pipeline/                   # Python orchestration pipeline (the "brain")
-│   ├── run.py                  # Entry point/orchestrator: preflight → … → notify on failure
-│   ├── config.py               # Central config, env helpers, atomic JSON writes
-│   ├── logging_setup.py        # Structured, levelled logging (LOG_LEVEL)
-│   ├── errors.py               # Typed exceptions + retry/backoff decorator
-│   ├── preflight.py            # Fail-fast checks (env vars, ffmpeg/node)
-│   ├── notify.py               # Best-effort failure alerts (GitHub issue / Slack)
-│   ├── healthcheck.py          # Weekly credential validation (CLI)
-│   ├── history.py              # Anti-repetition + performance memory (state/history.json)
-│   ├── topics.py               # 4-topic rotation + feeds/queries/pattern per topic
-│   ├── topic_select.py         # rotate | trending topic selection
-│   ├── fetch_news.py           # RSS + Google News ingestion, pooling, filtering, hero image
-│   ├── generate_script.py      # Gemini script + variants + analytics hint
-│   ├── render_props.py         # Builds Remotion props (theme, hero, A/B title)
-│   ├── analytics.py            # Optional view-count feedback loop
-│   ├── tts.py                  # edge-tts voiceover (multi-voice) + caption timings
-│   ├── thumbnail.py            # Pillow themed 1280×720 thumbnail (A/B layouts)
-│   └── upload_youtube.py       # YouTube Data API v3 upload (resumable, retried)
-├── tests/                      # pytest suite (rotation, pooling, script, render props, retry…)
-├── remotion/                   # Remotion renderer (the "visuals")
-│   ├── src/
-│   │   ├── Root.tsx            # Composition registration + zod schema + defaults
-│   │   ├── Short.tsx           # The animated vertical Short (React/TS)
-│   │   └── index.ts            # Remotion entry
-│   ├── public/                 # voice.mp3 is copied here for staticFile() at render time
-│   ├── package.json            # Remotion 4 + React 18 + TypeScript + zod
-│   └── remotion.config.ts      # Render defaults (JPEG frames, concurrency)
+┌──────────────────────────────────────────────────────────────────────────┐
+│                  LAYER 3 · GitHub Actions (free runners)                    │
+│  daily-short.yml  -- poll */15 min -->  GATE (1 publish per IST slot)       │
+│  healthcheck.yml  -- weekly  -->  validate Gemini key + YT refresh token    │
+└───────────────────────────────┬───────────────────────────────────────────┘
+                                 │ invokes stages
+                                 ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+│                      LAYER 1 · Python "brain"  (pipeline/)                  │
+│                                                                            │
+│  topic_select -> fetch_news -> generate_script -> tts -> render_props/thumb │
+│                                                                            │
+│        writes ▼ build/render-props.json   +   build/voice.mp3              │
+└───────────────────────────────┬───────────────────────────────────────────┘
+                                 │ typed JSON contract (zod-validated)
+                                 ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+│                  LAYER 2 · Remotion "visuals"  (remotion/)                  │
+│   Root.tsx (Composition) --> Short.tsx (scenes + schema) --> build/out.mp4  │
+└───────────────────────────────┬───────────────────────────────────────────┘
+                                 │ out.mp4
+                                 ▼
+                upload_youtube --> 📺 YouTube  +  state/history.json ⟲ git
+```
+
+**Why decoupled?** The brain and the visuals can be developed, tested, and reasoned about independently. You can rebuild the entire renderer without touching Python, and vice-versa, as long as the JSON contract holds.
+
+---
+
+## 🔄 End-to-end flow
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant GA as GitHub Actions
+    participant TS as topic_select
+    participant FN as fetch_news
+    participant GS as generate_script (Gemini)
+    participant TTS as tts (edge-tts)
+    participant RP as render_props / thumbnail
+    participant RM as Remotion render
+    participant YT as upload_youtube
+    participant H as history.json
+
+    GA->>GA: gate → is this an open IST slot?
+    GA->>TS: --stage script
+    Note over TS: (optional) analytics weights
+    TS->>FN: chosen topic
+    FN->>FN: RSS + Google News → de-dup, filter, sort
+    FN->>GS: candidate items + hero image
+    GS->>GS: strict-JSON script (anti-repetition + hook rotation)
+    GS->>H: prepend new entry (title, hook)
+    GA->>TTS: --stage voice
+    TTS->>TTS: voice.mp3 + captions.json (duration via mutagen)
+    Note over TTS: aborts if audio < MIN_AUDIO_SECONDS
+    TTS->>RP: build render-props.json + thumbnail (best-effort)
+    GA->>RM: --stage render
+    RM->>RM: read props + voice.mp3 → out.mp4
+    GA->>YT: --stage upload
+    YT->>YT: resumable upload + best-effort custom thumbnail
+    YT->>H: update latest entry (video_id, published_at)
+    H-->>GA: committed back to git
+```
+
+**Exit codes** (`pipeline/run.py`): `0` success · `2` configuration error · `1` any other failure. CI maps these to job status; failures trigger best-effort Slack / GitHub-issue alerts.
+
+---
+
+## 🧩 The pipeline, stage by stage
+
+The orchestrator (`pipeline/run.py`) exposes four **independently runnable, idempotent-ish** stages. Each stage runs its own preflight checks and reads/writes the shared `build/` artifacts.
+
+```mermaid
+flowchart LR
+    S1["script\n• topic + analytics\n• fetch news\n• Gemini script\n• A/B title pick"] -->|writes script.json\n+ pipeline-state.json| S2
+    S2["voice\n• edge-tts → voice.mp3\n• captions.json\n• render-props.json\n• thumbnail"] -->|writes render-props.json\n+ voice.mp3| S3
+    S3["render\n• npx remotion render\n• → out.mp4"] -->|reads props + audio| S4
+    S4["upload\n• YouTube Data API v3\n• history update"]
+    style S1 fill:#6C5CE7,color:#fff
+    style S2 fill:#00B894,color:#fff
+    style S3 fill:#0984E3,color:#fff
+    style S4 fill:#E17055,color:#fff
+```
+
+| Stage | Module | Reads | Writes | Notes |
+|---|---|---|---|---|
+| **script** | `generate_script.py`, `topic_select.py`, `fetch_news.py` | feeds, `history.json` | `build/script.json`, `build/pipeline-state.json` | Picks topic, researches, writes strict-JSON script, selects A/B title |
+| **voice** | `tts.py`, `render_props.py`, `thumbnail.py` | `script.json`, `pipeline-state.json` | `build/voice.mp3`, `captions.json`, `render-props.json`, `thumb.png` | **Hard-aborts if audio `< MIN_AUDIO_SECONDS` (15s)** |
+| **render** | `run.py:render_video()` → Remotion | `render-props.json`, `voice.mp3` | `build/out.mp4` | Free-runner-optimized render profile (all knobs env-overridable) |
+| **upload** | `upload_youtube.py` | `out.mp4`, `script.json` | YouTube + `history.json` | Resumable + retried; custom thumbnail is best-effort |
+
+---
+
+## 📜 The Python ↔ Remotion contract
+
+This is the **single most important interface** in the project. The producer and consumer must always agree.
+
+```
+            PRODUCER                                  CONSUMER
+  pipeline/render_props.py  ───────────────▶  remotion/src/Short.tsx
+      build_props()                              shortSchema (zod)
+                              build/render-props.json
+```
+
+`build/render-props.json` shape:
+
+```jsonc
+{
+  "title":           "string",          // active A/B title
+  "topicTitle":      "string",          // shown in the topic chip
+  "accent":          "#E17055",         // per-topic accent color
+  "accent2":         "#ff9a76",         // derived 2-tone gradient color
+  "pattern":         "grid|dots|rings|diagonal",
+  "heroImage":       "https://...|''",  // optional faint background image
+  "audioSrc":        "voice.mp3",
+  "durationSeconds": 55,                 // drives durationInFrames
+  "words":           [ {"text":"","start":0,"end":0} ], // optional; NOT relied upon
+  "lines":           ["spoken line 1"],  // drives subtitles
+  "points":          [ {"heading":"","detail":""} ],    // feature cards
+  "flow":            ["step 1", "step 2"]               // boxes-and-arrows diagram
+}
+```
+
+> ⚠️ **If you add a field, update *both* sides**: `render_props.build_props()` (producer) and the `shortSchema` + defaults in `Short.tsx` / `Root.tsx` (consumer). A drift here produces silent or broken renders.
+
+---
+
+## 🎨 The visual layer (Remotion)
+
+`Short.tsx` is a **scene-based composition** rendered at 1080×1920 @ 30 fps. Scene boundaries are computed as fractions of total duration, so the video always fits the narration length.
+
+```
+ t=0 ─────────────────────────────── timeline ──────────────────────────────▶ D
+ │                                                                            │
+ ├─ Hook (0 → 0.15D)         big animated title                               │
+ ├─ Cards (0.15D → 0.62/0.85D)  rotating feature highlight cards              │
+ ├─ Flow  (0.62D → 0.85D)   boxes-and-arrows "How it works" (if >= 2 steps)   │
+ ├─ CTA   (0.85D → D)        "Follow for daily AI updates" 🔔                  │
+ │                                                                            │
+ ├─ TopicChip   (always on, top)                                             │
+ ├─ Subtitles   (always on, driven by `lines`, char-weighted)                │
+ └─ Progress    (always on, bottom bar)                                      │
+        Background: animated gradient + per-topic pattern + optional hero img
+```
+
+Key design choices baked into the renderer:
+
+- **Audio is the source of truth for length.** `Root.tsx:calculateMetadata` sets `durationInFrames = ceil((durationSeconds + 0.6) * 30)`.
+- **Subtitles are driven by `lines`, not `words`.** edge-tts frequently returns *zero* WordBoundary events, so nothing is gated on `words.length`.
+- **Per-topic theming** via `accent`/`accent2`/`pattern` (`grid`/`dots`/`rings`/`diagonal`).
+- **Defensive visuals:** a broken `heroImage` URL can never fail the render (native `<img>`, kept faint behind content).
+
+Preview locally with **Remotion Studio** (no pipeline needed — uses `defaultProps`):
+
+```bash
+cd remotion && npx remotion studio src/index.ts
+```
+
+---
+
+## 🗞 Topic engine
+
+Four topics rotate deterministically by day. Each carries curated RSS feeds, Google News queries, an accent color, and a visual pattern.
+
+```mermaid
+flowchart TB
+    D["date.toordinal() % 4"] --> T0["🟣 ai_news\n#6C5CE7 · grid"]
+    D --> T1["🟢 copilot\n#00B894 · dots"]
+    D --> T2["🟠 claude\n#E17055 · rings"]
+    D --> T3["🔵 cursor\n#0984E3 · diagonal"]
+```
+
+Two selection strategies (`TOPIC_STRATEGY`):
+
+- **`rotate`** *(default)* — deterministic daily cycle, zero extra network calls.
+- **`trending`** — counts fresh items per topic *right now*, applies a **cooldown penalty** to topics used in the last few runs (variety), and can be biased by past-performance weights from the analytics loop.
+
+`fetch_news.py` pulls RSS + Google News, then **de-dupes, time-filters (<= 30 days), sorts newest-first**, and applies a `must_include` keyword filter for narrow topics (falling back to the full pool if the filter would empty it). Dead feeds are skipped silently; a truly empty pool raises `NewsFetchError` and aborts the run cleanly.
+
+---
+
+## ⏰ Scheduling & the publish gate
+
+GitHub Actions cron cannot guarantee exact times, so the workflow **polls every 15 minutes** and a **gate job** ensures *exactly one* publish per IST slot by inspecting prior successful runs.
+
+```mermaid
+flowchart TD
+    START(["cron */15 * * * *"]) --> DISPATCH{"workflow_dispatch?"}
+    DISPATCH -->|yes| RUN["✅ publish now"]
+    DISPATCH -->|no| SLOT{"Now inside an IST slot?\nAM 09:00–12:00\nPM 21:00–00:00"}
+    SLOT -->|no| SKIP["⏭ skip · outside_target_window"]
+    SLOT -->|yes| DONE{"A run already\nsucceeded in this slot?"}
+    DONE -->|yes| SKIP2["⏭ skip · slot_already_completed"]
+    DONE -->|no| RUN
+    RUN --> JOBS["test → publish (4 stages) → commit history"]
+```
+
+- **Two slots/day:** morning **09:00 IST**, evening **21:00 IST**, each with a `SLOT_TOLERANCE_MINUTES = 180` window.
+- **To change run times:** edit `hour=9` / `hour=21` in the gate's Python block (keep the `UTC+5:30` conversion) and/or the poll cron.
+- `workflow_dispatch` bypasses the gate and runs immediately — handy for manual testing from the Actions tab.
+
+---
+
+## 📁 Repository layout
+
+```
+YT_AI_Shorts/
+├── pipeline/                  # 🐍 the brain (pure-ish Python, unit-tested)
+│   ├── run.py                 # orchestrator · stages · exit codes
+│   ├── config.py              # single source of truth · atomic JSON writer
+│   ├── topics.py              # the 4 topics (feeds, queries, accent, pattern)
+│   ├── topic_select.py        # rotate vs trending + cooldown
+│   ├── fetch_news.py          # RSS + Google News → de-duped item pool
+│   ├── generate_script.py     # Gemini → strict-JSON script + fallback chain
+│   ├── tts.py                 # edge-tts → voice.mp3 + captions.json
+│   ├── render_props.py        # builds render-props.json + A/B title picker
+│   ├── thumbnail.py           # Pillow 1280×720 thumbnail (best-effort)
+│   ├── upload_youtube.py      # resumable, retried Data API v3 upload
+│   ├── history.py             # corruption-tolerant anti-repetition memory
+│   ├── analytics.py           # optional: learn from past view counts
+│   ├── preflight.py           # fail-fast env/binary checks
+│   ├── errors.py              # typed exceptions + retry/backoff decorator
+│   ├── notify.py              # best-effort Slack / GitHub-issue alerts
+│   ├── healthcheck.py         # weekly credential validation
+│   └── logging_setup.py       # centralized structured logging
+├── remotion/                  # 🎨 the visuals (React + TypeScript)
+│   └── src/
+│       ├── Short.tsx          # scene composition + zod schema (the contract)
+│       ├── Root.tsx           # <Composition> + defaults + calculateMetadata
+│       └── index.ts           # registerRoot
 ├── auth/
-│   └── get_token.py            # One-time helper to mint the YouTube OAuth refresh token
-├── assets/                     # Fonts (Poppins), logo, banner, sample thumbnail
-├── build/                      # Generated artifacts (gitignored): script.json, voice.mp3,
-│                               #   captions.json, render-props.json, out.mp4, thumb.png
-├── state/
-│   └── history.json            # Anti-repetition memory (committed back each run)
-├── requirements.txt            # Python runtime dependencies
-├── requirements-dev.txt        # Dev/CI dependencies (pytest)
-├── pytest.ini                  # Test configuration
-├── .env.example                # Template for local secrets / config
-└── README.md
+│   └── get_token.py           # one-time local OAuth → refresh token helper
+├── tests/                     # 15 pytest suites (pure logic, all mocked)
+├── .github/workflows/
+│   ├── daily-short.yml        # poll → gate → test → publish → commit history
+│   └── healthcheck.yml        # weekly credential health check
+├── state/history.json         # the ONLY durable state (committed back)
+├── build/                     # generated artifacts (gitignored)
+├── requirements.txt           # production Python deps
+├── requirements-dev.txt       # pytest
+├── .env.example               # copy → .env (local) / GitHub Secrets (CI)
+└── CLAUDE.md                  # contributor guide for AI coding agents
 ```
 
 ---
 
-## 6. Getting Started (Developers)
+## 🚀 Setup
 
 ### Prerequisites
 
-- **Python 3.11+**
-- **Node.js 20+** (for Remotion)
-- **ffmpeg** (Remotion's encoder) — `sudo apt-get install -y ffmpeg` on Linux
-- A **Google account** for: a free **Gemini API key** and **YouTube Data API** OAuth credentials
-- A **GitHub** account (to run the scheduled workflow for free)
+| Tool | Version | Why |
+|---|---|---|
+| **Python** | 3.11 | the pipeline |
+| **Node.js** | 20+ | Remotion renderer |
+| **ffmpeg** | any recent | Remotion's encoder |
+| **Git** | any | history is committed back |
 
-### Setup instructions
+### Required credentials
+
+| Secret | Where to get it |
+|---|---|
+| `GEMINI_API_KEY` | <https://aistudio.google.com/apikey> — **use a personal Google account** (corporate accounts often have `limit: 0` free quota) |
+| `YT_CLIENT_ID` / `YT_CLIENT_SECRET` / `YT_REFRESH_TOKEN` | Google Cloud OAuth client → mint with `auth/get_token.py` |
+| `YT_DATA_API_KEY` *(optional)* | For the analytics loop (reads public view stats) |
+| `SLACK_WEBHOOK_URL` *(optional)* | Failure alerts |
+
+### Install
 
 ```bash
-# 1. Install Python dependencies (add requirements-dev.txt to run the tests)
+# 1. Python dependencies
 pip install -r requirements.txt -r requirements-dev.txt
 
-# 2. Install Remotion dependencies
-cd remotion && npm install && cd ..
+# 2. Remotion dependencies
+cd remotion && npm ci && cd ..
 
-# 3. Create your local env file and fill in the values
-cp .env.example .env
+# 3. Local config
+cp .env.example .env      # then fill in your keys
 ```
 
-Generate the YouTube refresh token once (opens a browser to authorize):
+### One-time: mint a YouTube refresh token
 
 ```bash
-pip install google-auth-oauthlib
+# Download an OAuth client_secret.json from Google Cloud Console first
 python auth/get_token.py client_secret.json
-# Copy the printed YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN into .env
-# (and into GitHub repo Secrets for the scheduled run)
+# → prints YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN
+#   copy these into .env (local) or GitHub repo Secrets (CI)
 ```
 
-### Configuration
+> 🔐 **OAuth test-mode refresh tokens expire in ~7 days.** Publish your consent screen to **Production** so the token is long-lived. The weekly health check catches expiry early.
 
-Configuration is environment-variable driven (`pipeline/config.py`). Locally these come from `.env`; in CI they come from **GitHub → Settings → Secrets and variables → Actions**.
+---
 
-| Variable | Required | Default | Purpose |
-|---|---|---|---|
-| `GEMINI_API_KEY` | ✅ | — | Google Gemini free-tier key (script generation) |
-| `YT_CLIENT_ID` | ✅ | — | YouTube OAuth client ID |
-| `YT_CLIENT_SECRET` | ✅ | — | YouTube OAuth client secret |
-| `YT_REFRESH_TOKEN` | ✅ | — | Long-lived YouTube upload token |
-| `YT_PRIVACY` | — | `public` | `public` \| `unlisted` \| `private` |
-| `REVIEW_BEFORE_PUBLISH` | — | `false` | `true` uploads as private for manual review |
-| `TTS_VOICE` | — | `en-US-JennyNeural` | Clear US female edge-tts voice |
-| `TTS_RATE` / `TTS_PITCH` / `TTS_VOLUME` | — | `+16%` / `+8Hz` / `+14%` | Energetic, passionate delivery tuning |
-| `GEMINI_MODEL` | — | `gemini-2.5-flash` | Primary model (with fallbacks) |
-| `REMOTION_CONCURRENCY` / `REMOTION_GL` | — | all cores / `swangle` | Render-speed flags |
-| `REMOTION_SCALE` | — | `0.75` | Render at a codec-safe scale (H264-safe, avoids fractional pixel widths) |
-| `REMOTION_IMAGE_FORMAT` / `REMOTION_JPEG_QUALITY` | — | `jpeg` / `68` | Frame extraction speed/quality trade-off |
-| `REMOTION_CODEC` / `REMOTION_CRF` / `REMOTION_X264_PRESET` | — | `h264` / `24` / `veryfast` | Encoding speed vs compression trade-off |
-| `REMOTION_PIXEL_FORMAT` / `REMOTION_AUDIO_CODEC` | — | `yuv420p` / `aac` | YouTube-friendly output compatibility |
-| `LANGUAGE` | — | `English` | Script language (e.g. `Hindi`, `Hinglish`) |
-| `TOPIC_STRATEGY` | — | `rotate` | `rotate` (fixed cycle) or `trending` (by news volume) |
-| `TOPIC_COOLDOWN` | — | `2` | Trending mode: avoid re-picking recent topics |
-| `AB_TESTING` | — | `true` | Rotate title + thumbnail variants daily |
-| `ENABLE_ANALYTICS` | — | `false` | Turn on the view-count feedback loop |
-| `YT_DATA_API_KEY` | — | — | YouTube Data API key for reading public stats (analytics) |
-| `ANALYTICS_LOOKBACK` | — | `30` | How many past uploads to analyze |
-| `LOG_LEVEL` | — | `INFO` | `DEBUG` \| `INFO` \| `WARNING` \| `ERROR` |
-| `MIN_AUDIO_SECONDS` | — | `15` | Abort before render/upload if the voiceover is shorter |
-| `SLACK_WEBHOOK_URL` | — | — | Optional: post a Slack message on failure |
-| `GITHUB_TOKEN` / `GITHUB_REPOSITORY` | — | auto in CI | Used to open a GitHub issue on failure |
-
-> **Secrets are never committed.** `.env`, `client_secret*.json`, and `token.json` are gitignored.
-> Invalid `YT_PRIVACY` values fall back to `private` for safety.
-
-### Run instructions
+## ▶️ Running it
 
 ```bash
-# Full pipeline (generate → voice → render → upload)
-python -m pipeline.run
-
-# Cheap text + voice test (no render, no upload)
+# Cheapest sanity check — script + voice only, no render/upload
 python -m pipeline.run --no-render --no-upload
 
-# Generate + render but don't publish
-python -m pipeline.run --no-upload
-
-# Run individual stages (same commands used in CI)
+# Run a single stage
 python -m pipeline.run --stage script
 python -m pipeline.run --stage voice
 python -m pipeline.run --stage render
 python -m pipeline.run --stage upload
 
-# Preview the animation interactively
-cd remotion && npm run studio
+# Build everything but don't publish
+python -m pipeline.run --no-upload
+
+# Full unattended run (research → build → upload)
+python -m pipeline.run
+
+# Validate the renderer without a browser download
+cd remotion && npx tsc --noEmit && npx remotion bundle
+
+# Preview visuals interactively
+cd remotion && npx remotion studio src/index.ts
+
+# Weekly credential health check
+python -m pipeline.healthcheck
 ```
 
-Run the test suite:
+---
+
+## ⚙️ Configuration reference
+
+All configuration is environment-driven (`.env` locally, GitHub **Secrets**/**Variables** in CI). Defaults live in `pipeline/config.py`.
+
+### Credentials (Secrets)
+
+| Variable | Required for | Default |
+|---|---|---|
+| `GEMINI_API_KEY` | script | — |
+| `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` | upload | — |
+| `YT_DATA_API_KEY` | analytics (optional) | — |
+| `SLACK_WEBHOOK_URL` | alerts (optional) | — |
+
+### Behaviour toggles (Variables)
+
+| Variable | Default | Options / notes |
+|---|---|---|
+| `YT_PRIVACY` | `public` | `public` \| `unlisted` \| `private` (invalid → `private`) |
+| `REVIEW_BEFORE_PUBLISH` | `false` | `true` → upload as private for manual approval |
+| `TOPIC_STRATEGY` | `rotate` | `rotate` \| `trending` |
+| `TOPIC_COOLDOWN` | `2` | runs to avoid re-picking a topic (trending) |
+| `AB_TESTING` | `true` | A/B titles + thumbnail layouts |
+| `LANGUAGE` | `English` | script language label (e.g. `Hindi`, `Hinglish`) |
+| `ENABLE_ANALYTICS` | `false` | `true` + `YT_DATA_API_KEY` enables the learning loop |
+| `ANALYTICS_LOOKBACK` | `30` | past uploads to score |
+| `MIN_AUDIO_SECONDS` | `15` | hard floor; shorter audio aborts the run |
+| `LOG_LEVEL` | `INFO` | standard Python levels |
+
+### Voice (Variables)
+
+| Variable | Default | Notes |
+|---|---|---|
+| `TTS_VOICE` | `en-US-JennyNeural` | e.g. `en-IN-PrabhatNeural` (Indian male); per-topic override via `topics.py` |
+| `TTS_RATE` | `+16%` | |
+| `TTS_PITCH` | `+8Hz` | |
+| `TTS_VOLUME` | `+14%` | |
+
+---
+
+## 🏎 Render performance profile
+
+`run.py:render_video()` invokes `npx remotion render` with a free-runner-tuned profile. Every knob is overridable via `REMOTION_*` env / CI Variables.
+
+| Env var | Default | Notes |
+|---|---|---|
+| `REMOTION_CONCURRENCY` | `cpu-1` (CI: `2`) | parallel render threads |
+| `REMOTION_SCALE` | `0.75` | snapped to a codec-safe value for h264/h265 (avoids fractional pixel dims) |
+| `REMOTION_IMAGE_FORMAT` / `REMOTION_JPEG_QUALITY` | `jpeg` / `68` | frame capture |
+| `REMOTION_CODEC` / `REMOTION_CRF` / `REMOTION_X264_PRESET` | `h264` / `24` / `veryfast` | encode speed vs size |
+| `REMOTION_PIXEL_FORMAT` / `REMOTION_AUDIO_CODEC` | `yuv420p` / `aac` | broad compatibility |
+| `REMOTION_GL` | `swangle` | headless GL backend |
+
+---
+
+## 🔧 CI/CD (GitHub Actions)
+
+### `daily-short.yml` — the publisher
+
+```
+poll (*/15) --> gate --> test (pytest) --> publish --> commit history
+                  │                           │
+        one publish per IST slot       4 stages run in sequence:
+        (or workflow_dispatch)         script -> voice -> render -> upload
+```
+
+The publish job: checks out, sets up Node 20 + Python 3.11, installs ffmpeg, **caches `remotion/node_modules` + `~/.remotion` + `~/.cache/remotion`**, runs `npx remotion browser ensure`, executes the four stages, then commits `state/history.json` back with `[skip ci]`.
+
+### `healthcheck.yml` — the early-warning system
+
+Runs **Mondays 04:00 UTC**: refreshes the YouTube token and makes a cheap authenticated Gemini call. On failure it opens a GitHub issue (and Slack message if configured) so credential expiry is caught *before* the daily job needs it.
+
+### Configure in GitHub
+
+1. **Settings → Secrets and variables → Actions → Secrets:** add the credentials above.
+2. **→ Variables:** add any behaviour/render toggles you want to override.
+3. The workflow already passes all `REMOTION_*` Variables through to the render.
+
+---
+
+## ✅ Testing
 
 ```bash
 python -m pytest -q
 ```
 
-The pipeline exits with **0** on success, **2** on a configuration error (missing
-credentials/binaries), and **1** on any other failure — handy for shell/CI checks.
+15 suites cover the **pure logic** with all network/LLM/render calls mocked — never call live services in tests:
+
+| Area | Suite |
+|---|---|
+| Topic rotation / cooldown | `test_topics.py`, `test_topic_select.py` |
+| News de-dup / filter | `test_fetch_news.py`, `test_fetch_image.py` |
+| Script JSON extract / validate / normalize | `test_generate_script.py`, `test_generate_script_more.py` |
+| Render-props A/B + color shift | `test_render_props.py` |
+| Thumbnail font fallback | `test_thumbnail.py` |
+| Upload retry | `test_upload_retry.py` |
+| History corruption tolerance | `test_history.py` |
+| Analytics | `test_analytics.py` |
+| TTS / notify / healthcheck | `test_tts_notify_healthcheck.py` |
+| Orchestration / infra | `test_run.py`, `test_infra.py`, `test_coverage_practical.py` |
+
+> **Rule:** add a test whenever you touch pure logic. CI gates publish on a green `pytest`.
 
 ---
 
-## 7. Module & Interface Overview
+## 🛡 Reliability & error handling
 
-This project exposes **no HTTP/REST API**. Its "interfaces" are (a) the Python module functions chained by `run.py`, and (b) the external APIs it consumes.
-
-### Internal module contract
-
-| Module | Entry function | Input → Output |
-|---|---|---|
-| `analytics.py` | `collect()` | past uploads → `(topic_weights, perf_hint)` (optional) |
-| `topic_select.py` | `choose_topic(weights)` | strategy → the day's topic dict |
-| `fetch_news.py` | `fetch_items(topic)` | topic → de-duped, fresh, on-topic items (with `image`) |
-| `generate_script.py` | `generate(topic, items, perf_hint)` | topic + news → `script.json` (`title`, `title_variants`, `description`, `tags`, `lines`, `points`, `flow`, `narration`) |
-| `tts.py` | `synthesize(narration, voice)` | text → `voice.mp3` + `captions.json` (`{duration, words[]}`) |
-| `render_props.py` | `build_props(...)`, `active_title(...)` | script + captions → typed Remotion props (theme, hero, A/B title) |
-| `thumbnail.py` | `make(script, variant)` | script → `build/thumb.png` (or `None`; non-fatal) |
-| `upload_youtube.py` | `upload(script)` | `out.mp4` + metadata → YouTube video ID |
-| `healthcheck.py` | `main()` | validates YouTube/Gemini credentials → exit code |
-| `run.py` | `main(argv)` | orchestrates all stages, or runs one stage via `--stage` |
-
-**Supporting infrastructure modules:** `config.py` (settings, env helpers, atomic writes), `history.py` (anti-repetition + performance memory), `logging_setup.py` (structured logging), `errors.py` (typed exceptions + `retry()` backoff decorator), `preflight.py` (fail-fast checks), `notify.py` (failure alerts), `topics.py` (the four topic definitions + `topic_for`).
-
-### The Python → Remotion data contract (`build/render-props.json`)
-
-Validated by `shortSchema` (zod) in `Short.tsx`:
-
-```jsonc
-{
-  "title": "AI Innovation? Claude's Code Artifacts Prove It!",
-  "topicTitle": "Claude updates",
-  "accent": "#E17055",
-  "accent2": "#ff9a76",
-  "pattern": "rings",
-  "heroImage": "https://example.com/article-image.jpg",
-  "audioSrc": "voice.mp3",
-  "durationSeconds": 56.568,
-  "words":  [ { "text": "Most", "start": 0.0, "end": 0.21 } ],
-  "lines":  [ "spoken line 1", "spoken line 2" ],
-  "points": [ { "heading": "New Claude Tag", "detail": "Mark AI code for review" } ],
-  "flow":   [ "You prompt", "Claude drafts", "You review", "Merged" ]
-}
-```
-
-### External APIs consumed
-
-| Service | Auth | Used for |
-|---|---|---|
-| Google Gemini (`generativelanguage`) | API key | Script generation |
-| Microsoft `edge-tts` endpoint | none | Voice synthesis |
-| RSS / Google News | none | News ingestion (+ hero image) |
-| YouTube Data API v3 (`videos.insert`, `thumbnails.set`) | OAuth refresh token | Publishing |
-| YouTube Data API v3 (`videos.list`) | API key | Reading public view stats (analytics, optional) |
+- **Typed exceptions** (`errors.py`): `ConfigError` → exit `2`; all other `PipelineError` subclasses → exit `1`. `run.py` maps them precisely.
+- **Retry/backoff decorator** wraps flaky network calls (news download, TTS, resumable upload).
+- **Best-effort steps never crash the run:** thumbnail generation, custom-thumbnail upload, analytics, and notifications all swallow their own errors and log warnings.
+- **Atomic writes** (`config.atomic_write_text` / `write_json`) so readers never see a partial JSON file.
+- **Corruption-tolerant history:** unreadable/odd-shaped `history.json` resets gracefully instead of crashing.
+- **Fail-fast preflight:** missing env vars or binaries are reported with actionable messages before any slow work begins.
 
 ---
 
-## 8. Content & Rendering Workflow
-
-This is the project's equivalent of a "data processing / ML workflow."
-
-**Purpose.** Turn a topic of the day into a finished, published video with no manual steps.
-
-**Input → output flow**
-
-0. **Analytics (optional)** (`analytics.py`) — if enabled, reads public view counts for past uploads and produces per-topic weights + a "what performed well" hint.
-1. **Topic selection** (`topic_select.py`) — `rotate` (deterministic daily cycle) or `trending` (the topic with the most fresh news, weighted by past performance, with a cooldown for variety).
-2. **News ingestion** (`fetch_news.py`) — pulls from many RSS feeds + multiple Google News searches; applies a 30-day freshness cutoff, keyword filtering for narrow topics, de-duplication, captures a hero image, and returns an 18-item pool.
-3. **Script generation** (`generate_script.py`) — Gemini receives the news pool, a hook style, recently-used angles to avoid, the language, and the performance hint; returns strict JSON with a primary `title` plus `title_variants`. History is updated to prevent repetition.
-4. **A/B selection** (`render_props.py`) — picks today's active title variant and thumbnail layout, recording the choice in history.
-5. **Voiceover** (`tts.py`) — `edge-tts` produces `voice.mp3` and word-level timings using the topic's voice; the run aborts if audio is implausibly short.
-6. **Thumbnail** (`thumbnail.py`) — Pillow renders a themed 1280×720 image in the chosen A/B layout.
-7. **Rendering** (`remotion/`) — `run.py` writes `render-props.json` (theme + hero image + active title), copies the audio into `remotion/public/`, and invokes `npx remotion render` → `build/out.mp4`.
-8. **Publishing & recording** (`upload_youtube.py`) — uploads via the YouTube Data API, sets the thumbnail (best-effort), and writes the `video_id` + timestamp back into history for the analytics loop.
-
-**Trigger mechanism.** Primarily the **scheduler** (GitHub Actions poll cron + gate windows for 09:00 IST and 21:00 IST). Also **manual** via the Actions "Run workflow" button, or locally via `python -m pipeline.run`.
-
----
-
-## 9. Deployment & Environments
-
-There is a single production runtime: **GitHub Actions**. There are no separate QA/staging deployments; local execution serves as the development environment.
-
-| Environment | Where | How |
-|---|---|---|
-| **Local / Dev** | Your machine | `.env` + `python -m pipeline.run [--no-render --no-upload]` |
-| **Production** | GitHub Actions runner | `.github/workflows/daily-short.yml` with poll + gate windows (09:00/21:00 IST) |
-| **Health monitor** | GitHub Actions runner | `.github/workflows/healthcheck.yml` on a weekly cron |
-
-**CI/CD pipeline (`daily-short.yml`):** four jobs.
-
-- **`gate` job:** runs every 15 minutes, allows publish only inside IST target windows (09:00 and 21:00) with delay tolerance, and de-duplicates successful runs per slot.
-- **`test` job:** checkout → Python 3.11 → install `requirements.txt` + `requirements-dev.txt` → `pytest`. This job runs only when gate says the slot is open.
-- **`publish` job** (`needs: [gate, test]`): checkout → set up Node 20 + Python 3.11 (pip cache) → install ffmpeg → install Python deps → cache & install Remotion deps + headless Chrome → ensure browser → run separate stage steps (**script**, **voice**, **render**, **upload**) → commit `state/history.json` back to the repo.
-- **`skip-info` job:** logs why a poll run was skipped (outside window or already completed).
-- **Triggers:** `schedule` (cron `*/15 * * * *`) and `workflow_dispatch` (manual).
-- **Concurrency guard** prevents overlapping runs; **180-minute** timeout.
-- **Permissions:** `actions: read` (slot de-dup lookup), `contents: write` (push history), and `issues: write` (open a failure issue).
-- **Feature flags** are passed as repo *Variables* (`TOPIC_STRATEGY`, `AB_TESTING`, `LANGUAGE`, `ENABLE_ANALYTICS`) with safe defaults, plus the optional `YT_DATA_API_KEY` secret.
-- **Render speed profile:** CI defaults to a free-runner-optimized Remotion profile (`scale=0.75`, `jpeg-quality=68`, `codec=h264`, `crf=24`, `x264 preset=veryfast`, `pixel-format=yuv420p`, `audio-codec=aac`) and can be tuned via repo Variables (`REMOTION_*`). The scale is snapped to a codec-safe value for H264/H265 to avoid fractional pixel dimensions.
-
-### How slot gating works
-
-`daily-short.yml` polls every 15 minutes, but `gate` only opens execution during two IST windows:
-
-- Morning slot: `09:00` to `12:00` IST (tolerance = 180 minutes)
-- Evening slot: `21:00` to `00:00` IST (tolerance = 180 minutes)
-
-Within each window, exactly one successful publish run is allowed. If one run already succeeded for that slot, later poll ticks are skipped.
-
-Example timeline (IST):
-
-- `08:45` poll tick: skipped (`outside_target_window`)
-- `09:15` poll tick: gate opens, pipeline runs
-- `09:30` poll tick: skipped (`slot_already_completed`)
-- `20:45` poll tick: skipped (`outside_target_window`)
-- `21:10` poll tick: gate opens, pipeline runs
-- `21:30` poll tick: skipped (`slot_already_completed`)
-
-A second workflow, **`healthcheck.yml`**, runs weekly (Mondays 04:00 UTC) and on demand: it validates the YouTube refresh token and Gemini key and opens an issue if either is failing — catching token expiry before it breaks a daily run.
-
-To change publish timing, update the gate window logic and tolerance in `daily-short.yml` (cron remains polling in UTC).
-
----
-
-## 10. Logging & Monitoring
-
-- **Logging mechanism:** centralized structured logging (`pipeline/logging_setup.py`) emits timestamped, levelled lines (`%(asctime)s | LEVEL | module | message`) at every stage. Verbosity is controlled by `LOG_LEVEL`. Logs appear in the **GitHub Actions run logs** (Actions tab → the run → job steps).
-- **Error handling:** every stage raises a typed exception (`ConfigError`, `NewsFetchError`, `ScriptGenerationError`, `TTSError`, `RenderError`, `UploadError`). The orchestrator catches them, logs an actionable message, and returns a precise exit code (`2` config, `1` other). Network reads/uploads retry with exponential backoff; broken/short audio aborts before render/upload; thumbnail failures are non-fatal.
-- **Failure alerting:** on failure the run sends a best-effort notification (`pipeline/notify.py`) — a **GitHub issue** (using the Actions-provided `GITHUB_TOKEN`) and/or a **Slack** message (`SLACK_WEBHOOK_URL`). Notification errors never mask the original failure.
-- **Where to check:** the **Actions** tab shows pass/fail per day; a green run that produced a new video on the channel confirms success. A failed run shows up as an auto-filed issue (if alerting is configured).
-
----
-
-## 11. Known Challenges / Constraints
-
-- **OAuth refresh-token expiry.** If the Google OAuth consent screen is in *Testing* mode, the refresh token expires after **7 days** and uploads stop. Publish the app to *Production* to make it long-lived.
-- **Gemini quota on corporate accounts.** A Workspace/corporate Google account often has a **zero** free-tier quota (`429 ... limit: 0`); use a personal account's API key.
-- **Monetization is not automatable.** The pipeline only produces and uploads; YouTube Partner Program thresholds must be met independently.
-- **Repetitive-content policy.** YouTube demonetizes mass-produced content; the anti-repetition design mitigates but does not eliminate this risk.
-- **Free-tier dependencies.** `edge-tts` ignores Azure "excited/cheerful" style tags, so energy comes from voice parameters (`TTS_RATE`/`TTS_PITCH`/`TTS_VOLUME`) + script punctuation rather than expressive styles. The default voice is `en-US-JennyNeural`; swap to an Indian voice (e.g. `en-IN-PrabhatNeural` male / `en-IN-NeerjaNeural` female, or `hi-IN-MadhurNeural`) via `TTS_VOICE` or a per-topic override in `topics.py`.
-- **Feed drift.** RSS feeds move or go stale; mitigated by generous feed lists + Google News fallbacks (dead feeds are skipped silently).
-- **Scheduled-workflow inactivity.** GitHub disables cron workflows after 60 days of repo inactivity; the daily history commit keeps the repo active.
-
----
-
-## 12. Contributing Guidelines
-
-- **Branching:** `main` is the deployable branch; develop on short-lived feature branches (`feat/...`, `fix/...`) and open a Pull Request.
-- **Commits:** imperative, scoped messages (the bot uses `chore: ...`); use `[skip ci]` for non-functional commits that shouldn't trigger runs.
-- **Code standards:**
-  - Python — keep modules single-purpose and side-effect-light; prefer the existing functional style; fail loudly with actionable messages.
-  - TypeScript/Remotion — keep all animation logic in `Short.tsx`; any new prop must be added to **both** `shortSchema` and the Python `write_render_props()`.
-- **Testing a change:** run `python -m pytest -q` (must stay green — it gates CI), plus `python -m pipeline.run --no-render --no-upload` (fast) for content changes and `npm run studio` for visual changes, before opening a PR. Add/extend tests under `tests/` for any new pure logic.
-- **Never commit secrets.** Use `.env` locally and GitHub Secrets in CI.
-
----
-
-## 13. Troubleshooting Guide
+## 🩺 Operational runbook & troubleshooting
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| Upload fails after ~a week | Refresh token expired (Testing mode) | Publish OAuth app to Production; re-mint token via `auth/get_token.py` |
-| `429 ... limit: 0` from Gemini | Corporate Google account, no free quota | Create a key from a **personal** account; update `GEMINI_API_KEY` |
-| Run aborts: "Audio is only Ns" | TTS produced too little audio | Re-run; check `edge-tts` connectivity and the generated `narration` |
-| "fetched 0 fresh items" | Feeds down + query too narrow | Broaden the topic's `queries`; verify Google News reachable |
-| Thumbnail "skipped" | Channel not phone-verified | Verify at `youtube.com/verify` (upload still succeeds) |
-| Remotion render fails in CI | ffmpeg/Chrome not available | Ensure the ffmpeg + `remotion browser ensure` steps ran (check cache) |
-| Wrong publish time | Cron is in UTC | Adjust `cron` in `daily-short.yml` (03:30 UTC = 09:00 IST) |
-| Run exits with code `2` | Configuration error (missing env var / `ffmpeg` / `node`) | Read the logged message; set the missing secret or install the binary |
-| `publish` job skipped | The `test` job failed | Open the `test` job logs; fix the failing test before it will publish |
-| No failure issue appears | Alerting not configured | Ensure `issues: write` permission and (optionally) set `SLACK_WEBHOOK_URL` |
+| `limit: 0` in Gemini error | Corporate Google account has no free-tier quota | Create a key from a **personal** account |
+| Upload fails after ~7 days | OAuth test-mode refresh token expired | Publish consent screen to **Production**; re-mint token |
+| Render fails on Chrome download | `storage.googleapis.com` DNS-blocked in restricted sandbox | Validate with `tsc --noEmit` + `npx remotion bundle`; real render runs in CI on clean `npm ci` |
+| Blank / too-short video | Audio shorter than `MIN_AUDIO_SECONDS` | Run aborts by design before render/upload — check script length |
+| Wrong-OS esbuild error | Committed `node_modules` from another OS | Use clean `npm ci` (CI does this) |
+| No notification on failure | No channel configured | Set `SLACK_WEBHOOK_URL`, or rely on the auto GitHub issue in Actions |
 
-**Debugging tips:** set `LOG_LEVEL=DEBUG` for verbose output (including per-feed failures), reproduce locally with `python -m pipeline.run --no-upload`, inspect `build/script.json` and `build/render-props.json` for content issues, and open `remotion/` in Studio to debug visuals.
+> 💰 **Monetization cannot be automated** — it requires meeting YouTube Partner Program thresholds. Don't add features that imply otherwise.
 
 ---
 
-## 14. For Product Managers (Non-Technical Summary)
+## 🚫 Invariants — do not break these
 
-**What the system does.** Every morning, it acts like a tiny, tireless video team: it reads the day's most relevant AI and developer-tooling news, writes a punchy ~1-minute script, records it in a friendly Indian-male voice, turns it into a sleek animated vertical video, and posts it to YouTube — completely on its own.
+These are load-bearing contracts. Changing them silently breaks the pipeline.
 
-**Key workflows.**
-
-1. *Plan* — picks the theme of the day from a fixed four-theme rotation.
-2. *Research* — gathers fresh, real news on that theme.
-3. *Create* — writes an original, non-repetitive script and narrates it.
-4. *Produce* — renders a branded, animated short with on-screen highlights.
-5. *Publish* — uploads it (public by default) with a title, description, tags, and thumbnail.
-
-**User journey (high level).** A viewer scrolling YouTube Shorts sees a clean, fast, informative ~1-minute update on the latest in AI or their favorite developer tool, with clear narration and animated highlights — and a prompt to follow for a fresh update daily.
-
-**Business impact & value.**
-
-- **Always-on consistency** — the #1 growth lever on Shorts, with no daily effort.
-- **Lower cost** — replaces hours of manual production at essentially $0 running cost.
-- **On-brand quality** — consistent look, voice, and structure every day.
-- **Defensible originality** — built-in safeguards reduce the "repetitive content" risk that hurts reach and monetization.
-
-**What it does *not* do.** It will not, by itself, generate ad revenue — that depends on meeting YouTube's partner thresholds and on overall content quality and audience growth.
+1. **Audio is the source of truth for video length.** Duration comes from `mutagen` reading `voice.mp3`. Never derive length from `words[-1].end` — edge-tts often emits zero WordBoundary events.
+2. **Subtitles are driven by `lines`, not `words`.** Never gate a scene/caption on `words.length > 0`.
+3. **Python ↔ Remotion contract is `build/render-props.json` only.** New field → update producer *and* consumer.
+4. **All file writes are atomic.** Use the helpers in `config.py`; never hand-write JSON.
+5. **Stages stay independently runnable.** `script` writes `script.json` + `pipeline-state.json`; later stages read them — keep that ordering.
+6. **Best-effort steps must never crash the run** (thumbnail, analytics, notifications, custom-thumbnail upload).
+7. **Use `google-genai`** (`from google import genai`). The deprecated `google-generativeai` must not be reintroduced.
+8. **Raise the right typed error** so `run.py` maps it to the correct exit code.
+9. **Every network call** gets a timeout, a User-Agent, and `@retry` backoff.
 
 ---
 
-## 15. Future Enhancements / Roadmap
+<div align="center">
 
-**Implemented**
+**Built to run itself.** · See `CLAUDE.md` for the contributor guide · `BUILD_PROMPT.md` to rebuild from scratch.
 
-- ✅ **Failure alerting** — opens a GitHub issue and/or posts to Slack on failure.
-- ✅ **CI-gated tests** — a `pytest` job must pass before publishing.
-- ✅ **Token health check** — weekly job (`healthcheck.yml`) validates credentials early.
-- ✅ **Coverage expansion** — tests cover the render-props contract and upload retry paths.
-- ✅ **A/B titles & thumbnails** — daily variant rotation, recorded in history for analysis.
-- ✅ **Multi-language / multi-voice** — `LANGUAGE` setting + per-topic voice overrides.
-- ✅ **Smarter topic selection** — `TOPIC_STRATEGY=trending` weights by live news volume.
-- ✅ **Richer visuals** — per-topic patterns/gradients + optional source hero image.
-- ✅ **Analytics loop** — optional view-count feedback into scripts + topic weights.
-
-**Still open**
-
-- **True CTR tracking** — the A/B framework records variants; correlating click-through needs YouTube Analytics (impressions/CTR), which requires an added OAuth scope.
-- **B-roll / screenshots** — richer hero media beyond the article's feed image.
-- **Optional human-in-the-loop** — a one-click review/approve step (scaffolded via `REVIEW_BEFORE_PUBLISH`).
-
----
-
-*Built entirely on free tools: GitHub Actions · Google Gemini (free tier) · Microsoft edge-tts · Remotion · YouTube Data API.*
+</div>

@@ -2,7 +2,7 @@
 
 This is a reusable **instruction set** you can hand to any capable AI coding agent (Claude Code, Cursor, etc.) to build this project from scratch. It deliberately contains **no code** — it describes *what* to build, *why*, and *in what order*. The agent should make its own implementation choices while honoring every requirement and guardrail below.
 
-**What the agent must produce:** a fully-automatic pipeline that, once a day and unattended, picks a topic, researches fresh news, writes an original 50–60 second script, narrates it in an Indian-male voice, renders a sleek vertical motion-graphics video, uploads it to YouTube, and remembers what it did — all on free tools, on a schedule (default 9:00 AM IST, easily changeable).
+**What the agent must produce:** a fully-automatic pipeline that, twice a day and unattended, picks a topic, researches fresh news, writes an original 50–60 second script, narrates it in an energetic English voice, renders a sleek vertical motion-graphics video, uploads it to YouTube, and remembers what it did — all on free tools, on a schedule (reference build: 09:00 IST and 21:00 IST, easily changeable).
 
 ---
 
@@ -30,7 +30,7 @@ Give the agent Section 2 (the system prompt) plus Section 5 (the workflow) to ex
 
 ## 2. The agent system prompt (paste first)
 
-> You are a senior automation engineer. Build a production-grade, fully-automatic "daily AI YouTube Shorts" pipeline that runs unattended in the cloud and publishes one ~50–60 second vertical Short every day, rotating across four themes (AI news, GitHub Copilot, Claude, Cursor), using only free tools.
+> You are a senior automation engineer. Build a production-grade, fully-automatic "daily AI YouTube Shorts" pipeline that runs unattended in the cloud and publishes ~50–60 second vertical Shorts on a fixed daily cadence (the reference build publishes twice a day), rotating across four themes (AI news, GitHub Copilot, Claude, Cursor), using only free tools.
 >
 > Hold to these principles in everything you build:
 > 1. **Free tools only.** No paid APIs or hosting. If a step would need money, stop and flag it rather than silently choosing a paid path.
@@ -39,7 +39,7 @@ Give the agent Section 2 (the system prompt) plus Section 5 (the workflow) to ex
 > 4. **Keep content logic and animation separate.** The part that researches and writes should never touch the part that animates. They communicate only through one well-defined, validated data file.
 > 5. **The audio decides the video length.** Measure the real length of the generated voice file itself; never trust the speech engine's word-timing events (they are frequently missing). Abort before rendering or uploading if the audio is suspiciously short.
 > 6. **Be resilient.** Skip dead news sources silently, always keep a live search as a fallback, fall back across several model names if one is unavailable, and give every network call a timeout and automatic retries.
-> 7. **Sound human and never repeat yourself.** Rotate opening styles, feed the writer the recent past titles to avoid, and write in a warm, energetic Indian-developer voice — not like an AI or a template.
+> 7. **Sound human and never repeat yourself.** Rotate opening styles, feed the writer the recent past titles to avoid, and write in a warm, energetic tech-host voice — not like an AI or a template. The spoken language and the narration voice must both be configurable (with a sensible default), and the voice must be overridable per topic.
 > 8. **Test the logic and gate the release.** Cover the pure logic with automated tests that must pass in CI before the publishing step runs.
 >
 > Build stage by stage. After each stage, validate what the environment allows (import/compile checks for the logic; a compile/bundle check for the renderer). Be honest that a real video render and a real upload only happen in CI with real credentials — don't claim they work locally if the environment can't actually do them.
@@ -50,7 +50,7 @@ Give the agent Section 2 (the system prompt) plus Section 5 (the workflow) to ex
 
 ## 3. Non-negotiable requirements
 
-**Cadence and timing.** Exactly one Short per day. Default target time **9:00 AM IST**, and the run time must be changeable in one obvious place. (The reference build also supports an optional second slot in the evening — keep timing configuration centralized either way.)
+**Cadence and timing.** A fixed, predictable daily cadence with exactly-once publishing per slot. The reference build publishes **twice a day — 09:00 IST and 21:00 IST** — and the run times must be changeable in one obvious place. (A single daily slot is equally valid; keep timing configuration centralized either way.)
 
 **Topic rotation, in this exact order**, advancing one step per calendar day:
 1. Latest tech updates in AI
@@ -60,7 +60,7 @@ Give the agent Section 2 (the system prompt) plus Section 5 (the workflow) to ex
 
 **Script quality.** Roughly 50–60 seconds of speech. It must feel human, energetic, and non-repetitive, achieved through an anti-repetition memory of recent titles plus rotating opening styles. The owner asked for a "developer review" feel — implement this as a toggle that, when on, publishes privately for manual approval, and when off, publishes fully automatically.
 
-**Voice.** Indian male English by default, overridable per topic and via configuration.
+**Voice.** An energetic, clear English voice by default (the reference build uses a US female neural voice), overridable per topic and via configuration — including switching to an Indian voice if desired.
 
 **Visuals.** Quality animation with a sleek UI and friendly feel — vertical full-HD portrait, smooth scene-based motion graphics. No static slideshows and no code or terminal mockups.
 
@@ -75,7 +75,7 @@ Give the agent Section 2 (the system prompt) plus Section 5 (the workflow) to ex
 | Scheduler / runtime | A CI scheduler with cron and secrets (e.g. GitHub Actions) | Free minutes, built-in cron and secrets, can commit state back, no server to maintain |
 | News research | Public RSS feeds plus a public news-search RSS | No API key; the search acts as an always-available fallback |
 | Script writing | A free-tier large language model with strong structured-output support | Free, reliable at returning structured data |
-| Voiceover | A free text-to-speech engine that offers an Indian male voice | Free and natural-sounding |
+| Voiceover | A free text-to-speech engine with multiple natural neural voices (default an energetic English voice; per-topic/config override, including Indian voices) | Free and natural-sounding |
 | Audio length | A small audio-metadata library | Reads true audio length, unlike unreliable speech word-timings |
 | Animation / render | A programmatic, code-driven motion-graphics renderer plus a standard video encoder | Open-source, produces polished MP4s without manual editing |
 | Thumbnail | A standard image library | Free image generation |
@@ -96,9 +96,9 @@ Build these as separate, independently-runnable stages. Each entry says *what it
 
 **Stage 2 — News research.** For the chosen topic, gather recent items from its sources plus a live search fallback. Give every fetch a timeout and a browser-like identifier; skip any individual source that fails without aborting. Clean the text, capture a best-effort image, filter out anything too old, sort newest first, remove duplicates, and keep only on-topic items (but fall back to the full pool rather than returning nothing). If genuinely nothing usable remains, fail clearly so the run stops. *Done when, against mocked feeds, it returns a clean on-topic list and an empty pool raises a clear error.*
 
-**Stage 3 — Script generation.** Ask the language model to turn the 1–2 strongest real news items into a punchy spoken script. Pick a random opening style each time and tell the model the recent past titles to avoid. The prompt should request a warm, energetic, easy-to-pronounce Indian-developer voice of about 120–140 words ending in a "follow for daily updates" call to action, with no emojis in the spoken lines. Require a strict structured response containing: a short title, a couple of alternate titles (for A/B testing), a description with a few hashtags, a handful of search tags, the spoken lines, three to four on-screen highlight points (each a short heading plus a brief detail), and three to four tiny step labels for a simple flow diagram. Be tolerant when reading the model's response (it may wrap the data in formatting), validate that the essentials are present, fill safe defaults for the visual extras, and fall back across several model names if one is unavailable or out of free quota — with an actionable error if every option fails. Record the new title in the history memory. *Done when a mocked model yields a normalized result and malformed output raises a clear error.*
+**Stage 3 — Script generation.** Ask the language model to turn the 1–2 strongest real news items into a punchy spoken script. Pick a random opening style each time and tell the model the recent past titles to avoid. The prompt should request a warm, energetic, easy-to-pronounce tech-host script (in the configured language) of about 120–140 words ending in a "follow for daily updates" call to action, with no emojis in the spoken lines. Require a strict structured response containing: a short title, a couple of alternate titles (for A/B testing), a description with a few hashtags, a handful of search tags, the spoken lines, three to four on-screen highlight points (each a short heading plus a brief detail), and three to four tiny step labels for a simple flow diagram. Be tolerant when reading the model's response (it may wrap the data in formatting), validate that the essentials are present, fill safe defaults for the visual extras, and fall back across several model names if one is unavailable or out of free quota — with an actionable error if every option fails. Record the new title in the history memory. *Done when a mocked model yields a normalized result and malformed output raises a clear error.*
 
-**Stage 4 — Voice and captions.** Convert the spoken lines into an audio file using the configured Indian male voice with a slightly faster, brighter delivery, retrying transient failures. Crucially, measure the real audio length from the file itself, and abort the whole run if it's implausibly short. Save the audio and a small captions record. *Done when synthesis yields a positive, real duration and empty audio raises a clear error.*
+**Stage 4 — Voice and captions.** Convert the spoken lines into an audio file using the configured voice with a slightly faster, brighter delivery, retrying transient failures. Crucially, measure the real audio length from the file itself, and abort the whole run if it's implausibly short. Save the audio and a small captions record. *Done when synthesis yields a positive, real duration and empty audio raises a clear error.*
 
 **Stage 5 — Prepare the visuals' inputs.** From the script and the measured audio length, assemble the single data file the renderer will consume, including the brand accent (and a derived second color for a gradient), the chosen topic's visual pattern, an optional faint background image, the spoken lines (which drive the on-screen captions), the highlight points, and the flow steps. Pick today's title variant for A/B testing. Separately, generate a branded thumbnail image with the topic label and wrapped title in two alternating layouts — but treat the thumbnail as best-effort, never letting it crash the run. *Done when the data file and thumbnail are produced and the thumbnail step survives a missing font.*
 
@@ -108,7 +108,7 @@ Build these as separate, independently-runnable stages. Each entry says *what it
 
 **Stage 8 — Orchestrate and remember.** Wire the stages into one runner that can execute the whole chain or any single stage, with flags to skip rendering or uploading for cheap testing. Before each stage do a fast preflight that checks the needed credentials and programs and fails with an actionable message. Maintain a corruption-tolerant history file that records what was made (for anti-repetition) and, after upload, the video id and time (and later, performance). The runner maps each error category to its exit code and sends the failure alert. *Done when the full chain runs end to end given credentials, and each stage can be run on its own.*
 
-**Stage 9 — Schedule it.** Set up the scheduled automation to target 9:00 AM IST (with an optional evening slot), allowing manual triggering too. Because CI cron timing drifts, poll more frequently and gate the actual publish to exactly one run per intended slot by checking whether a successful run already happened in that window. Run the test suite first and only publish if it passes. Install the needed system tools, cache the renderer's dependencies and its downloaded browser to keep runs fast, run the stages in order, and finally commit the updated history back to the repository. *Done when a manual trigger runs the whole chain and scheduled runs publish exactly once per slot.*
+**Stage 9 — Schedule it.** Set up the scheduled automation to target the chosen daily slots (the reference build uses 09:00 IST and 21:00 IST), allowing manual triggering too. Because CI cron timing drifts, poll more frequently and gate the actual publish to exactly one run per intended slot by checking whether a successful run already happened in that window. Run the test suite first and only publish if it passes. Install the needed system tools, cache the renderer's dependencies and its downloaded browser to keep runs fast, run the stages in order, and finally commit the updated history back to the repository. *Done when a manual trigger runs the whole chain and scheduled runs publish exactly once per slot.*
 
 **Stage 10 — Harden it.** Add best-effort failure notifications (a chat webhook and/or an auto-opened repository issue) that never throw. Add a weekly health check that refreshes the upload token and makes a cheap authenticated model call, alerting if either is failing — so dead credentials surface before the daily run needs them. Provide a one-time local helper that walks the owner through granting upload permission and prints the values to store as secrets. Optionally add a learning loop that reads public view counts of past uploads and nudges both topic choice and writing style toward what performed well. Cover the pure logic with tests. *Done when the test suite is green, the health check validates credentials, and any stage failure produces an alert.*
 
@@ -152,7 +152,7 @@ Document these clearly in the README, because the pipeline cannot do them for th
 
 | To change… | Where it should live |
 |---|---|
-| Run time | One centralized timing setting (default 9:00 AM IST) |
+| Run times | One centralized timing setting (reference build: 09:00 IST and 21:00 IST) |
 | Topics and news sources | The topic definitions |
 | Voice and language | Voice/language settings, with optional per-topic override |
 | Manual review before publishing | The review toggle (publishes privately for approval) |
