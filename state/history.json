@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor's Crazy New AI Automations!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Cursor Just Upgraded Coding Forever",
+        "This New Cursor Feature is Insane"
+      ],
+      "active_title": "Cursor Just Upgraded Coding Forever",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "3yZZK6ab84E",
+      "published_at": "2026-06-28T16:07:32.816981+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's Secret Weapon: Forget SpaceX, Devs Get REAL Upgrades!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
