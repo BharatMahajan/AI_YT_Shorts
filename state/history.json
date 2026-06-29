@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Legal Bombshell! Your ChatGPT History Just Became Evidence!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Your AI Chats Aren't Private? ChatGPT Logs Used in Arson Trial!",
+        "AI Conversations Go to Court: Prosecutors Use ChatGPT Data!"
+      ],
+      "active_title": "AI Conversations Go to Court: Prosecutors Use ChatGPT Data!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "rEnlDJEAm4Q",
+      "published_at": "2026-06-29T03:49:06.369598+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's Crazy New AI Automations!",
       "hook_style": "Open by busting a common misconception.",
