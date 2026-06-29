@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "Claude Hits Azure: NVIDIA Blackwell Ultra Unleashes Agentic AI!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "AI Bombshell! Claude Now on NVIDIA Blackwell in Azure!",
+        "Game-Changer! Anthropic Claude Supercharged on Azure!"
+      ],
+      "active_title": "Game-Changer! Anthropic Claude Supercharged on Azure!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "4BcUEG_WKKs",
+      "published_at": "2026-06-29T18:16:22.517068+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "Legal Bombshell! Your ChatGPT History Just Became Evidence!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
