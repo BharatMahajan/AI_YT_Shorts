@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "Copilot's Latest: AI Bug Fixes & Lightning Speed!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "GitHub Copilot: Auto-Fix Bugs, Super Fast AI!",
+        "New Copilot Features: Security & Speed Boost!"
+      ],
+      "active_title": "Copilot's Latest: AI Bug Fixes & Lightning Speed!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "LGIdzZvGncQ",
+      "published_at": "2026-06-30T17:39:42.815297+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "Claude Hits Azure: NVIDIA Blackwell Ultra Unleashes Agentic AI!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
