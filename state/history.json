@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's NEW Sonnet 5 & Claude Science Unleashed! 🔥",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Anthropic Drops Sonnet 5 & Claude Science! 🚀",
+        "Big Claude Update: Sonnet 5 & AI Science Power!"
+      ],
+      "active_title": "Anthropic Drops Sonnet 5 & Claude Science! 🚀",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "saGwpL9tg6w",
+      "published_at": "2026-07-01T17:47:13.874379+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "Copilot's Latest: AI Bug Fixes & Lightning Speed!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
