@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI is WAY SMARTER Than We Thought?! New Study Drops a Bomb!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Mind Blown: AI's True Power Underestimated?",
+        "UK Study: Our AI Benchmarks Are WRONG!"
+      ],
+      "active_title": "AI is WAY SMARTER Than We Thought?! New Study Drops a Bomb!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "YZlY1IxhaeE",
+      "published_at": "2026-07-03T17:18:52.202613+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's Mobile Magic: Ship Code From Anywhere!",
       "hook_style": "Open with a surprising one-line stat or claim.",
