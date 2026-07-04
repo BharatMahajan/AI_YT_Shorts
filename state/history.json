@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot's HUGE Updates: New AI & Usage-Based Pricing!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Copilot Unlocked: Smarter AI, Flexible Pricing!",
+        "Pay-As-You-Go Copilot: Meet Kimi K2.7 Code!"
+      ],
+      "active_title": "Copilot Unlocked: Smarter AI, Flexible Pricing!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "egg4nxPXocM",
+      "published_at": "2026-07-04T16:50:47.287741+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "AI is WAY SMARTER Than We Thought?! New Study Drops a Bomb!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
