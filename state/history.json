@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Anthropic's Latest: Claude Science, Sonnet 5, Fable 5!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Claude AI: Science & New Models Released!",
+        "Anthropic Updates: Claude Science + Sonnet & Fable!"
+      ],
+      "active_title": "Anthropic Updates: Claude Science + Sonnet & Fable!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "oKw4EWfT24I",
+      "published_at": "2026-07-05T16:56:12.124407+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot's HUGE Updates: New AI & Usage-Based Pricing!",
       "hook_style": "Open with a surprising one-line stat or claim.",
