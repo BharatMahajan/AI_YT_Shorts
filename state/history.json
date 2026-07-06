@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor's REAL Game-Changer: Code from Your iPhone!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor on iOS: Your New Mobile Dev HQ!",
+        "Unleash Cursor AI: Now in Your Pocket!"
+      ],
+      "active_title": "Cursor's REAL Game-Changer: Code from Your iPhone!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "TGc_dacPMRk",
+      "published_at": "2026-07-06T18:21:36.579855+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Anthropic's Latest: Claude Science, Sonnet 5, Fable 5!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
