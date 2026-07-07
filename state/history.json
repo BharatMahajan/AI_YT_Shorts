@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Claude's Secret Thoughts REVEALED! Inner Monologue Shocks AI World!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "AI Mind-Reading?! Anthropic Unlocks Claude's Inner World!",
+        "Claude's Hidden Brain Exposed! The AI Just Blew Our Minds!"
+      ],
+      "active_title": "AI Mind-Reading?! Anthropic Unlocks Claude's Inner World!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "yjdzO34w7u0",
+      "published_at": "2026-07-07T17:53:17.696747+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's REAL Game-Changer: Code from Your iPhone!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
