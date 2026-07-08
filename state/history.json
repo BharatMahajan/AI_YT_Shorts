@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot: Instant Domains & Mobile Merge Fixes!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot's AI: Zero DNS & Mobile Dev Power-Up!",
+        "Devs Rejoice! Copilot's New Workflow Accelerators!"
+      ],
+      "active_title": "Devs Rejoice! Copilot's New Workflow Accelerators!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "T1kOyUsaD6o",
+      "published_at": "2026-07-08T17:13:57.449861+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot Unleashed: New App & Smarter AI for Everyone!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
