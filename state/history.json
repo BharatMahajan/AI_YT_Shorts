@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot Unleashed: New App & Smarter AI for Everyone!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Copilot Desktop App & Kimi K2.7: Big AI Updates!",
+        "GitHub Copilot Gets A Desktop App & Brain Upgrade!"
+      ],
+      "active_title": "GitHub Copilot Gets A Desktop App & Brain Upgrade!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "ZTZSoMVxBvM",
+      "published_at": "2026-07-08T06:34:17.955158+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "Claude's Secret Thoughts REVEALED! Inner Monologue Shocks AI World!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
