@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude Unwraps Reflect & Unleashes Sonnet 5!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Claude AI: Sonnet 5 & Reflect Dashboard!",
+        "New Claude Update: Sonnet 5 & AI Wrapped!"
+      ],
+      "active_title": "Claude Unwraps Reflect & Unleashes Sonnet 5!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "2s0KEcf7YCY",
+      "published_at": "2026-07-09T17:54:15.312435+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: Instant Domains & Mobile Merge Fixes!",
       "hook_style": "Open by busting a common misconception.",
