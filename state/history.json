@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor's SECRET Weapon: Grok 4.5 Unleashed!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Cursor's Brain Boost: Meet Grok 4.5!",
+        "Code Smarter: Cursor's Grok 4.5 Arrives!"
+      ],
+      "active_title": "Cursor's Brain Boost: Meet Grok 4.5!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "6CrRBGaXrJk",
+      "published_at": "2026-07-10T17:40:31.239848+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Unwraps Reflect & Unleashes Sonnet 5!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
