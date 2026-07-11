@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI Just Taught Itself New Skills! GPT-5.6 Sol Levels Up!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "OpenAI's GPT-5.6 Sol: AI's Self-Improvement Breakthrough!",
+        "GPT-5.6 Sol: The Dawn of Automated AI Researchers!"
+      ],
+      "active_title": "GPT-5.6 Sol: The Dawn of Automated AI Researchers!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "6LMWRz9z2ek",
+      "published_at": "2026-07-11T06:18:44.156106+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's SECRET Weapon: Grok 4.5 Unleashed!",
       "hook_style": "Open by busting a common misconception.",
