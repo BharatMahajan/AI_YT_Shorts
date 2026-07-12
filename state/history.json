@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot: GPT-5.6 & Instant Repo Insights!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Copilot's AI Brain Upgrade & New Repo Overviews!",
+        "Level Up Your Code: GitHub Copilot's Latest Features!"
+      ],
+      "active_title": "GitHub Copilot: GPT-5.6 & Instant Repo Insights!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "PWDHM_HD_kg",
+      "published_at": "2026-07-12T16:44:46.025899+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot's Brain Gets a HUGE Upgrade!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
