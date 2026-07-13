@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Anthropic UNLOCKS Claude's Brain! Plus Cowork Goes Mobile!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Claude's Thoughts Revealed! Cowork Hits Mobile & Web!",
+        "Anthropic Breakthrough: Inside Claude's 'Mind'! Cowork Anywhere!"
+      ],
+      "active_title": "Claude's Thoughts Revealed! Cowork Hits Mobile & Web!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "FbovrRYiwG0",
+      "published_at": "2026-07-13T17:49:34.985168+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: GPT-5.6 & Instant Repo Insights!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
