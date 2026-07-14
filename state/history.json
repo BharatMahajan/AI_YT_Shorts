@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor's Latest: Sand AI & Smart Side Chats Unleashed!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor 3.11: New Sand AI & Transcript Search!",
+        "Forget Grok: Cursor's REAL Dev Upgrades Are Here!"
+      ],
+      "active_title": "Forget Grok: Cursor's REAL Dev Upgrades Are Here!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "6qMRgnwIMbY",
+      "published_at": "2026-07-14T06:11:51.784303+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Anthropic UNLOCKS Claude's Brain! Plus Cowork Goes Mobile!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
