@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "iPhone's New Brain? 27 Billion AI Model Fits Your Pocket!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Massive AI on iPhone! Bonsai 27B Changes Everything!",
+        "Pocket AI Powerhouse: 27 Billion Params, Tiny Size!"
+      ],
+      "active_title": "iPhone's New Brain? 27 Billion AI Model Fits Your Pocket!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "cWkThGeMj7E",
+      "published_at": "2026-07-15T17:12:48.533570+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "OpenAI's First Hardware: A Moving ChatGPT Companion!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
