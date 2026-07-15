@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "OpenAI's First Hardware: A Moving ChatGPT Companion!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "ChatGPT Just Got a Body! OpenAI's Wild New Hardware!",
+        "OpenAI's Screenless Speaker: ChatGPT Comes Alive!"
+      ],
+      "active_title": "OpenAI's First Hardware: A Moving ChatGPT Companion!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "H3hqt1Uh1l4",
+      "published_at": "2026-07-15T06:13:16.210356+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's AI Evolution: Sand & Supercharged Chats!",
       "hook_style": "Open by busting a common misconception.",
