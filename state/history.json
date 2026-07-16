@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot's SECRET Sauce Just Got Better!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Copilot's AI Leaps Forward!",
+        "Next-Gen Coding with Copilot!"
+      ],
+      "active_title": "Copilot's AI Leaps Forward!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "CckJllQxJeE",
+      "published_at": "2026-07-16T06:16:37.634041+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "iPhone's New Brain? 27 Billion AI Model Fits Your Pocket!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
