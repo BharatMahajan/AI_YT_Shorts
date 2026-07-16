@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot: Smarter Code, Safer Projects!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "GitHub Copilot's Brains & Security Upgrades!",
+        "Copilot Unleashed: GPT-5.6 & Security Reviews!"
+      ],
+      "active_title": "GitHub Copilot's Brains & Security Upgrades!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "IPhZD8ICV5o",
+      "published_at": "2026-07-16T17:05:59.433089+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot's SECRET Sauce Just Got Better!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
