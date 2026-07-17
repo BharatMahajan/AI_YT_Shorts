@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude Levels Up: 1Password & Built-in Browser Unleashed!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Claude's Game-Changing Update: 1Password & Web Browsing!",
+        "AI Automation: Claude Gets 1Password & Web Browser!"
+      ],
+      "active_title": "AI Automation: Claude Gets 1Password & Web Browser!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "cxSLZ_wF0ME",
+      "published_at": "2026-07-17T16:59:09.088426+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude's HUGE 1Password Integration is HERE!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
