@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's HUGE 1Password Integration is HERE!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Claude AI Now Manages Your Passwords!",
+        "1Password + Claude = Productivity Power!"
+      ],
+      "active_title": "1Password + Claude = Productivity Power!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "WBW4WbT5mLg",
+      "published_at": "2026-07-17T06:14:38.728643+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: Smarter Code, Safer Projects!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
