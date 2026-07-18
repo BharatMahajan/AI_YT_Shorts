@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor's Latest: Supercharged Slack & Grok 4.5 AI Power!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Cursor Just Got SMARTER: Slack Collaboration & Grok AI!",
+        "Devs Rejoice! Cursor's New Slack & Grok 4.5 Updates!"
+      ],
+      "active_title": "Cursor's Latest: Supercharged Slack & Grok 4.5 AI Power!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "tUdPJjBG-sc",
+      "published_at": "2026-07-18T06:03:43.891796+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Levels Up: 1Password & Built-in Browser Unleashed!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
