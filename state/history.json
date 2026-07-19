@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "AI Just Learned to TRULY SEE?! Deepmind's GenCeption!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Deepmind's GenCeption: AI Vision Just Leveled Up!",
+        "Google AI's GenCeption: World Models for Smarter Vision!"
+      ],
+      "active_title": "Deepmind's GenCeption: AI Vision Just Leveled Up!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "_EiEca_Y8qA",
+      "published_at": "2026-07-19T16:48:21.693817+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "Open-Weight AI: Cyber Powerhouse, Security Risk!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
