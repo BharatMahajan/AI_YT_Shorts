@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Open-Weight AI: Cyber Powerhouse, Security Risk!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "AI Open Models: Elite Cyber Skills, Low Cost!",
+        "Warning: Open AI Models Are Cyber Powerhouses!"
+      ],
+      "active_title": "AI Open Models: Elite Cyber Skills, Low Cost!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "Cgm4jAIK4ZM",
+      "published_at": "2026-07-19T06:32:32.290917+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's Slack Superpowers: AI Code Planning & Multi-Repo Magic!",
       "hook_style": "Open by busting a common misconception.",
