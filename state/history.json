@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot: AI Just Got More YOU-Friendly!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot's Smartest Update Yet!",
+        "Your Code, Your AI Rules!"
+      ],
+      "active_title": "Your Code, Your AI Rules!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "N2RGBp19yrQ",
+      "published_at": "2026-07-20T17:20:08.033210+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "AI Just Learned to TRULY SEE?! Deepmind's GenCeption!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
