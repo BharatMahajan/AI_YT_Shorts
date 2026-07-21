@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude Tag Unleashed: AI Joins Your Team in Slack!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Anthropic's Claude Tag: AI for Team Collaboration!",
+        "Claude Tag: AI Integrates Directly into Slack!"
+      ],
+      "active_title": "Claude Tag Unleashed: AI Joins Your Team in Slack!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "pkawJtQq_0Q",
+      "published_at": "2026-07-21T17:11:37.217692+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude's Secret Upgrade: Turbo Speed & Enterprise Dominance!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
