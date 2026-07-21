@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Secret Upgrade: Turbo Speed & Enterprise Dominance!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Claude Unlocks Turbo Speed & Enterprise Agents!",
+        "Claude AI's Latest: Faster Dev, Smarter Agents!"
+      ],
+      "active_title": "Claude's Secret Upgrade: Turbo Speed & Enterprise Dominance!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "h7nF8ZVX6Gg",
+      "published_at": "2026-07-21T06:24:57.187200+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: AI Just Got More YOU-Friendly!",
       "hook_style": "Open by busting a common misconception.",
