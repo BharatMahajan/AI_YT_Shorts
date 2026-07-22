@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor's Team Code Breakthrough!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Cursor's Slack AI Just Got Smarter!",
+        "AI Code Collaboration: Cursor Unleashed in Slack"
+      ],
+      "active_title": "Cursor's Slack AI Just Got Smarter!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "jStXN5q66yY",
+      "published_at": "2026-07-22T17:11:32.619841+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor Unleashed: Double Limits, Super Agents!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
