@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor Unleashed: Double Limits, Super Agents!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor's AI: Limits OFF!",
+        "Twice the Cursor, Twice the Power!"
+      ],
+      "active_title": "Cursor's AI: Limits OFF!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "XVSqZU58t2I",
+      "published_at": "2026-07-22T06:27:23.054551+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Tag Unleashed: AI Joins Your Team in Slack!",
       "hook_style": "Open by busting a common misconception.",
