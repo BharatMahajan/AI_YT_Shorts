@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "NVIDIA Supercomputer Ignites US Military AI!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Jensen Huang Boosts Naval AI!",
+        "US Military Gets World's Most Powerful AI!"
+      ],
+      "active_title": "US Military Gets World's Most Powerful AI!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "wJxc8QUTmYM",
+      "published_at": "2026-07-23T06:32:47.840755+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's Team Code Breakthrough!",
       "hook_style": "Open by busting a common misconception.",
