@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "AI Chips SHOCKER! Etched Dumps GPUs for $10B Valuation!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "NEW AI Chips: No More GPUs?!",
+        "Etched: The $10 Billion AI Chip Revolution!"
+      ],
+      "active_title": "Etched: The $10 Billion AI Chip Revolution!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "dcNl-lM40k0",
+      "published_at": "2026-07-23T17:16:04.621658+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "NVIDIA Supercomputer Ignites US Military AI!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
