@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot: Gemini 3.6 Flash & Mobile Fixes!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Copilot Gets Gemini 3.6 Flash & On-The-Go Debugging!",
+        "GitHub Copilot's AI Just Got Smarter & More Mobile!"
+      ],
+      "active_title": "GitHub Copilot: Gemini 3.6 Flash & Mobile Fixes!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "hndRRcdgAv0",
+      "published_at": "2026-07-24T17:20:55.199978+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "Copilot's Brain Boost & Mobile Fixes!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
