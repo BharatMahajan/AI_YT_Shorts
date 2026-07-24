@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "Copilot's Brain Boost & Mobile Fixes!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "GitHub Copilot: Smarter AI, Mobile Magic!",
+        "Copilot Gets Gemini 3.6 Flash & On-The-Go Fixes!"
+      ],
+      "active_title": "Copilot's Brain Boost & Mobile Fixes!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "5C1XuYDxAWQ",
+      "published_at": "2026-07-24T06:26:10.581679+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "AI Chips SHOCKER! Etched Dumps GPUs for $10B Valuation!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
