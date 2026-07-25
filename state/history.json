@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude Opus 5 Is HERE! Near Fable 5 Power, Half The Price!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Opus 5 Drops: Claude's Newest AI Champ!",
+        "Anthropic's Opus 5: Smarter, Cheaper AI!"
+      ],
+      "active_title": "Opus 5 Drops: Claude's Newest AI Champ!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "wfd4l4r18CU",
+      "published_at": "2026-07-25T06:19:56.033295+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: Gemini 3.6 Flash & Mobile Fixes!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
