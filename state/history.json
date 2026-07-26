@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor's AI Savings Secret: Auto-Model Magic!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Cursor Router: Your AI Model Concierge!",
+        "Cut AI Costs 60% with Cursor's New Router!"
+      ],
+      "active_title": "Cut AI Costs 60% with Cursor's New Router!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "y8NbLqvQ7-w",
+      "published_at": "2026-07-26T06:40:50.093154+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Opus 5: Cracks AI Security & Slashes Costs!",
       "hook_style": "Open by busting a common misconception.",
