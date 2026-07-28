@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "Copilot's Brain & Enterprise Control Get a HUGE Upgrade!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "GitHub Copilot: Smarter AI, Tighter Control!",
+        "New Copilot: Claude Opus 5 & Org Policies!"
+      ],
+      "active_title": "GitHub Copilot: Smarter AI, Tighter Control!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "AecJbvAFk7Y",
+      "published_at": "2026-07-28T06:30:37.524122+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "China's AI Firepower: Kimi K3 Shakes Up Silicon Valley!",
       "hook_style": "Open by busting a common misconception.",
