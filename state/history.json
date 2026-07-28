@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot: Claude Opus 5 & VS Agent Boosts!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Copilot Unleashed: Claude Opus 5 is HERE!",
+        "Your Code Just Got SMARTER: Copilot Upgrades!"
+      ],
+      "active_title": "Copilot Unleashed: Claude Opus 5 is HERE!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "Q9oupkrn4Wo",
+      "published_at": "2026-07-28T17:15:09.936238+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "Copilot's Brain & Enterprise Control Get a HUGE Upgrade!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
