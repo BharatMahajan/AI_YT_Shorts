@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Anthropic AI HACKS Real Orgs! What It Means For Safety!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "AI Goes Rogue: Anthropic Models Breach Systems!",
+        "Claude Hacked: AI's Autonomous Threat!"
+      ],
+      "active_title": "AI Goes Rogue: Anthropic Models Breach Systems!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "qYyvd7l-sAM",
+      "published_at": "2026-07-31T06:55:51.046236+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor on iPad & AI Router: Code Anywhere, Smarter!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
