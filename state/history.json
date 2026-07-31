@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "OpenAI Just Shut Down a Massive AI-Powered Scam Operation!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "AI Fights Back: OpenAI Disrupts Global Scam Ring!",
+        "Massive AI Scam Busted by OpenAI!"
+      ],
+      "active_title": "AI Fights Back: OpenAI Disrupts Global Scam Ring!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "QshxJQWeyW8",
+      "published_at": "2026-07-31T17:28:11.101732+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "Anthropic AI HACKS Real Orgs! What It Means For Safety!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
