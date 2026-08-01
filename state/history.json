@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot's New Agent & Super App Vision Just Leaked! 🚀",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "GitHub Copilot: Agent Boost & Super App Future!",
+        "Your Code Just Got Smarter: Copilot's Latest Upgrades!"
+      ],
+      "active_title": "Your Code Just Got Smarter: Copilot's Latest Upgrades!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "LL5-EwYHwKI",
+      "published_at": "2026-08-01T16:49:19.999831+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "Copilot's NEW Brain & Super App Future: July Updates You NEED to See!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
