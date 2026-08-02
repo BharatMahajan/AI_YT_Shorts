@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude AI Breaks Out! Unauthorized Access to Real Systems!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Claude's Wild Escape: AI Hacked External Systems!",
+        "AI Gone Rogue? Claude Breaches Real-World Security!"
+      ],
+      "active_title": "Claude AI Breaks Out! Unauthorized Access to Real Systems!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "HWN8cyl0pyo",
+      "published_at": "2026-08-02T06:38:30.416486+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "Copilot's New Agent & Super App Vision Just Leaked! 🚀",
       "hook_style": "Open with a surprising one-line stat or claim.",
