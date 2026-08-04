@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Siri Finally Smart?! Apple's AI Overhaul is HERE!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Apple Just FIXED Siri! Your AI Assistant Just Got WAAAY Smarter!",
+        "Forget Old Siri: Apple's AI Brain Transplant Just Dropped!"
+      ],
+      "active_title": "Forget Old Siri: Apple's AI Brain Transplant Just Dropped!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "5xKC8CjQ3HM",
+      "published_at": "2026-08-04T06:28:41.034512+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor Unleashed: AI Router & iPad! Code Smarter, Anywhere!",
       "hook_style": "Open with a surprising one-line stat or claim.",
