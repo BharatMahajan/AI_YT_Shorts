@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "AI's $10 BILLION Power Play! Anthropic Fuels Up!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Anthropic's Shock $10B Compute Deal!",
+        "New Startup Fuels AI: Anthropic's Massive Compute Boost!"
+      ],
+      "active_title": "New Startup Fuels AI: Anthropic's Massive Compute Boost!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "Hov_StLAATQ",
+      "published_at": "2026-08-04T17:34:00.988145+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "Siri Finally Smart?! Apple's AI Overhaul is HERE!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
