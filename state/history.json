@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "Copilot's NEW Brain & Triggered Actions!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot Just Got SMARTER: Trigger Automations!",
+        "GitHub Copilot: Cloud Agent Gets an Upgrade!"
+      ],
+      "active_title": "Copilot's NEW Brain & Triggered Actions!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "6-g6J7CBbrE",
+      "published_at": "2026-08-05T06:19:03.283853+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "AI's $10 BILLION Power Play! Anthropic Fuels Up!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
