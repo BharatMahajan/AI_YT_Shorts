@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot's NEW AI Control & Comment Automation!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Copilot's AI Gets Smarter, YOU Get More Control!",
+        "GitHub Copilot: Automate with Just a Comment!"
+      ],
+      "active_title": "GitHub Copilot's NEW AI Control & Comment Automation!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "nYDpr17tA3E",
+      "published_at": "2026-08-05T17:24:20.875245+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "Copilot's NEW Brain & Triggered Actions!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
