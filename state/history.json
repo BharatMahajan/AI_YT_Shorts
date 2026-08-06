@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Double Threat: Cracks Encryption & Builds Games!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Claude Unleashed: Crypto Whiz & Game Creator!",
+        "Anthropic's Claude: Breaking Encryption, Building Worlds!"
+      ],
+      "active_title": "Claude Unleashed: Crypto Whiz & Game Creator!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "d5G_yP24NEQ",
+      "published_at": "2026-08-06T06:29:04.039602+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot's NEW AI Control & Comment Automation!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
