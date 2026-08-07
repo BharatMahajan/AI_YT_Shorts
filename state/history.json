@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor: AI's New Command Center! Google Workspace & Agent Standard!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Cursor's AI Goes Beyond Code: Workspace & Agent Standard!",
+        "Cursor Unleashed: AI Superpowers for Your Whole Workflow!"
+      ],
+      "active_title": "Cursor Unleashed: AI Superpowers for Your Whole Workflow!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "lBG33lB4u-I",
+      "published_at": "2026-08-07T16:44:43.674281+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's AI Goes Google: Full Workflow Control!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
