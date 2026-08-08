@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "OpenAI's Astra Model PAUSED! Too Powerful for its Own Good?!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "OpenAI Hits Brakes on Astra: AI Too Dangerous?",
+        "STOP! OpenAI Pauses Astra Over Cyberattack Fears!"
+      ],
+      "active_title": "OpenAI's Astra Model PAUSED! Too Powerful for its Own Good?!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "A1feMbjZOHE",
+      "published_at": "2026-08-08T04:54:08.172846+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor: AI's New Command Center! Google Workspace & Agent Standard!",
       "hook_style": "Open by busting a common misconception.",
