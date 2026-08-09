@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot's ROI & Smart Reviews: Unleash AI's True Impact!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "GitHub Copilot: New ROI Dashboard & Review Control!",
+        "AI Just Got Smarter: Copilot's ROI & Effort Levels!"
+      ],
+      "active_title": "GitHub Copilot: New ROI Dashboard & Review Control!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "cVfUHt8FmkY",
+      "published_at": "2026-08-09T16:12:00.186555+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot: Smart Reviews & ROI Insights Unleashed!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
