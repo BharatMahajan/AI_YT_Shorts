@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude LEVELS UP: Auto Mode Default & Cowork Launch!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Anthropic's Latest: Claude Code Goes Auto, Cowork Debuts!",
+        "Claude Unlocks Next-Gen Productivity: Auto Code & Cowork!"
+      ],
+      "active_title": "Claude Unlocks Next-Gen Productivity: Auto Code & Cowork!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "IF_l1WUQ3TU",
+      "published_at": "2026-08-10T05:25:31.747823+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "Copilot's ROI & Smart Reviews: Unleash AI's True Impact!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
