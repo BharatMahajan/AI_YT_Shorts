@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor Shatters Limits: iPad App & Google Workspace Power-Up!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor Unleashed: Code on iPad, Rule Google Workspace!",
+        "Your Code Anywhere: Cursor's iPad & Workspace Revolution!"
+      ],
+      "active_title": "Cursor Shatters Limits: iPad App & Google Workspace Power-Up!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "co2z3-1t-4g",
+      "published_at": "2026-08-11T05:04:43.169666+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude's Wild Ride: Data Deletion & Default AI Coding!",
       "hook_style": "Open with a surprising one-line stat or claim.",
