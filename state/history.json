@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "Google & DeepMind UNLOCK Sign Language AI! SL2T is HERE!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Sign Language AI Revolution: Google's SL2T!",
+        "Massive AI Accessibility Win: DeepMind's SL2T!"
+      ],
+      "active_title": "Sign Language AI Revolution: Google's SL2T!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "N0cjianRjjg",
+      "published_at": "2026-08-12T16:47:21.847261+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "NVIDIA Just Unlocked $500 Billion for AI Factories!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
