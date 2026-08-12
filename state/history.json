@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "NVIDIA Just Unlocked $500 Billion for AI Factories!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "AI's HALF-TRILLION Dollar Power Play Just Dropped!",
+        "NVIDIA & Wall Street: $500B for AI Compute!"
+      ],
+      "active_title": "AI's HALF-TRILLION Dollar Power Play Just Dropped!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "rUSWBvcOD7E",
+      "published_at": "2026-08-12T05:33:43.727337+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's New Leap: Workspace AI & iPad Power!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
