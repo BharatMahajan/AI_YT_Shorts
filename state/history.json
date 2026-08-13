@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot Super App & Vision AI: Your Ultimate Productivity Boost!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Copilot's Super App Future Arrives!",
+        "GitHub Copilot: Vision AI & Unified Experience!"
+      ],
+      "active_title": "GitHub Copilot: Vision AI & Unified Experience!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "ekjjxY4dvHg",
+      "published_at": "2026-08-13T16:45:21.559711+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "Copilot Sees: GitHub's New Vision & Agent AI!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
