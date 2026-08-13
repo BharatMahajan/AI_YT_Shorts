@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "Copilot Sees: GitHub's New Vision & Agent AI!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "GitHub Copilot: Vision AI & Agent Plugins Unleashed!",
+        "New Copilot Features: Vision + Customizable AI Agents!"
+      ],
+      "active_title": "New Copilot Features: Vision + Customizable AI Agents!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "WYjFOar5DEo",
+      "published_at": "2026-08-13T05:32:03.167230+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "Google & DeepMind UNLOCK Sign Language AI! SL2T is HERE!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
