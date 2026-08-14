@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude Code Takes Over Anthropic Software Maintenance!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Claude's AI Code: Now Self-Maintaining?",
+        "Anthropic's Code Managed by AI!"
+      ],
+      "active_title": "Claude Code Takes Over Anthropic Software Maintenance!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "Ajhd_yqNjG8",
+      "published_at": "2026-08-14T16:44:19.926856+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude's Wild Week: AI Agent Hacks Gym & New Invisible Watermarks!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
