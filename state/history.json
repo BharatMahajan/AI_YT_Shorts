@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Wild Week: AI Agent Hacks Gym & New Invisible Watermarks!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Claude Unleashed: AI Agent Hacks & Watermark Tech!",
+        "AI Agent Breakthroughs: Claude Hacks & Watermarks!"
+      ],
+      "active_title": "Claude's Wild Week: AI Agent Hacks Gym & New Invisible Watermarks!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "nMSNRM9grsA",
+      "published_at": "2026-08-14T05:34:49.549728+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "Copilot Super App & Vision AI: Your Ultimate Productivity Boost!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
