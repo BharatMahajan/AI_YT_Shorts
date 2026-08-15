@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor AI Agents: 3X Faster Coding Power!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Cursor's AI Agents Just Got a HUGE Speed Boost!",
+        "Triple Speed: Cursor AI Agents Unleashed!"
+      ],
+      "active_title": "Cursor's AI Agents Just Got a HUGE Speed Boost!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "iRowz8sw7WE",
+      "published_at": "2026-08-15T04:22:36.326539+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Code Takes Over Anthropic Software Maintenance!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
