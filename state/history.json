@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Anthropic's Claude Gets Invisible AI Watermarks!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Claude's New AI Watermarks: Know What's Real!",
+        "Anthropic Adds Watermarks: AI Transparency NOW!"
+      ],
+      "active_title": "Anthropic Adds Watermarks: AI Transparency NOW!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "fS4LhuMuNC4",
+      "published_at": "2026-08-16T04:34:31.394440+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor: 3X Faster AI Agents Amidst SpaceX's $60B Bet!",
       "hook_style": "Open by busting a common misconception.",
