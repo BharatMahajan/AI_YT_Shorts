@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "OpenAI's AI Safety Team: DISSOLVED! Catastrophic Risks!?",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "OpenAI Scraps Catastrophic AI Risk Team!",
+        "OpenAI Dissolves Key AI Safety Division!"
+      ],
+      "active_title": "OpenAI Dissolves Key AI Safety Division!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "_kfjIyqX44s",
+      "published_at": "2026-08-16T16:04:08.731083+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "Anthropic's Claude Gets Invisible AI Watermarks!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
