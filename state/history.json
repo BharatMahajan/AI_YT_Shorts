@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot's NEW AI Choice & Grok 4.6! 🚀",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "GitHub Copilot: Pick YOUR AI Brain!",
+        "Copilot's NEW Model Choice & Power Boost!"
+      ],
+      "active_title": "GitHub Copilot's NEW AI Choice & Grok 4.6! 🚀",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "hzIipYbJMHg",
+      "published_at": "2026-08-17T16:12:56.847369+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "Copilot's NEW BRAIN! You're Underestimating GitHub AI! 🚀",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
