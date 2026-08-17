@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "Copilot's NEW BRAIN! You're Underestimating GitHub AI! 🚀",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "GitHub Copilot's Massive AI Upgrade: Grok & Gemini Arrive!",
+        "STOP Underestimating Copilot: NEW Grok & Gemini Models!"
+      ],
+      "active_title": "Copilot's NEW BRAIN! You're Underestimating GitHub AI! 🚀",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "IDttJ3b9yyA",
+      "published_at": "2026-08-17T04:28:41.609620+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "OpenAI's AI Safety Team: DISSOLVED! Catastrophic Risks!?",
       "hook_style": "Open with a surprising one-line stat or claim.",
