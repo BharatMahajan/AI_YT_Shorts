@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude's Wild Week: New AI Watermarks & Firing Humans!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Claude Shakes Up AI: Watermarks & Human Impact!",
+        "Invisible Signatures & AI Agents: Claude's Latest!"
+      ],
+      "active_title": "Claude Shakes Up AI: Watermarks & Human Impact!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "hhHb8_VhA_o",
+      "published_at": "2026-08-18T16:09:29.249476+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude's New Invisible Watermarks! What You Need to Know",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
