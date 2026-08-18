@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's New Invisible Watermarks! What You Need to Know",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Anthropic's Claude: Hidden AI Signatures!",
+        "Claude AI Adds Secret Watermarks to All Text!"
+      ],
+      "active_title": "Anthropic's Claude: Hidden AI Signatures!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "6iUyD_aYl7U",
+      "published_at": "2026-08-18T04:31:15.867344+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot's NEW AI Choice & Grok 4.6! 🚀",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
