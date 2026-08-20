@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "OpenAI's AI Privacy Game Changer! Zero Data Retention is HERE!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "OpenAI Secures Your AI Data! No More Worries!",
+        "AI Privacy Solved? OpenAI's New Frontier!"
+      ],
+      "active_title": "OpenAI's AI Privacy Game Changer! Zero Data Retention is HERE!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "MXI47X8QQ7U",
+      "published_at": "2026-08-20T04:25:57.778352+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor Origin: Code Hosting Takes Aim at GitHub!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
