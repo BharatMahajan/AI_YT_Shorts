@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "AI Solves Unsolvable Math: Is This the End of Human Dominance?!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "OpenAI's Math Breakthrough: An Existential Crisis for Mathematicians!",
+        "AI Cracks Ancient Math Problems: What Does It Mean for YOU?!"
+      ],
+      "active_title": "AI Solves Unsolvable Math: Is This the End of Human Dominance?!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "otL8T5kzwIw",
+      "published_at": "2026-08-20T16:22:14.545402+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "OpenAI's AI Privacy Game Changer! Zero Data Retention is HERE!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
