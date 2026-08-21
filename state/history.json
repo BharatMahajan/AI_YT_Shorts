@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot Gets SMARTER! ✨ Your AI Copilot Just Leveled Up!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "GitHub Copilot's Latest Upgrade Revealed!",
+        "NEW GitHub Copilot Features You NEED to See!"
+      ],
+      "active_title": "GitHub Copilot's Latest Upgrade Revealed!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "37keR-yW25g",
+      "published_at": "2026-08-21T16:13:34.005015+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot: Grok 4.6 & AI Canvases Unleashed!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
