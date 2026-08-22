@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude's Wild Ride: Watermark Bypasses & Opus 4.6 Flaws!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Claude's Double Whammy: Watermarks Hacked, Opus 4.6 Leaks!",
+        "Invisible Watermarks & Smut-Machine: Claude's Latest Saga!"
+      ],
+      "active_title": "Invisible Watermarks & Smut-Machine: Claude's Latest Saga!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "NUR11e7ixJQ",
+      "published_at": "2026-08-22T16:02:56.708463+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude's Dual Attack: Cyber Defense & Watermark Wars!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
