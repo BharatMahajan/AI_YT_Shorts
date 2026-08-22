@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Dual Attack: Cyber Defense & Watermark Wars!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Mythos 5 Secures Code, Watermarks Get Workarounds: Claude Update!",
+        "Claude's Big Moves: Mythos 5 & AI Watermark Reactions!"
+      ],
+      "active_title": "Claude's Big Moves: Mythos 5 & AI Watermark Reactions!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "DgvzU1Zwoi4",
+      "published_at": "2026-08-22T04:30:54.843667+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot Gets SMARTER! ✨ Your AI Copilot Just Leveled Up!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
