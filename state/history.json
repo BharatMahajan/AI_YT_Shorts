@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor Origin: SpaceX's $60B Bet on Dev's Future!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "SpaceX Powers Cursor: Origin Code Hosting Revealed!",
+        "Cursor's Origin: The $60B AI Code Revolution!"
+      ],
+      "active_title": "Cursor Origin: SpaceX's $60B Bet on Dev's Future!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "X_7gZrjteh8",
+      "published_at": "2026-08-23T15:55:39.774692+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor Reimagined: Code Hosting & Workspace Mastery!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
