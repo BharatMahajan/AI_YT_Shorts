@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor Reimagined: Code Hosting & Workspace Mastery!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor's AI Evolution: Host Code & Google Power!",
+        "Cursor Destroys Old Ideas: Code Hosted, Google AI!"
+      ],
+      "active_title": "Cursor Reimagined: Code Hosting & Workspace Mastery!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "sDcz62c-368",
+      "published_at": "2026-08-23T04:26:08.544118+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude's Wild Ride: Watermark Bypasses & Opus 4.6 Flaws!",
       "hook_style": "Open with a surprising one-line stat or claim.",
