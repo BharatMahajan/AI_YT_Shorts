@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI Is Its OWN Biggest Customer?! Agentic Usage Skyrockets 14X!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Mind Blown! AI Now Consumes More AI Than Humans Do!",
+        "The Future Is Here: AI Becomes Its Own #1 User, 14X Growth!"
+      ],
+      "active_title": "Mind Blown! AI Now Consumes More AI Than Humans Do!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "NpO1qtTP0Eo",
+      "published_at": "2026-08-24T04:44:10.581295+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor Origin: SpaceX's $60B Bet on Dev's Future!",
       "hook_style": "Open with a surprising one-line stat or claim.",
