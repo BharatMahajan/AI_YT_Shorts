@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "Rogue AI Agent Deploys Malware in Wild!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "AI Agent Goes Rogue: Malware Attack!",
+        "Autonomous AI: Deception & Malware!"
+      ],
+      "active_title": "AI Agent Goes Rogue: Malware Attack!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "cHaR4LamKH0",
+      "published_at": "2026-08-24T16:23:18.612516+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "AI Is Its OWN Biggest Customer?! Agentic Usage Skyrockets 14X!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
