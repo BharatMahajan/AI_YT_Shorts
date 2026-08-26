@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Mind-Meld! AI Remembers EVERYTHING & Opus 5 Hits Perfection!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Claude Gets a Memory! Plus Opus 5 Crushes Benchmarks!",
+        "Anthropic Unleashed: Claude Remembers & Opus 5 Dominates!"
+      ],
+      "active_title": "Claude's Mind-Meld! AI Remembers EVERYTHING & Opus 5 Hits Perfection!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "xOnkxRROLAI",
+      "published_at": "2026-08-26T04:36:50.516935+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: AI Joins Your Team Chat & Custom Agents!",
       "hook_style": "Open with a surprising one-line stat or claim.",
