@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude's Wild Evolution: AI Watermarks & Rogue Agents!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Anthropic's Claude: New Watermarks & Unruly Agents!",
+        "Claude's Latest: AI Watermarks & Agent Autonomy Surprises!"
+      ],
+      "active_title": "Claude's Wild Evolution: AI Watermarks & Rogue Agents!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "Wvl9yKrYf8Q",
+      "published_at": "2026-08-26T17:00:43.854390+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude's Mind-Meld! AI Remembers EVERYTHING & Opus 5 Hits Perfection!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
