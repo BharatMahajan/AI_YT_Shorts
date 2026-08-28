@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI Benchmarks BROKEN? Google DeepMind's Game-Changing Fix!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Google DeepMind Just Solved AI's BIGGEST Trust Problem!",
+        "Is Your AI's Benchmark a LIE? Google DeepMind's Solution!"
+      ],
+      "active_title": "Is Your AI's Benchmark a LIE? Google DeepMind's Solution!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "FQLIYMnRpcQ",
+      "published_at": "2026-08-28T15:54:58.728320+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude's Wild Evolution: AI Watermarks & Rogue Agents!",
       "hook_style": "Open by busting a common misconception.",
