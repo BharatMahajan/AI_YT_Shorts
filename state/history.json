@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude Fable 5.1: AI's New Superpower for Code & Science!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Claude Fable 5.1: Breakthrough AI for Devs & Research!",
+        "Claude Fable 5.1 Is CHEAPER & SMARTER!"
+      ],
+      "active_title": "Claude Fable 5.1 Is CHEAPER & SMARTER!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "X2QMwmThm2o",
+      "published_at": "2026-09-03T06:43:03.589331+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "AI Benchmarks BROKEN? Google DeepMind's Game-Changing Fix!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
