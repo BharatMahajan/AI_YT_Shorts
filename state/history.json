@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude Fable 5.1: Crushes Science, Cuts Your Costs!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Fable 5.1: Claude's Brain Upgrade & Price Drop!",
+        "Anthropic Drops Claude Fable 5.1: Speed & Savings!"
+      ],
+      "active_title": "Anthropic Drops Claude Fable 5.1: Speed & Savings!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "GZlU4_dbytg",
+      "published_at": "2026-09-03T11:28:22.084949+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude Fable 5.1: AI's New Superpower for Code & Science!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
