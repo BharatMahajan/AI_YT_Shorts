@@ -158,17 +158,63 @@ def run_render_stage() -> None:
     log.info("Video ready: %s", config.VIDEO_FILE)
 
 
+def _video_duration_seconds() -> float:
+    captions = _read_json(config.CAPTIONS_FILE)
+    if isinstance(captions, dict):
+        dur = captions.get("duration")
+        if isinstance(dur, (int, float)) and dur > 0:
+            return float(dur)
+    return 0.0
+
+
+def _record_upload_log(*, video_id: str, title: str, published_at: str) -> None:
+    """Append a human-readable row (size, length, URL, date) for this upload.
+
+    Written to state/upload_log.csv (committed alongside history.json) and,
+    when running in GitHub Actions, also echoed into the run's Job Summary.
+    """
+    size_bytes = config.VIDEO_FILE.stat().st_size if config.VIDEO_FILE.exists() else 0
+    size_mb = size_bytes / (1024 * 1024)
+    duration_s = _video_duration_seconds()
+    url = f"https://youtu.be/{video_id}"
+
+    log_file = config.STATE / "upload_log.csv"
+    is_new = not log_file.exists()
+    with open(log_file, "a", encoding="utf-8", newline="") as f:
+        if is_new:
+            f.write("published_at_utc,video_id,youtube_url,size_mb,duration_seconds,title\n")
+        safe_title = (title or "").replace('"', "'")
+        f.write(
+            f'{published_at},{video_id},{url},{size_mb:.2f},{duration_s:.1f},"{safe_title}"\n'
+        )
+
+    summary_path = os.getenv("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        try:
+            with open(summary_path, "a", encoding="utf-8") as f:
+                f.write("### 🎬 Published Short\n")
+                f.write(f"- **Title:** {title}\n")
+                f.write(f"- **URL:** {url}\n")
+                f.write(f"- **Size:** {size_mb:.2f} MB\n")
+                f.write(f"- **Length:** {duration_s:.1f}s\n")
+                f.write(f"- **Published (UTC):** {published_at}\n")
+        except OSError:
+            pass
+
+
 def run_upload_stage() -> None:
     preflight.run(require_upload=True, require_node=False)
     script = _script_or_fail()
     from .upload_youtube import upload
 
     vid = upload(script)
+    published_at = datetime.now(timezone.utc).isoformat()
     history.update_latest(
         history.load(),
         video_id=vid,
-        published_at=datetime.now(timezone.utc).isoformat(),
+        published_at=published_at,
     )
+    _record_upload_log(video_id=vid, title=script.get("title", ""), published_at=published_at)
     log.info("Done. Published https://youtu.be/%s", vid)
 
 

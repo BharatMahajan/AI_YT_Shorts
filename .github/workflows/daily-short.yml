@@ -2,9 +2,14 @@ name: Daily AI Short
 
 on:
   schedule:
-    # Run twice daily at 09:00 and 21:00 IST.
-    # IST = UTC+5:30 -> 09:00 IST = 03:30 UTC, 21:00 IST = 15:30 UTC.
-    - cron: "30 3,15 * * *"
+    # Fire every hour. GitHub Actions schedules are best-effort and can (and
+    # regularly do) fire hours late on low-traffic repos, so relying on a
+    # narrow "twice a day at an exact minute" cron caused every run to land
+    # outside the old +/-180min window and silently skip publishing for
+    # weeks. Firing hourly means whichever tick actually lands inside a
+    # target slot's (wide) window will publish it; the gate below still
+    # de-dupes so only one publish happens per slot.
+    - cron: "5 * * * *"
   workflow_dispatch: {}   # lets you run it manually from the Actions tab anytime
 
 permissions:
@@ -32,7 +37,6 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           BRANCH: ${{ github.ref_name }}
           WORKFLOW_FILE: daily-short.yml
-          SLOT_TOLERANCE_MINUTES: "180"
         shell: bash
         run: |
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
@@ -52,41 +56,31 @@ jobs:
           from datetime import datetime, timedelta, timezone
 
           IST = timezone(timedelta(hours=5, minutes=30))
-          tolerance_minutes = int(os.getenv("SLOT_TOLERANCE_MINUTES", "180"))
-          tolerance = timedelta(minutes=tolerance_minutes)
 
-          def in_window(ts: datetime, start: datetime, end: datetime) -> bool:
-              return start <= ts < end
-
+          # Two publish targets, 12h apart: 09:00 and 21:00 IST. Each slot's
+          # window is the full 12h half-day *centered* on its target (i.e.
+          # bounded by the midpoints between the two targets: 03:00 and
+          # 15:00 IST). This gives +/-6h of slack around each target, which
+          # comfortably absorbs the multi-hour scheduling delays GitHub
+          # Actions can introduce, while still guaranteeing at most one
+          # publish per slot per day.
           def get_active_slot(now_ist: datetime):
-              morning = now_ist.replace(hour=9, minute=0, second=0, microsecond=0)
-              evening = now_ist.replace(hour=21, minute=0, second=0, microsecond=0)
-              morning_end = morning + tolerance
-              evening_end = evening + tolerance
+              day = now_ist.date()
+              bound_am = now_ist.replace(hour=3, minute=0, second=0, microsecond=0)
+              bound_pm = now_ist.replace(hour=15, minute=0, second=0, microsecond=0)
 
-              if in_window(now_ist, morning, morning_end):
-                  return {
-                      "slot_key": f"{morning.date().isoformat()}-AM",
-                      "start": morning,
-                      "end": morning_end,
-                  }
-              if in_window(now_ist, evening, evening_end):
-                  return {
-                      "slot_key": f"{evening.date().isoformat()}-PM",
-                      "start": evening,
-                      "end": evening_end,
-                  }
-              return None
+              if bound_am <= now_ist < bound_pm:
+                  return {"slot_key": f"{day.isoformat()}-AM", "start": bound_am, "end": bound_pm}
+              if now_ist >= bound_pm:
+                  next_bound_am = bound_am + timedelta(days=1)
+                  return {"slot_key": f"{day.isoformat()}-PM", "start": bound_pm, "end": next_bound_am}
+              # now_ist < bound_am -> still in yesterday's PM slot (before 03:00 IST)
+              prev_bound_pm = bound_pm - timedelta(days=1)
+              prev_day = day - timedelta(days=1)
+              return {"slot_key": f"{prev_day.isoformat()}-PM", "start": prev_bound_pm, "end": bound_am}
 
           now_ist = datetime.now(timezone.utc).astimezone(IST)
           active_slot = get_active_slot(now_ist)
-
-          if active_slot is None:
-              with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
-                  out.write("should_run=false\n")
-                  out.write("reason=outside_target_window\n")
-                  out.write("slot_key=none\n")
-              raise SystemExit(0)
 
           current_slot = active_slot["slot_key"]
           slot_start = active_slot["start"]
@@ -213,13 +207,13 @@ jobs:
       - name: Upload to YouTube
         run: python -m pipeline.run --stage upload
 
-      - name: Persist anti-repetition history
+      - name: Persist anti-repetition history + upload log
         if: success() && !cancelled()
         run: |
           git config user.name "ai-shorts-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add state/history.json || true
-          git commit -m "chore: update history [skip ci]" || echo "no changes"
+          git add state/history.json state/upload_log.csv || true
+          git commit -m "chore: update history + upload log [skip ci]" || echo "no changes"
           git push || echo "nothing to push"
 
   skip-info:
