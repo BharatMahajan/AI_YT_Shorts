@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude Fable & Mythos 5.1: AI's New Superpowers Just Dropped!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Claude Drops Fable 5.1 & Mythos 5.1: Major AI Upgrades!",
+        "Anthropic's Fable 5.1 & Mythos 5.1 Are Here – Game Changer!"
+      ],
+      "active_title": "Anthropic's Fable 5.1 & Mythos 5.1 Are Here – Game Changer!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "08zf3e7HASU",
+      "published_at": "2026-09-04T00:12:17.844868+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude Fable 5.1: Crushes Science, Cuts Your Costs!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
