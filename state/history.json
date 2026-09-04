@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor's AI Goes Private! Self-Hosted Agents & Cloudflare Support!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Cursor AI: Self-Hosted for Ultimate Security!",
+        "Secure Your Code! Cursor's New Self-Hosted AI Agents!"
+      ],
+      "active_title": "Cursor's AI Goes Private! Self-Hosted Agents & Cloudflare Support!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "UoYAD3azYkM",
+      "published_at": "2026-09-04T22:35:38.731650+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's NEW Self-Hosted AI! Secure Your Code!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
