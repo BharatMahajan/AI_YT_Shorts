@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor's NEW Self-Hosted AI! Secure Your Code!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Cursor's AI Goes On-Prem: Total Code Security!",
+        "Cursor's Game-Changer: Private AI Agents for Devs!"
+      ],
+      "active_title": "Cursor's NEW Self-Hosted AI! Secure Your Code!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "G1KjslV33GY",
+      "published_at": "2026-09-04T11:26:44.848260+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Fable & Mythos 5.1: AI's New Superpowers Just Dropped!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
