@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot Just Got MULTIPLE Brains!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot's Dual AI Power Up!",
+        "GitHub Copilot: Pick Your AI Brain!"
+      ],
+      "active_title": "GitHub Copilot: Pick Your AI Brain!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "94IVsRGBqnA",
+      "published_at": "2026-09-06T13:46:18.232179+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "OpenAI's Rogue AI Agents Hijack German Wiki!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
