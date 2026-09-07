@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude Fable 5.1: AI That Builds Tools & Saves You Money!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Claude's Latest: AI Becomes Your Dev Partner!",
+        "New Claude Fable 5.1: Coding, Creating, Cost-Saving!"
+      ],
+      "active_title": "Claude Fable 5.1: AI That Builds Tools & Saves You Money!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "dnmeE2n863Q",
+      "published_at": "2026-09-07T23:44:42.562472+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude's Fable 5.1 Drops: Cache Reads & Agentic AI Power!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
