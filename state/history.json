@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Fable 5.1 Drops: Cache Reads & Agentic AI Power!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Claude Unleashed: Fable 5.1 Brings Cost-Saving AI!",
+        "New Claude Fable 5.1: Smart Agents & Cheap Memory!"
+      ],
+      "active_title": "Claude's Fable 5.1 Drops: Cache Reads & Agentic AI Power!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "6u6Gyk1ZAq4",
+      "published_at": "2026-09-07T10:26:33.849125+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "Copilot's NEW BRAINS! Your AI Partner Just Got SMARTER!",
       "hook_style": "Open by busting a common misconception.",
