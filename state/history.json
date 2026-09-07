@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot's NEW BRAINS! Your AI Partner Just Got SMARTER!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "GitHub Copilot: Astra Unleashed & Multi-Model Power!",
+        "Massive Copilot Update: GPT-6 Astra & AI Choices!"
+      ],
+      "active_title": "Massive Copilot Update: GPT-6 Astra & AI Choices!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "dfpNkKZ7HB8",
+      "published_at": "2026-09-07T00:00:44.661370+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot Just Got MULTIPLE Brains!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
