@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor's Secret Weapon: Self-Hosted AI Agents!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Cursor's Latest: Keep Your AI PRIVATE!",
+        "Run Cursor AI Anywhere: New Features!"
+      ],
+      "active_title": "Cursor's Latest: Keep Your AI PRIVATE!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "cYxljJAzRmE",
+      "published_at": "2026-09-08T09:43:02.693096+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Fable 5.1: AI That Builds Tools & Saves You Money!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
