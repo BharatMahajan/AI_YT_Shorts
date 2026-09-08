@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor's AI Goes Local! Self-Hosted Agents for Total Code Control!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Cursor AI: Secure Coding On Your Network!",
+        "Self-Hosted Cursor AI: Unprecedented Privacy!"
+      ],
+      "active_title": "Cursor AI: Secure Coding On Your Network!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "bJSWrEVCxkQ",
+      "published_at": "2026-09-08T21:59:14.388377+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's Secret Weapon: Self-Hosted AI Agents!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
