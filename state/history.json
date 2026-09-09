@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI Solves Unsolvable Math?! OpenAI's Navier-Stokes Drama!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "OpenAI Cracks Millennium Math Problem, Then DRAMA!",
+        "Navier-Stokes Solved! But OpenAI's AI Controversy Begins!"
+      ],
+      "active_title": "Navier-Stokes Solved! But OpenAI's AI Controversy Begins!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "XYTrtWnhA4k",
+      "published_at": "2026-09-09T09:55:42.008226+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's AI Goes Local! Self-Hosted Agents for Total Code Control!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
