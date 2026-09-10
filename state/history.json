@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot's New Brains: GPT-6 Astra & HydraFusion Unleashed!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot Just Got a Double AI Upgrade!",
+        "Your AI Coding Partner Just Leveled Up!"
+      ],
+      "active_title": "GitHub Copilot's New Brains: GPT-6 Astra & HydraFusion Unleashed!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "gDxNV_9rTjs",
+      "published_at": "2026-09-10T09:53:51.986227+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "OpenAI's Math Bomb: AI Cracks Unsolvable Equations!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
