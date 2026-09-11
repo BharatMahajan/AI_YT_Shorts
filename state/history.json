@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude Fable 5.1: Gov AI & Security Superpower!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Anthropic's Fable 5.1: From White House to Bug Hunts!",
+        "Claude Fable 5.1: Gov-Approved & Security-Smart!"
+      ],
+      "active_title": "Anthropic's Fable 5.1: From White House to Bug Hunts!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "oSiJSq5WGdE",
+      "published_at": "2026-09-11T09:55:24.936518+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: AI Brains JUST Got a Massive Upgrade!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
