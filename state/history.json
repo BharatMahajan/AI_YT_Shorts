@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor Projects: AI Tackles Your Biggest Codebases!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor AI: The Future of Project Management!",
+        "Code with AI: Cursor Projects Unveiled!"
+      ],
+      "active_title": "Code with AI: Cursor Projects Unveiled!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "oP9vaNMrICU",
+      "published_at": "2026-09-12T22:32:37.686904+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor Projects: AI Finally Tackles HUGE Codebases!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
