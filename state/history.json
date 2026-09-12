@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor Projects: AI Finally Tackles HUGE Codebases!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Cursor's Game Changer: AI Projects with Subagents!",
+        "Massive Dev Work? Cursor Projects Got You!"
+      ],
+      "active_title": "Massive Dev Work? Cursor Projects Got You!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "xninrnP5_IQ",
+      "published_at": "2026-09-12T10:53:41.024480+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude's Latest: AI Security & Coding Power!",
       "hook_style": "Open by busting a common misconception.",
