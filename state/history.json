@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "AI Agents Aren't Hype! Astra Runs Businesses & Pilots Drones!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "GPT-6 Astra: AI Agents Already Run the Show!",
+        "Forget Chatbots! AI Agents Now Manage Companies!"
+      ],
+      "active_title": "AI Agents Aren't Hype! Astra Runs Businesses & Pilots Drones!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "2CnhZ3rgwmc",
+      "published_at": "2026-09-13T22:47:50.197516+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "GPT-6 Astra: AI Agents Just Took Over Your Company?!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
