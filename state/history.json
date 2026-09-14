@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot: Smarter, Faster, AND You're in Control!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "GitHub Copilot: Choose Your AI's Brain!",
+        "Copilot's NEW BRAINS: Cost-Control & HydraFusion!"
+      ],
+      "active_title": "GitHub Copilot: Choose Your AI's Brain!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "3eXUtX9kzCM",
+      "published_at": "2026-09-14T22:47:09.923900+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot Gets Hyper-Smart: Multi-Model AI & Auto-Review!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
