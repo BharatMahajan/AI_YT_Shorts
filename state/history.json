@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot Gets Hyper-Smart: Multi-Model AI & Auto-Review!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Copilot's NEW BRAIN! HydraFusion & Auto-Review Unleashed!",
+        "AI Code Review Solved! Copilot's Latest Upgrades!"
+      ],
+      "active_title": "Copilot's NEW BRAIN! HydraFusion & Auto-Review Unleashed!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "GK_iGYcONk0",
+      "published_at": "2026-09-14T12:53:13.879799+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "AI Agents Aren't Hype! Astra Runs Businesses & Pilots Drones!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
