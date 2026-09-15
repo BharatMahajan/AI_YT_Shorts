@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude's NEW Update: Opus 5 Saves Cash, Automates WhatsApp!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Anthropic's Claude: Opus 5 Price Drop & WhatsApp Automation!",
+        "Claude Opus 5 & Meta: AI Power-Up You Need to See!"
+      ],
+      "active_title": "Claude Opus 5 & Meta: AI Power-Up You Need to See!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "z3EfadFsp3g",
+      "published_at": "2026-09-15T22:30:19.814789+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude Opus 5: Fable Power, Half The Cost! Plus New AI Tool!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
