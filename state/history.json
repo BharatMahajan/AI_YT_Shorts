@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude Opus 5: Fable Power, Half The Cost! Plus New AI Tool!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Claude Opus 5: Cheaper, Smarter AI Just Dropped!",
+        "Anthropic's Opus 5: Fable-Level Power For Less!"
+      ],
+      "active_title": "Anthropic's Opus 5: Fable-Level Power For Less!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "yCw8cRqqm70",
+      "published_at": "2026-09-15T13:49:00.901698+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: Smarter, Faster, AND You're in Control!",
       "hook_style": "Open with a surprising one-line stat or claim.",
