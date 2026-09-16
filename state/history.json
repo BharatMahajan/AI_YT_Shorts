@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor Projects: AI Tackles Your WHOLE Application!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Cursor AI: Beyond Snippets with Projects!",
+        "Cursor's New AI: Full App Development with Projects!"
+      ],
+      "active_title": "Cursor Projects: AI Tackles Your WHOLE Application!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "S4VZTx0VYGc",
+      "published_at": "2026-09-16T22:21:35.680889+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's AI: Now It Learns Your WHOLE Project!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
