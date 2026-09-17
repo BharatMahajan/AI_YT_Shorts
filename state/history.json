@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "Anthropic's NEW AI Agent Manager Solves Chaos!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Claude Code Projects: Next-Gen AI Agent Control!",
+        "Taming Rogue AI? Anthropic's Groundbreaking Solution!"
+      ],
+      "active_title": "Claude Code Projects: Next-Gen AI Agent Control!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "14L9r4Mmbqs",
+      "published_at": "2026-09-17T23:51:05.989254+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "GPT-6 Astra Cracks Nazi Enigma Code in HOURS!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
