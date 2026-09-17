@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "GPT-6 Astra Cracks Nazi Enigma Code in HOURS!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "OpenAI's GPT-6 Astra: 83-Year Mystery SOLVED!",
+        "AI Decrypts Unsolved Enigma! GPT-6 Astra's Feat!"
+      ],
+      "active_title": "OpenAI's GPT-6 Astra: 83-Year Mystery SOLVED!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "AdrBpE-7om8",
+      "published_at": "2026-09-17T11:50:57.711227+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor Projects: AI Tackles Your WHOLE Application!",
       "hook_style": "Open by busting a common misconception.",
