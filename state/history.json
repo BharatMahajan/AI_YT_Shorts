@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude Code Projects & Custom AI Agents Just Dropped! HUGE!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Claude Code Gets Autonomous: Projects & AGENTS.md!",
+        "Anthropic's Claude: New Dev Tools for Autonomous AI!"
+      ],
+      "active_title": "Claude Code Projects & Custom AI Agents Just Dropped! HUGE!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "pU-oq9ehJyo",
+      "published_at": "2026-09-19T11:11:29.736043+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: Smarter Reviews & AI Brain Control!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
