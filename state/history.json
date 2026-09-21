@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "OpenAI's AI Cracks 100+ Math Problems! Genius Unlocked?",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "AI's New Frontier: OpenAI Solves 100+ Math Mysteries!",
+        "Mind Blown! OpenAI AI Resolves 100+ Open Math Problems!"
+      ],
+      "active_title": "Mind Blown! OpenAI AI Resolves 100+ Open Math Problems!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "JTjmVAyu59E",
+      "published_at": "2026-09-21T23:36:51.594718+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "US China AI Dialogue: Guardrails for Global AI!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
