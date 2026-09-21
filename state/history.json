@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "US China AI Dialogue: Guardrails for Global AI!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "AI's Biggest Move: US & China Talk!",
+        "Global AI Security: US-China Agreement!"
+      ],
+      "active_title": "Global AI Security: US-China Agreement!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "BUUQezIJNXg",
+      "published_at": "2026-09-21T14:23:21.639781+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "Runway AI Video Goes LIVE! Real-Time Generation is HERE!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
