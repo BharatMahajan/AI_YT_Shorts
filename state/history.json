@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Runway AI Video Goes LIVE! Real-Time Generation is HERE!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "AI Video: Runway Unlocks Real-Time Control!",
+        "Game-Changer: Runway's Live AI Video Generation!"
+      ],
+      "active_title": "Game-Changer: Runway's Live AI Video Generation!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "RoDjKvKcRLc",
+      "published_at": "2026-09-21T00:25:56.499977+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "AI Can't Handle Long Projects? Cursor Projects Says: Think Again!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
