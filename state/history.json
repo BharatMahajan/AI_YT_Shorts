@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot: NEW AI Brains & Smarter Reviews!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Copilot's AI Just Leveled Up!",
+        "GitHub Copilot: Smarter Than Ever!"
+      ],
+      "active_title": "GitHub Copilot: NEW AI Brains & Smarter Reviews!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "3L8YboM6Ztk",
+      "published_at": "2026-09-22T22:08:21.117383+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot: Grok 4.7 & Smarter Reviews!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
