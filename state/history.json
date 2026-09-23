@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude Opus 5.5 DROPS: Cheaper, Smarter, & Less Robotic!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Anthropic's Claude Opus 5.5 is HERE! Major AI Upgrade!",
+        "Claude Opus 5.5: Fable Power, 40% Less Cost! Dive In!"
+      ],
+      "active_title": "Anthropic's Claude Opus 5.5 is HERE! Major AI Upgrade!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "ic6OBoxP9wc",
+      "published_at": "2026-09-23T11:40:59.748269+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: NEW AI Brains & Smarter Reviews!",
       "hook_style": "Open with a surprising one-line stat or claim.",
