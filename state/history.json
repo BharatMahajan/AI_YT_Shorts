@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "DHH: English is the NEW Code!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Ruby on Rails Creator Quits Coding!",
+        "AI Coding: DHH's Shocking Shift!"
+      ],
+      "active_title": "DHH: English is the NEW Code!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "vCcosb_7m7Q",
+      "published_at": "2026-09-25T13:55:19.065311+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "AI Gets a FACE! Gemini 3.8 Live Changes Everything!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
