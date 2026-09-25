@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI Gets a FACE! Gemini 3.8 Live Changes Everything!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Gemini 3.8 Live: Google AI Now Has a Face!",
+        "Google's Gemini 3.8: Meet Your New AI Avatar!"
+      ],
+      "active_title": "AI Gets a FACE! Gemini 3.8 Live Changes Everything!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "8JN-8li4t_I",
+      "published_at": "2026-09-25T01:49:31.063127+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor AI: Whole Projects, Your Network! HUGE Update!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
