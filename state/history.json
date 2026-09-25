@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "Meta's Muse AI is OUTPACING ChatGPT! Smart Glasses Integration Incoming!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Meta Muse AI: Blowing Past ChatGPT Numbers!",
+        "Forget ChatGPT? Meta Muse is the New AI Agent Leader!"
+      ],
+      "active_title": "Meta's Muse AI is OUTPACING ChatGPT! Smart Glasses Integration Incoming!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "luY6PWPB_BY",
+      "published_at": "2026-09-25T22:24:43.268903+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "DHH: English is the NEW Code!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
