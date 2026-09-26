@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot is a Super App Now! Build UIs with Words!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Copilot Reimagined: Super App & Canvases!",
+        "GitHub Copilot: Build UIs with AI Agents!"
+      ],
+      "active_title": "Copilot Reimagined: Super App & Canvases!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "VBOghDOgMtg",
+      "published_at": "2026-09-26T22:54:37.183528+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot: Build UIs with Words, Meet the AI Super App!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
