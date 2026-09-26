@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot: Build UIs with Words, Meet the AI Super App!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot Unleashed: UI Magic & The New AI Super App!",
+        "GitHub Copilot: From Text to UI & Beyond!"
+      ],
+      "active_title": "Copilot Unleashed: UI Magic & The New AI Super App!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "Ba0qTeLUwjE",
+      "published_at": "2026-09-26T13:21:51.679567+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "Meta's Muse AI is OUTPACING ChatGPT! Smart Glasses Integration Incoming!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
