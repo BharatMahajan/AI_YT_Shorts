@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor's Latest: AI for HUGE Projects, On YOUR Network!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor AI: Full Codebases, Total Control!",
+        "Cursor Updates: Projects & Self-Hosted AI Breakthrough!"
+      ],
+      "active_title": "Cursor's Latest: AI for HUGE Projects, On YOUR Network!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "q5zUTIxCWRM",
+      "published_at": "2026-09-28T22:06:42.084864+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's AI Just Leveled Up: Projects & Self-Hosting!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
