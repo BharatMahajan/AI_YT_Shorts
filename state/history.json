@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor's AI Just Leveled Up: Projects & Self-Hosting!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Cursor AI: Whole Projects, Your Network! New Features!",
+        "AI Projects & Self-Host: Cursor Redefines Code!"
+      ],
+      "active_title": "Cursor's AI Just Leveled Up: Projects & Self-Hosting!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "lGIxXkHuTnc",
+      "published_at": "2026-09-28T15:32:51.969677+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Opus 5.5: AI's New Powerhouse Unveiled!",
       "hook_style": "Open by busting a common misconception.",
