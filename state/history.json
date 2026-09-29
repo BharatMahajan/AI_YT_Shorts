@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "ElevenLabs V4: AI Voices Get REAL — Expressive, Fast & Consistent!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "AI Voices Master Emotion: ElevenLabs V4 Drops!",
+        "Real-Time AI Speech Just Got a Major Upgrade!"
+      ],
+      "active_title": "AI Voices Master Emotion: ElevenLabs V4 Drops!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "Q7CuNfTjwlM",
+      "published_at": "2026-09-29T15:50:24.288234+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "OpenAI's GPT-6.1 Astra CANCELLED! Safety First?",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
