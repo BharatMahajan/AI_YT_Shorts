@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot's NEW AI Brains & Agentic Power!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "GitHub Copilot: AI Gets Smarter!",
+        "Copilot's Latest AI Upgrade!"
+      ],
+      "active_title": "Copilot's Latest AI Upgrade!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "l2vtzZhKfZo",
+      "published_at": "2026-09-30T13:46:46.169962+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot: GPT-6.1 Sol & Visual AI Workflows!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
