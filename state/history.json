@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot: GPT-6.1 Sol & Visual AI Workflows!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Copilot's New Brain: GPT-6.1 Sol & Canvas Builder!",
+        "GitHub Copilot Just Got Super Smart!"
+      ],
+      "active_title": "GitHub Copilot Just Got Super Smart!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "6L5Ziw8aRJs",
+      "published_at": "2026-09-30T00:41:07.843635+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "ElevenLabs V4: AI Voices Get REAL — Expressive, Fast & Consistent!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
