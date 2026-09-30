@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot's NEW AI Models & Smarter Code Reviews!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "GitHub Copilot Upgrades You NEED to See!",
+        "Copilot Gets Smarter: New AI & Better Reviews!"
+      ],
+      "active_title": "Copilot Gets Smarter: New AI & Better Reviews!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "UC26KjvnTYE",
+      "published_at": "2026-09-30T23:08:06.954037+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "Copilot's NEW AI Brains & Agentic Power!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
