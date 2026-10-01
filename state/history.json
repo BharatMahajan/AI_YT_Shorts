@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Wildest Update: AI Makes Scientific Breakthroughs!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Anthropic's Claude: From Chatbot to Scientist!",
+        "Claude Just Got A PhD?! New Lab & Copilot Power!"
+      ],
+      "active_title": "Claude's Wildest Update: AI Makes Scientific Breakthroughs!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "Ms6q94ZCAmA",
+      "published_at": "2026-10-01T16:47:11.168506+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "Copilot's NEW AI Models & Smarter Code Reviews!",
       "hook_style": "Open with a surprising one-line stat or claim.",
