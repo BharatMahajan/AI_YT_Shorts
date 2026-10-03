@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Apple LIMITS AI: Mac Security Under Threat?",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Apple Blocks AI Agents on Mac? Privacy First!",
+        "Mac Security Tightens: AI Agent Risk is REAL!"
+      ],
+      "active_title": "Mac Security Tightens: AI Agent Risk is REAL!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "Vypa9B2MMok",
+      "published_at": "2026-10-03T00:39:02.059120+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor's AI: Months of Context, Faster Runs! Game-Changer!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
