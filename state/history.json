@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot: Desktop Control & Smarter Code Reviews!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Copilot Can Now Control Your Desktop Apps!",
+        "GitHub Copilot Gets Computer Control & API Reviews!"
+      ],
+      "active_title": "GitHub Copilot: Desktop Control & Smarter Code Reviews!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "nFHV46QDE5U",
+      "published_at": "2026-10-04T12:28:33.634224+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "OpenAI Insider Drops AI Safety Bombshell! Agents Go Rogue?",
       "hook_style": "Open with a surprising one-line stat or claim.",
