@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Wildest Updates: AI Mods & Scientific Breakthrough!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Claude: AI Discovers CRISPR, Code Gets Mods!",
+        "Claude's Newest Power-Ups: Code Mods & Bio-Discoveries!"
+      ],
+      "active_title": "Claude: AI Discovers CRISPR, Code Gets Mods!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "ngf6zqesKeA",
+      "published_at": "2026-10-05T01:05:57.792340+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: Desktop Control & Smarter Code Reviews!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
