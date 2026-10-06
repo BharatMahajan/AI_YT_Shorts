@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor AI: Smarter Models, Bigger Projects!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Cursor's AI Brain Just Leveled Up!",
+        "Massive AI Upgrade Hits Cursor!"
+      ],
+      "active_title": "Massive AI Upgrade Hits Cursor!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "zAssAeE2R_U",
+      "published_at": "2026-10-06T10:19:03.179900+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude's Latest: AI App Builders & Fable 5.1 Unveiled!",
       "hook_style": "Open by busting a common misconception.",
