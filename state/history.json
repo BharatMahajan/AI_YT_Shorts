@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor AI Just Got a HUGE Memory Upgrade!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Cursor's AI: Endless Context, Smarter Code!",
+        "Cursor's AI Memory Boost: Devs, Rejoice!"
+      ],
+      "active_title": "Cursor's AI Memory Boost: Devs, Rejoice!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "WsJp7ih1D5A",
+      "published_at": "2026-10-06T21:41:44.493261+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor AI: Smarter Models, Bigger Projects!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
