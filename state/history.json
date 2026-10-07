@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "ChatGPT's GPT-6: Interactive UI & Mini-Apps! A Visual Revolution!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "ChatGPT's Visual Revolution: GPT-6 Intelligent UI is HERE!",
+        "GPT-6 & Interactive UI: ChatGPT Gets Smarter & Faster!"
+      ],
+      "active_title": "ChatGPT's GPT-6: Interactive UI & Mini-Apps! A Visual Revolution!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "3tM1Vz-NrAI",
+      "published_at": "2026-10-07T22:15:03.131533+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "Google Gemini Playground: Build Games with Text, No Code!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
