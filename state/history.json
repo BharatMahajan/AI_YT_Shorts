@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Google Gemini Playground: Build Games with Text, No Code!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "AI Game Dev: Google's Playground Changes EVERYTHING!",
+        "Code-Free Games: Gemini Playground Unlocks Creativity!"
+      ],
+      "active_title": "Google Gemini Playground: Build Games with Text, No Code!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "-oqlIOJl2ZM",
+      "published_at": "2026-10-07T16:39:40.209606+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor AI Just Got a HUGE Memory Upgrade!",
       "hook_style": "Open with a surprising one-line stat or claim.",
