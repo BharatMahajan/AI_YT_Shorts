@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot: Local Control & AI Speed!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "New Copilot: Secure Local AI & Haiku Speed!",
+        "Copilot Gets Local Sandboxes & Faster AI!"
+      ],
+      "active_title": "New Copilot: Secure Local AI & Haiku Speed!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "GroS1e5ricY",
+      "published_at": "2026-10-08T22:13:58.989991+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot's NEW AI Smarts & Local Power!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
