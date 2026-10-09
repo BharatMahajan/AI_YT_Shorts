@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude Unleashed: Haiku 5.5, 90% Off, & AI-Powered Videos!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Claude's Big Drop: Haiku 5.5 Price Cut + AI Video!",
+        "Claude Haiku 5.5: Cheaper AI & Instant Video Creation!"
+      ],
+      "active_title": "Claude Haiku 5.5: Cheaper AI & Instant Video Creation!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "UUlC5JwBVIY",
+      "published_at": "2026-10-09T16:15:58.710552+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: Local Control & AI Speed!",
       "hook_style": "Open by busting a common misconception.",
