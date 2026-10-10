@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor's Mobile Magic! Remote AI Coding from Your Phone!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Cursor Goes Mobile: Control Your AI from Anywhere!",
+        "Your AI Dev Desk in Your Pocket: Cursor's New Remote Agents!"
+      ],
+      "active_title": "Cursor's Mobile Magic! Remote AI Coding from Your Phone!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "i0hImgSh6-Y",
+      "published_at": "2026-10-10T00:52:44.797120+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Unleashed: Haiku 5.5, 90% Off, & AI-Powered Videos!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
