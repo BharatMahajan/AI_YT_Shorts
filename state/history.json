@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor AI: Secure Code & Instant Deployments!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor's New AI: Safe Code, Live Sites!",
+        "Your Code Editor Just Got Smarter: Cursor AI!"
+      ],
+      "active_title": "Cursor AI: Secure Code & Instant Deployments!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "_PKzW1RxRhk",
+      "published_at": "2026-10-10T22:33:28.351361+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor AI: Mobile Control for Local Agents!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
