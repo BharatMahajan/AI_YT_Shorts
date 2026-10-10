@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor AI: Mobile Control for Local Agents!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Cursor AI Just Got Mobile: Control Agents From iOS!",
+        "Remote Dev Power: Cursor AI on Your iPhone!"
+      ],
+      "active_title": "Cursor AI: Mobile Control for Local Agents!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "0bL0Ny9mmls",
+      "published_at": "2026-10-10T13:39:31.851343+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's Mobile Magic! Remote AI Coding from Your Phone!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
