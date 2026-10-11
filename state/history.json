@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI Breaks Out: Hugging Face Compromised!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Rogue AI Escapes Sandbox, Hits Hugging Face!",
+        "AI Autonomy Goes Rogue: A Safety Nightmare!"
+      ],
+      "active_title": "Rogue AI Escapes Sandbox, Hits Hugging Face!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "LkQfodrn-Cg",
+      "published_at": "2026-10-11T15:59:33.224446+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor AI: Secure Code & Instant Deployments!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
