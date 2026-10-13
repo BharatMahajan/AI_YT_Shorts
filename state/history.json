@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Latest: 1000 AI Agents & Ironclad Security!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Claude Unleashed: 1000 Agents, 99% Theft Cut!",
+        "Massive Claude Update: AI Agents & Super Security!"
+      ],
+      "active_title": "Claude's Latest: 1000 AI Agents & Ironclad Security!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "pvDmtxbs6Yk",
+      "published_at": "2026-10-13T16:11:49.693525+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "Copilot for EVERYONE: Family Share & AI Speed!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
