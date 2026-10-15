@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor AI: Control Your Code From Your Phone!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Cursor AI Mobile: Unleash Your Dev Workflow!",
+        "Cursor AI: Remote Coding Power, In Your Pocket!"
+      ],
+      "active_title": "Cursor AI Mobile: Unleash Your Dev Workflow!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "nWZikM9XFIg",
+      "published_at": "2026-10-15T00:06:31.501590+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor AI: Remote Control for Local Agents!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
@@ -2729,11 +2743,6 @@
       "topic": "claude",
       "title": "Claude AI: Mythos AI Suspended? What's New?",
       "hook_style": "Open with a sharp question the viewer is already wondering."
-    },
-    {
-      "topic": "claude",
-      "title": "Claude AI's Mythos RETURNS! New 'Claude Tag' for Devs!",
-      "hook_style": "Open with 'Here's what just changed and why it matters'."
     }
   ]
 }
