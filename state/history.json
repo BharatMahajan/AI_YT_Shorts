@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "Meta's New AI: Muse Spark Open Runs LOCALLY on Macs!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Meta & Apple Team Up: AI Runs On Your Mac!",
+        "Muse Spark Open: AI Power, Right On Your Mac!"
+      ],
+      "active_title": "Muse Spark Open: AI Power, Right On Your Mac!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "ejLxuT-Zozg",
+      "published_at": "2026-10-15T22:30:51.994931+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "SpaceXAI Grok Voice 3.0: #1 Voice AI Agent Unleashed!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
@@ -2747,11 +2761,6 @@
       "topic": "claude",
       "title": "Mythos AI BACK! Plus NEW Claude Tag for Devs! 🚀",
       "hook_style": "Open with a surprising one-line stat or claim."
-    },
-    {
-      "topic": "claude",
-      "title": "Claude AI: Forget the Hype, Here's What's REALLY New!",
-      "hook_style": "Open by busting a common misconception."
     }
   ]
 }
