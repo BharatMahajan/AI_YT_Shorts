@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "SpaceXAI Grok Voice 3.0: #1 Voice AI Agent Unleashed!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Grok Voice 3.0: Top-Ranked AI Agent is Here!",
+        "SpaceXAI's Grok Voice 3.0: The Future of Conversational AI!"
+      ],
+      "active_title": "SpaceXAI's Grok Voice 3.0: The Future of Conversational AI!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "2tCBFj1q-xQ",
+      "published_at": "2026-10-15T10:08:42.604372+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor AI: Control Your Code From Your Phone!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
@@ -2738,11 +2752,6 @@
       "topic": "claude",
       "title": "Claude AI: Forget the Hype, Here's What's REALLY New!",
       "hook_style": "Open by busting a common misconception."
-    },
-    {
-      "topic": "claude",
-      "title": "Claude AI: Mythos AI Suspended? What's New?",
-      "hook_style": "Open with a sharp question the viewer is already wondering."
     }
   ]
 }
