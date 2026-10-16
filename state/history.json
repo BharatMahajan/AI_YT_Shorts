@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot: Supercharged Collaboration & Smarter AI!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot Gets a Brain Boost: Multi-Repo & Gemini 4 Argon!",
+        "GitHub Copilot's HUGE AI Upgrade: What You Need to Know!"
+      ],
+      "active_title": "GitHub Copilot: Supercharged Collaboration & Smarter AI!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "Z1C5g0ik7k4",
+      "published_at": "2026-10-16T12:23:35.541143+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "Meta's New AI: Muse Spark Open Runs LOCALLY on Macs!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
@@ -2755,11 +2769,6 @@
     {
       "topic": "claude",
       "title": "Claude AI: Mythos Back! New Tag Feature for Devs!",
-      "hook_style": "Open with a surprising one-line stat or claim."
-    },
-    {
-      "topic": "claude",
-      "title": "Mythos AI BACK! Plus NEW Claude Tag for Devs! 🚀",
       "hook_style": "Open with a surprising one-line stat or claim."
     }
   ]
