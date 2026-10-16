@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot Supercharged: Gemini 4 Argon & HydraFusion Max!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "GitHub Copilot's Massive AI Brain Upgrades!",
+        "New Copilot Power: Gemini 4 Argon & HydraFusion Max!"
+      ],
+      "active_title": "Copilot Supercharged: Gemini 4 Argon & HydraFusion Max!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "0K5gjugl28w",
+      "published_at": "2026-10-16T23:36:54.261534+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot: Supercharged Collaboration & Smarter AI!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
@@ -2764,11 +2778,6 @@
     {
       "topic": "claude",
       "title": "Claude AI Just Got CRAZIER! 🔥 New Dev Updates!",
-      "hook_style": "Open with a surprising one-line stat or claim."
-    },
-    {
-      "topic": "claude",
-      "title": "Claude AI: Mythos Back! New Tag Feature for Devs!",
       "hook_style": "Open with a surprising one-line stat or claim."
     }
   ]
