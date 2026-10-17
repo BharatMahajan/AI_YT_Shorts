@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Game-Changing AI Updates!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Claude: Code Review & 1000 Agents!",
+        "Anthropic Unleashes AI Power!"
+      ],
+      "active_title": "Claude: Code Review & 1000 Agents!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "va0c3RF1Yr0",
+      "published_at": "2026-10-17T13:56:55.689999+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "Copilot Supercharged: Gemini 4 Argon & HydraFusion Max!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
@@ -2774,11 +2788,6 @@
       "topic": "claude",
       "title": "Claude AI Updates: Mythos & Code Artifacts Evolve!",
       "hook_style": "Open by busting a common misconception."
-    },
-    {
-      "topic": "claude",
-      "title": "Claude AI Just Got CRAZIER! 🔥 New Dev Updates!",
-      "hook_style": "Open with a surprising one-line stat or claim."
     }
   ]
 }
