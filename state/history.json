@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "Microsoft's Shock AI Warning: Agents Untrusted?!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "AI Agents: Microsoft's HUGE Trust Warning!",
+        "Can We Trust AI? Microsoft Says NO!"
+      ],
+      "active_title": "Microsoft's Shock AI Warning: Agents Untrusted?!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "RCnlvcF8y7o",
+      "published_at": "2026-10-19T23:52:52.254799+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "AI Teams Conquer Minecraft: Google Gemini 4's Autonomous Win!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "3yZZK6ab84E",
       "published_at": "2026-06-28T16:07:32.816981+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor's Secret Weapon: Forget SpaceX, Devs Get REAL Upgrades!",
-      "hook_style": "Open with a bold contrarian take, then justify it.",
-      "title_variants": [
-        "Cursor's REAL News: Dev Features Trump SpaceX Deal!",
-        "Beyond SpaceX: Cursor's Game-Changing Dev Updates!"
-      ],
-      "active_title": "Cursor's REAL News: Dev Features Trump SpaceX Deal!",
-      "title_variant": 1,
-      "thumb_variant": 1,
-      "video_id": "O5E234hc6dg",
-      "published_at": "2026-06-28T13:21:17.442186+00:00"
     }
   ]
 }
