@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI Teams Conquer Minecraft: Google Gemini 4's Autonomous Win!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Gemini 4: AI Agents Master Minecraft SOLO!",
+        "Google's AI Agents Just Beat Minecraft. Seriously."
+      ],
+      "active_title": "AI Teams Conquer Minecraft: Google Gemini 4's Autonomous Win!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "LaT7KVA2vGI",
+      "published_at": "2026-10-19T13:15:53.159520+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor AI: Cloud Canvases - Your New Collaborative Dev Hub!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "O5E234hc6dg",
       "published_at": "2026-06-28T13:21:17.442186+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor's HUGE AI & Automation Upgrades!",
-      "hook_style": "Open by busting a common misconception.",
-      "title_variants": [
-        "Cursor Just Got SMARTER! (And Faster!)",
-        "Devs Rejoice! Cursor's New Power-Ups!"
-      ],
-      "active_title": "Cursor Just Got SMARTER! (And Faster!)",
-      "title_variant": 1,
-      "thumb_variant": 1,
-      "video_id": "t6oIZCihJLw",
-      "published_at": "2026-06-28T08:19:09.179771+00:00"
     }
   ]
 }
