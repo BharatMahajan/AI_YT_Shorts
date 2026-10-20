@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot Updates: Unbroken Flow & Your Own AI Models!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot's NEW Superpowers: Seamless Dev & Custom AI!",
+        "GitHub Copilot: Move Sessions, Bring Your Own Model!"
+      ],
+      "active_title": "Copilot's NEW Superpowers: Seamless Dev & Custom AI!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "AuLcc11FqZM",
+      "published_at": "2026-10-20T10:04:32.770272+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "Microsoft's Shock AI Warning: Agents Untrusted?!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "rEnlDJEAm4Q",
       "published_at": "2026-06-29T03:49:06.369598+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor's Crazy New AI Automations!",
-      "hook_style": "Open by busting a common misconception.",
-      "title_variants": [
-        "Cursor Just Upgraded Coding Forever",
-        "This New Cursor Feature is Insane"
-      ],
-      "active_title": "Cursor Just Upgraded Coding Forever",
-      "title_variant": 1,
-      "thumb_variant": 1,
-      "video_id": "3yZZK6ab84E",
-      "published_at": "2026-06-28T16:07:32.816981+00:00"
     }
   ]
 }
