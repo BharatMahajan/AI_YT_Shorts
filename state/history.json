@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Latest: AI Scorpion Antivenom & Predictable Dev Workflows!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Claude Unveiled: Scorpion Antivenom Design & AWS Structured Outputs!",
+        "Life-Saving AI? Claude Tackles Scorpion Stings & Boosts Dev Tools!"
+      ],
+      "active_title": "Life-Saving AI? Claude Tackles Scorpion Stings & Boosts Dev Tools!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "GuiuJrs0AKU",
+      "published_at": "2026-10-21T10:22:54.603724+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot: Smarter AI, Seamless DevOps!",
       "hook_style": "Open with a surprising one-line stat or claim.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "LGIdzZvGncQ",
       "published_at": "2026-06-30T17:39:42.815297+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "Claude Hits Azure: NVIDIA Blackwell Ultra Unleashes Agentic AI!",
-      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
-      "title_variants": [
-        "AI Bombshell! Claude Now on NVIDIA Blackwell in Azure!",
-        "Game-Changer! Anthropic Claude Supercharged on Azure!"
-      ],
-      "active_title": "Game-Changer! Anthropic Claude Supercharged on Azure!",
-      "title_variant": 2,
-      "thumb_variant": 0,
-      "video_id": "4BcUEG_WKKs",
-      "published_at": "2026-06-29T18:16:22.517068+00:00"
     }
   ]
 }
