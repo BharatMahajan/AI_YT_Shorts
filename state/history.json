@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor AI: Your Code Just Went Mobile & Collaborative!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Cursor Unleashes Mobile Agent Control & Cloud Power!",
+        "Cursor: Code Anywhere, Collaborate Everywhere!"
+      ],
+      "active_title": "Cursor AI: Your Code Just Went Mobile & Collaborative!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "wWUP5kKQT_M",
+      "published_at": "2026-10-22T15:24:02.861763+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Mobile Coding A Gimmick? Not Anymore! Cursor's Agent Update!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "YZlY1IxhaeE",
       "published_at": "2026-07-03T17:18:52.202613+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor's Mobile Magic: Ship Code From Anywhere!",
-      "hook_style": "Open with a surprising one-line stat or claim.",
-      "title_variants": [
-        "Cursor on Your iPhone: Code From Anywhere!",
-        "Unleash Cursor AI Agents on iOS!"
-      ],
-      "active_title": "Unleash Cursor AI Agents on iOS!",
-      "title_variant": 2,
-      "thumb_variant": 1,
-      "video_id": "s0W0bp8jShU",
-      "published_at": "2026-07-02T17:29:21.927866+00:00"
     }
   ]
 }
