@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Mobile Coding A Gimmick? Not Anymore! Cursor's Agent Update!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor AI: Your Desktop AI, In Your Pocket!",
+        "Remote Control Your AI Agents: Cursor's Mobile Power!"
+      ],
+      "active_title": "Mobile Coding A Gimmick? Not Anymore! Cursor's Agent Update!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "ttRVjz_wmwE",
+      "published_at": "2026-10-22T10:21:46.880857+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude Duet: Your New AI Co-Pilot!",
       "hook_style": "Open with a surprising one-line stat or claim.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "s0W0bp8jShU",
       "published_at": "2026-07-02T17:29:21.927866+00:00"
-    },
-    {
-      "topic": "claude",
-      "title": "Claude's NEW Sonnet 5 & Claude Science Unleashed! 🔥",
-      "hook_style": "Open with a sharp question the viewer is already wondering.",
-      "title_variants": [
-        "Anthropic Drops Sonnet 5 & Claude Science! 🚀",
-        "Big Claude Update: Sonnet 5 & AI Science Power!"
-      ],
-      "active_title": "Anthropic Drops Sonnet 5 & Claude Science! 🚀",
-      "title_variant": 1,
-      "thumb_variant": 0,
-      "video_id": "saGwpL9tg6w",
-      "published_at": "2026-07-01T17:47:13.874379+00:00"
     }
   ]
 }
