@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI Agents Get Private Cloud: Google's New Compute Engine!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Google Cloud's ACE: The Future of Secure AI Agents is Here!",
+        "Forget Smart, AI Agents Are Now SECURE: Google Cloud's Latest!"
+      ],
+      "active_title": "Google Cloud's ACE: The Future of Secure AI Agents is Here!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "il76E0vOQQQ",
+      "published_at": "2026-10-23T10:20:09.738087+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor AI Just Dropped TWO HUGE Updates!",
       "hook_style": "Open by busting a common misconception.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "oKw4EWfT24I",
       "published_at": "2026-07-05T16:56:12.124407+00:00"
-    },
-    {
-      "topic": "copilot",
-      "title": "GitHub Copilot's HUGE Updates: New AI & Usage-Based Pricing!",
-      "hook_style": "Open with a surprising one-line stat or claim.",
-      "title_variants": [
-        "Copilot Unlocked: Smarter AI, Flexible Pricing!",
-        "Pay-As-You-Go Copilot: Meet Kimi K2.7 Code!"
-      ],
-      "active_title": "Copilot Unlocked: Smarter AI, Flexible Pricing!",
-      "title_variant": 1,
-      "thumb_variant": 1,
-      "video_id": "egg4nxPXocM",
-      "published_at": "2026-07-04T16:50:47.287741+00:00"
     }
   ]
 }
