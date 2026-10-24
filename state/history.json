@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot's NEW AI Superpowers: Teams & Autofix!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Copilot Unleashed: Code in Teams, Auto-Fix Security!",
+        "GitHub Copilot: Stop Wasting Time, Start Auto-Fixing!"
+      ],
+      "active_title": "GitHub Copilot: Stop Wasting Time, Start Auto-Fixing!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "i2YRQNpPm98",
+      "published_at": "2026-10-24T23:18:20.129505+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot's NEW Superpowers: Autofix & Teams Integration!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "ZTZSoMVxBvM",
       "published_at": "2026-07-08T06:34:17.955158+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "Claude's Secret Thoughts REVEALED! Inner Monologue Shocks AI World!",
-      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
-      "title_variants": [
-        "AI Mind-Reading?! Anthropic Unlocks Claude's Inner World!",
-        "Claude's Hidden Brain Exposed! The AI Just Blew Our Minds!"
-      ],
-      "active_title": "AI Mind-Reading?! Anthropic Unlocks Claude's Inner World!",
-      "title_variant": 1,
-      "thumb_variant": 0,
-      "video_id": "yjdzO34w7u0",
-      "published_at": "2026-07-07T17:53:17.696747+00:00"
     }
   ]
 }
