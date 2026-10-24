@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot's NEW Superpowers: Autofix & Teams Integration!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot Unleashed: AI Autofix & Teams Coding!",
+        "GitHub Copilot: Vulnerability Fixes & Chat-to-Code!"
+      ],
+      "active_title": "GitHub Copilot: Vulnerability Fixes & Chat-to-Code!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "ygqGRm5Vp9Y",
+      "published_at": "2026-10-24T11:09:44.328233+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "Sam Altman's SHOCKING AI Sandbox Warning!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "yjdzO34w7u0",
       "published_at": "2026-07-07T17:53:17.696747+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor's REAL Game-Changer: Code from Your iPhone!",
-      "hook_style": "Open with a bold contrarian take, then justify it.",
-      "title_variants": [
-        "Cursor on iOS: Your New Mobile Dev HQ!",
-        "Unleash Cursor AI: Now in Your Pocket!"
-      ],
-      "active_title": "Cursor's REAL Game-Changer: Code from Your iPhone!",
-      "title_variant": 0,
-      "thumb_variant": 1,
-      "video_id": "TGc_dacPMRk",
-      "published_at": "2026-07-06T18:21:36.579855+00:00"
     }
   ]
 }
