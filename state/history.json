@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Latest: Haiku 4.5 & Agent Sandboxing!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Anthropic Drops Haiku 4.5 & New Sandbox!",
+        "Claude Haiku 4.5 is HERE + Agent Security Boost!"
+      ],
+      "active_title": "Claude's Latest: Haiku 4.5 & Agent Sandboxing!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "DOEH_pZ3s0o",
+      "published_at": "2026-10-25T11:28:32.670043+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot's NEW AI Superpowers: Teams & Autofix!",
       "hook_style": "Open with a surprising one-line stat or claim.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "T1kOyUsaD6o",
       "published_at": "2026-07-08T17:13:57.449861+00:00"
-    },
-    {
-      "topic": "copilot",
-      "title": "GitHub Copilot Unleashed: New App & Smarter AI for Everyone!",
-      "hook_style": "Open with 'Here's what just changed and why it matters'.",
-      "title_variants": [
-        "Copilot Desktop App & Kimi K2.7: Big AI Updates!",
-        "GitHub Copilot Gets A Desktop App & Brain Upgrade!"
-      ],
-      "active_title": "GitHub Copilot Gets A Desktop App & Brain Upgrade!",
-      "title_variant": 2,
-      "thumb_variant": 1,
-      "video_id": "ZTZSoMVxBvM",
-      "published_at": "2026-07-08T06:34:17.955158+00:00"
     }
   ]
 }
