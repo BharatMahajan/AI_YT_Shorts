@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor AI Agent SDK: Build Your Own Custom AI Code Assistant!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Cursor AI Unleashes Custom Agents!",
+        "Agent SDK: Your Personalized Coding AI!"
+      ],
+      "active_title": "Cursor AI Unleashes Custom Agents!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "SW5m8dvhmSI",
+      "published_at": "2026-10-26T22:53:08.595076+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's Local Agents Just Went Mobile!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "6LMWRz9z2ek",
       "published_at": "2026-07-11T06:18:44.156106+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor's SECRET Weapon: Grok 4.5 Unleashed!",
-      "hook_style": "Open by busting a common misconception.",
-      "title_variants": [
-        "Cursor's Brain Boost: Meet Grok 4.5!",
-        "Code Smarter: Cursor's Grok 4.5 Arrives!"
-      ],
-      "active_title": "Cursor's Brain Boost: Meet Grok 4.5!",
-      "title_variant": 1,
-      "thumb_variant": 1,
-      "video_id": "6CrRBGaXrJk",
-      "published_at": "2026-07-10T17:40:31.239848+00:00"
     }
   ]
 }
