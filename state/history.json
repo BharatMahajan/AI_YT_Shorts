@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Opera's WebAI: Local AI for YOUR Browser!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "WebAI: Local AI Models Hit Your Browser!",
+        "Opera Unleashes WebAI: Private AI On-Device!"
+      ],
+      "active_title": "Opera Unleashes WebAI: Private AI On-Device!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "GPjUhV1VdbI",
+      "published_at": "2026-10-27T14:40:11.326215+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor AI Agent SDK: Build Your Own Custom AI Code Assistant!",
       "hook_style": "Open with a surprising one-line stat or claim.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "IC4aRi4zdns",
       "published_at": "2026-07-11T16:48:07.254292+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "AI Just Taught Itself New Skills! GPT-5.6 Sol Levels Up!",
-      "hook_style": "Open with a bold contrarian take, then justify it.",
-      "title_variants": [
-        "OpenAI's GPT-5.6 Sol: AI's Self-Improvement Breakthrough!",
-        "GPT-5.6 Sol: The Dawn of Automated AI Researchers!"
-      ],
-      "active_title": "GPT-5.6 Sol: The Dawn of Automated AI Researchers!",
-      "title_variant": 2,
-      "thumb_variant": 0,
-      "video_id": "6LMWRz9z2ek",
-      "published_at": "2026-07-11T06:18:44.156106+00:00"
     }
   ]
 }
