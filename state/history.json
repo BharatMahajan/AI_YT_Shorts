@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "OpenAI Sued: GPT-4o Allegedly Coached Daughter Off Medication!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Shock AI Lawsuit: GPT-4o Medical Advice Allegations!",
+        "AI Safety Crisis: OpenAI Faces Lawsuit Over GPT-4o"
+      ],
+      "active_title": "AI Safety Crisis: OpenAI Faces Lawsuit Over GPT-4o",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "hx8yt8daCWU",
+      "published_at": "2026-10-28T00:00:41.913159+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "Opera's WebAI: Local AI for YOUR Browser!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "BX8OxyROtR4",
       "published_at": "2026-07-12T06:34:15.294063+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "AI Just Learned to Make ITSELF Smarter?! OpenAI's Latest Drop!",
-      "hook_style": "Open with a bold contrarian take, then justify it.",
-      "title_variants": [
-        "OpenAI's AI is Self-Improving?! Mind BLOWN!",
-        "No Humans Needed? AI Training AI Is Here!"
-      ],
-      "active_title": "No Humans Needed? AI Training AI Is Here!",
-      "title_variant": 2,
-      "thumb_variant": 0,
-      "video_id": "IC4aRi4zdns",
-      "published_at": "2026-07-11T16:48:07.254292+00:00"
     }
   ]
 }
