@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "AI Surgeons?! Claude Just Performed Autonomous Brain Surgery!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Autonomous AI: Claude's Brain Surgery Breakthrough!",
+        "First AI Surgery: Claude Operates Solo on Mouse!"
+      ],
+      "active_title": "AI Surgeons?! Claude Just Performed Autonomous Brain Surgery!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "pL29Ln37skw",
+      "published_at": "2026-10-31T01:02:06.239357+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor AI's Brain is Open! Build Your Own Custom Coding Agent with SDK!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "cWkThGeMj7E",
       "published_at": "2026-07-15T17:12:48.533570+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "OpenAI's First Hardware: A Moving ChatGPT Companion!",
-      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
-      "title_variants": [
-        "ChatGPT Just Got a Body! OpenAI's Wild New Hardware!",
-        "OpenAI's Screenless Speaker: ChatGPT Comes Alive!"
-      ],
-      "active_title": "OpenAI's First Hardware: A Moving ChatGPT Companion!",
-      "title_variant": 0,
-      "thumb_variant": 0,
-      "video_id": "H3hqt1Uh1l4",
-      "published_at": "2026-07-15T06:13:16.210356+00:00"
     }
   ]
 }
