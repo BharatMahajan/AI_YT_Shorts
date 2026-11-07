@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor: Deploy Live Apps in 60 Seconds!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Cursor's New Feature: Build Live Apps!",
+        "Launch Web Apps Instantly with Cursor!"
+      ],
+      "active_title": "Cursor's New Feature: Build Live Apps!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "aPVsLAjnimo",
+      "published_at": "2026-11-07T14:03:07.191416+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor Ships Apps: Build & Deploy Live from Your IDE!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "dcNl-lM40k0",
       "published_at": "2026-07-23T17:16:04.621658+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "NVIDIA Supercomputer Ignites US Military AI!",
-      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
-      "title_variants": [
-        "Jensen Huang Boosts Naval AI!",
-        "US Military Gets World's Most Powerful AI!"
-      ],
-      "active_title": "US Military Gets World's Most Powerful AI!",
-      "title_variant": 2,
-      "thumb_variant": 0,
-      "video_id": "wJxc8QUTmYM",
-      "published_at": "2026-07-23T06:32:47.840755+00:00"
     }
   ]
 }
