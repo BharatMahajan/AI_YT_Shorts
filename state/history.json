@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot's NEW Dashboard & API Control: See Your AI Impact!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "GitHub Copilot: Full Impact, API Control!",
+        "Boost Dev ROI: Copilot's New Insights!"
+      ],
+      "active_title": "Copilot's NEW Dashboard & API Control: See Your AI Impact!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "CA2xNTE9VBA",
+      "published_at": "2026-11-09T18:52:57.913334+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot's NEW Dev Superpowers: Xcode & Impact Insights!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "kDVok6akeG4",
       "published_at": "2026-07-25T16:48:53.043888+00:00"
-    },
-    {
-      "topic": "claude",
-      "title": "Claude Opus 5 Is HERE! Near Fable 5 Power, Half The Price!",
-      "hook_style": "Open with a surprising one-line stat or claim.",
-      "title_variants": [
-        "Opus 5 Drops: Claude's Newest AI Champ!",
-        "Anthropic's Opus 5: Smarter, Cheaper AI!"
-      ],
-      "active_title": "Opus 5 Drops: Claude's Newest AI Champ!",
-      "title_variant": 1,
-      "thumb_variant": 0,
-      "video_id": "wfd4l4r18CU",
-      "published_at": "2026-07-25T06:19:56.033295+00:00"
     }
   ]
 }
