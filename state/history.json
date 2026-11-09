@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot's NEW Dev Superpowers: Xcode & Impact Insights!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Copilot's Latest: Xcode Integration & Team Impact!",
+        "Level Up! GitHub Copilot's Xcode & Dashboard Updates!"
+      ],
+      "active_title": "GitHub Copilot's NEW Dev Superpowers: Xcode & Impact Insights!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "-pAvyaH3ie8",
+      "published_at": "2026-11-09T00:56:25.455172+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "AI Cyber Gap SHRINKS! Open Models Nearly Match Closed For Hacking!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "wfd4l4r18CU",
       "published_at": "2026-07-25T06:19:56.033295+00:00"
-    },
-    {
-      "topic": "copilot",
-      "title": "GitHub Copilot: Gemini 3.6 Flash & Mobile Fixes!",
-      "hook_style": "Open with 'Here's what just changed and why it matters'.",
-      "title_variants": [
-        "Copilot Gets Gemini 3.6 Flash & On-The-Go Debugging!",
-        "GitHub Copilot's AI Just Got Smarter & More Mobile!"
-      ],
-      "active_title": "GitHub Copilot: Gemini 3.6 Flash & Mobile Fixes!",
-      "title_variant": 0,
-      "thumb_variant": 1,
-      "video_id": "hndRRcdgAv0",
-      "published_at": "2026-07-24T17:20:55.199978+00:00"
     }
   ]
 }
