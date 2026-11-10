@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Claude's Double Drop: Fable 5.2 & Workspace Revolution!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Claude Fable 5.2 & AI Workspace Revealed!",
+        "Anthropic's Latest: Models & Productivity Suite!"
+      ],
+      "active_title": "Claude Fable 5.2 & AI Workspace Revealed!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "sOY6lHJagbA",
+      "published_at": "2026-11-10T23:43:42.652011+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude's NEW Update: Black Holes & 3D Magic! (Fable 5.2 & Mythos)",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "lD_aSQJqYPI",
       "published_at": "2026-07-27T17:29:37.182986+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor's AI Revolution: Router & Agent Swarm Slash Costs!",
-      "hook_style": "Open with a surprising one-line stat or claim.",
-      "title_variants": [
-        "Cursor Unleashed: Smart AI Saves You 60%!",
-        "Cut Coding Costs: Meet Cursor Router & Agent Swarm!"
-      ],
-      "active_title": "Cut Coding Costs: Meet Cursor Router & Agent Swarm!",
-      "title_variant": 2,
-      "thumb_variant": 1,
-      "video_id": "0DQNY4BBVRw",
-      "published_at": "2026-07-26T16:56:57.058597+00:00"
     }
   ]
 }
