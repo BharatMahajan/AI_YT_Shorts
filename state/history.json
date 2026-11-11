@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "cursor",
+      "title": "Cursor Just Went Multiplayer! Code with Your Team, Live!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Cursor Projects: Multiplayer & AI Agent Handoffs!",
+        "Cursor's Wild Update: Live Team Coding & AI Delegation!"
+      ],
+      "active_title": "Cursor's Wild Update: Live Team Coding & AI Delegation!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "1h9dr4UOkbE",
+      "published_at": "2026-11-11T21:26:44.637299+00:00"
+    },
+    {
       "topic": "claude",
       "title": "Claude's Double Drop: Fable 5.2 & Workspace Revolution!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "AecJbvAFk7Y",
       "published_at": "2026-07-28T06:30:37.524122+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "China's AI Firepower: Kimi K3 Shakes Up Silicon Valley!",
-      "hook_style": "Open by busting a common misconception.",
-      "title_variants": [
-        "Chinese AI Blows Past US Giants!",
-        "Kimi K3: The AI Model Everyone's Talking About!"
-      ],
-      "active_title": "China's AI Firepower: Kimi K3 Shakes Up Silicon Valley!",
-      "title_variant": 0,
-      "thumb_variant": 0,
-      "video_id": "lD_aSQJqYPI",
-      "published_at": "2026-07-27T17:29:37.182986+00:00"
     }
   ]
 }
