@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "ai_news",
+      "title": "Australia Drops First-Ever Mandatory AI Safety Bill!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Australia's Groundbreaking AI Safety Law!",
+        "Mandatory AI Audits: Australia Leads the Way!"
+      ],
+      "active_title": "Australia Drops First-Ever Mandatory AI Safety Bill!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "Vv30aFLGPSg",
+      "published_at": "2026-11-12T11:05:03.431662+00:00"
+    },
+    {
+      "topic": "ai_news",
       "title": "Google Unleashes Gemini Decisions API: Instant AI Insights!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "NiLI-11dzJE",
       "published_at": "2026-07-29T06:32:56.529244+00:00"
-    },
-    {
-      "topic": "copilot",
-      "title": "GitHub Copilot: Claude Opus 5 & VS Agent Boosts!",
-      "hook_style": "Open with a sharp question the viewer is already wondering.",
-      "title_variants": [
-        "Copilot Unleashed: Claude Opus 5 is HERE!",
-        "Your Code Just Got SMARTER: Copilot Upgrades!"
-      ],
-      "active_title": "Copilot Unleashed: Claude Opus 5 is HERE!",
-      "title_variant": 1,
-      "thumb_variant": 1,
-      "video_id": "Q9oupkrn4Wo",
-      "published_at": "2026-07-28T17:15:09.936238+00:00"
     }
   ]
 }
