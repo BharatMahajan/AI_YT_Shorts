@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Double Whammy: New Models & Meeting Magic Unveiled!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Anthropic Drops Fable 5.2, Mythos 5.2 & AI Meeting Agent!",
+        "Claude's Latest: Cheaper AI Models & Meeting Automation!"
+      ],
+      "active_title": "Claude's Latest: Cheaper AI Models & Meeting Automation!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "E1sYlSd1pXU",
+      "published_at": "2026-11-14T10:21:35.498219+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot's Massive Enterprise & AI Boost!",
       "hook_style": "Open mid-action, like you're continuing an exciting thought.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "qYyvd7l-sAM",
       "published_at": "2026-07-31T06:55:51.046236+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor on iPad & AI Router: Code Anywhere, Smarter!",
-      "hook_style": "Open with a bold contrarian take, then justify it.",
-      "title_variants": [
-        "Cursor's Mobile Code Magic: iPad & AI Router!",
-        "Cursor's New Brain: iPad Coding & Router Power!"
-      ],
-      "active_title": "Cursor on iPad & AI Router: Code Anywhere, Smarter!",
-      "title_variant": 0,
-      "thumb_variant": 1,
-      "video_id": "tOJSP7IrpEg",
-      "published_at": "2026-07-30T17:17:17.923869+00:00"
     }
   ]
 }
