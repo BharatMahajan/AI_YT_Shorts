@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor: Real-Time Team Coding & Instant Live Apps!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Cursor's Epic Update: Multiplayer & Live Apps!",
+        "Code Together, Deploy Now: New Cursor Features!"
+      ],
+      "active_title": "Cursor: Real-Time Team Coding & Instant Live Apps!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "m0v0uCLzmZs",
+      "published_at": "2026-11-15T21:48:24.489048+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's Latest: Build Live Apps & Multiplayer Collaboration!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "LL5-EwYHwKI",
       "published_at": "2026-08-01T16:49:19.999831+00:00"
-    },
-    {
-      "topic": "copilot",
-      "title": "Copilot's NEW Brain & Super App Future: July Updates You NEED to See!",
-      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
-      "title_variants": [
-        "GitHub Copilot's July Upgrade: Meet the New Agent & Super App!",
-        "Copilot Agent Level-Up & Super App Vision Revealed!"
-      ],
-      "active_title": "Copilot Agent Level-Up & Super App Vision Revealed!",
-      "title_variant": 2,
-      "thumb_variant": 1,
-      "video_id": "A2PhNNeaA8o",
-      "published_at": "2026-08-01T06:28:34.071817+00:00"
     }
   ]
 }
