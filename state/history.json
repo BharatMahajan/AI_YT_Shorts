@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot's AI JUST GOT SMARTER! New Models Here!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "GitHub Copilot: HUGE AI Model Upgrades!",
+        "Copilot's Latest Powers for Devs!"
+      ],
+      "active_title": "Copilot's Latest Powers for Devs!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "UdTHeye_pCU",
+      "published_at": "2026-11-17T21:52:43.190486+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot Just Got a Brain Transplant! Massive Enterprise Boost!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "5xKC8CjQ3HM",
       "published_at": "2026-08-04T06:28:41.034512+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor Unleashed: AI Router & iPad! Code Smarter, Anywhere!",
-      "hook_style": "Open with a surprising one-line stat or claim.",
-      "title_variants": [
-        "Cursor's AI Brain Boost: Faster Code, Mobile Freedom!",
-        "New Cursor: Smart AI Routing & iPad Coding!"
-      ],
-      "active_title": "Cursor's AI Brain Boost: Faster Code, Mobile Freedom!",
-      "title_variant": 1,
-      "thumb_variant": 1,
-      "video_id": "lWStn6jXbWg",
-      "published_at": "2026-08-03T17:40:43.198348+00:00"
     }
   ]
 }
