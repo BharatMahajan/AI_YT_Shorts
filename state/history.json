@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's NEW Code Mode & Meeting Magic Unveiled!",
+      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
+      "title_variants": [
+        "Anthropic Just Dropped HUGE Claude Updates!",
+        "Claude Gets Smarter: Code Chaining & Meetings!"
+      ],
+      "active_title": "Claude's NEW Code Mode & Meeting Magic Unveiled!",
+      "title_variant": 0,
+      "thumb_variant": 0,
+      "video_id": "yJfbUQ47UUc",
+      "published_at": "2026-11-18T13:20:30.780149+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "Copilot's AI JUST GOT SMARTER! New Models Here!",
       "hook_style": "Open by busting a common misconception.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "Hov_StLAATQ",
       "published_at": "2026-08-04T17:34:00.988145+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "Siri Finally Smart?! Apple's AI Overhaul is HERE!",
-      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
-      "title_variants": [
-        "Apple Just FIXED Siri! Your AI Assistant Just Got WAAAY Smarter!",
-        "Forget Old Siri: Apple's AI Brain Transplant Just Dropped!"
-      ],
-      "active_title": "Forget Old Siri: Apple's AI Brain Transplant Just Dropped!",
-      "title_variant": 2,
-      "thumb_variant": 0,
-      "video_id": "5xKC8CjQ3HM",
-      "published_at": "2026-08-04T06:28:41.034512+00:00"
     }
   ]
 }
