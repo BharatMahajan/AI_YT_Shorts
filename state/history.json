@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor: Coding Isn't Lonely Anymore!",
+      "hook_style": "Open with a bold contrarian take, then justify it.",
+      "title_variants": [
+        "Cursor Just Made Coding Multiplayer!",
+        "Teams Rejoice: Cursor's New Collaboration Features!"
+      ],
+      "active_title": "Cursor Just Made Coding Multiplayer!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "pZxrU9NOtIE",
+      "published_at": "2026-11-19T12:57:12.054653+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor's Multiplayer Projects: Code Together, Live!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "nYDpr17tA3E",
       "published_at": "2026-08-05T17:24:20.875245+00:00"
-    },
-    {
-      "topic": "copilot",
-      "title": "Copilot's NEW Brain & Triggered Actions!",
-      "hook_style": "Open by busting a common misconception.",
-      "title_variants": [
-        "Copilot Just Got SMARTER: Trigger Automations!",
-        "GitHub Copilot: Cloud Agent Gets an Upgrade!"
-      ],
-      "active_title": "Copilot's NEW Brain & Triggered Actions!",
-      "title_variant": 0,
-      "thumb_variant": 1,
-      "video_id": "6-g6J7CBbrE",
-      "published_at": "2026-08-05T06:19:03.283853+00:00"
     }
   ]
 }
