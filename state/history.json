@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "Apple's Secret AI Agent: Will It Run Your ENTIRE Mac?!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Apple Is Building An AI Agent To Run Your Mac!",
+        "Mac AI Agent Incoming: Apple's Big Move!"
+      ],
+      "active_title": "Mac AI Agent Incoming: Apple's Big Move!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "3fEMH9h8kns",
+      "published_at": "2026-11-20T03:15:30.045439+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor: Coding Isn't Lonely Anymore!",
       "hook_style": "Open with a bold contrarian take, then justify it.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "d5G_yP24NEQ",
       "published_at": "2026-08-06T06:29:04.039602+00:00"
-    },
-    {
-      "topic": "copilot",
-      "title": "GitHub Copilot's NEW AI Control & Comment Automation!",
-      "hook_style": "Open with 'Here's what just changed and why it matters'.",
-      "title_variants": [
-        "Copilot's AI Gets Smarter, YOU Get More Control!",
-        "GitHub Copilot: Automate with Just a Comment!"
-      ],
-      "active_title": "GitHub Copilot's NEW AI Control & Comment Automation!",
-      "title_variant": 0,
-      "thumb_variant": 1,
-      "video_id": "nYDpr17tA3E",
-      "published_at": "2026-08-05T17:24:20.875245+00:00"
     }
   ]
 }
