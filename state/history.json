@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot is NOW a Workflow Agent! Massive New AI Boost!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot's AI Brain Upgrade: Azure DevOps & More!",
+        "GitHub Copilot: From Assistant to Agent!"
+      ],
+      "active_title": "GitHub Copilot is NOW a Workflow Agent! Massive New AI Boost!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "ZYI-PWTUeiU",
+      "published_at": "2026-11-21T09:54:25.439135+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot Transforms Azure DevOps Workflow!",
       "hook_style": "Open with a sharp question the viewer is already wondering.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "A1feMbjZOHE",
       "published_at": "2026-08-08T04:54:08.172846+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor: AI's New Command Center! Google Workspace & Agent Standard!",
-      "hook_style": "Open by busting a common misconception.",
-      "title_variants": [
-        "Cursor's AI Goes Beyond Code: Workspace & Agent Standard!",
-        "Cursor Unleashed: AI Superpowers for Your Whole Workflow!"
-      ],
-      "active_title": "Cursor Unleashed: AI Superpowers for Your Whole Workflow!",
-      "title_variant": 2,
-      "thumb_variant": 1,
-      "video_id": "lBG33lB4u-I",
-      "published_at": "2026-08-07T16:44:43.674281+00:00"
     }
   ]
 }
