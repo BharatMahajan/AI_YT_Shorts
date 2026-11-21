@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot's Azure DevOps AI Takeover!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Copilot Supercharges Azure DevOps!",
+        "AI Revolutionizes Azure DevOps!"
+      ],
+      "active_title": "GitHub Copilot's Azure DevOps AI Takeover!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "Ov-_hel3fTQ",
+      "published_at": "2026-11-21T23:17:42.457383+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot is NOW a Workflow Agent! Massive New AI Boost!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "jvM1b0be6lw",
       "published_at": "2026-08-08T16:19:39.902917+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "OpenAI's Astra Model PAUSED! Too Powerful for its Own Good?!",
-      "hook_style": "Open by busting a common misconception.",
-      "title_variants": [
-        "OpenAI Hits Brakes on Astra: AI Too Dangerous?",
-        "STOP! OpenAI Pauses Astra Over Cyberattack Fears!"
-      ],
-      "active_title": "OpenAI's Astra Model PAUSED! Too Powerful for its Own Good?!",
-      "title_variant": 0,
-      "thumb_variant": 0,
-      "video_id": "A1feMbjZOHE",
-      "published_at": "2026-08-08T04:54:08.172846+00:00"
     }
   ]
 }
