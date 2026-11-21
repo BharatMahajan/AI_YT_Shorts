@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot Transforms Azure DevOps Workflow!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Copilot's Azure DevOps Takeover is HERE!",
+        "Your Azure DevOps Workflow Just Got Supercharged by Copilot!"
+      ],
+      "active_title": "GitHub Copilot Transforms Azure DevOps Workflow!",
+      "title_variant": 0,
+      "thumb_variant": 1,
+      "video_id": "njPmUyI3sbs",
+      "published_at": "2026-11-21T01:32:59.301720+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "Apple's AI Agent: Code, Web, & Beyond!",
       "hook_style": "Open with a surprising one-line stat or claim.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "lBG33lB4u-I",
       "published_at": "2026-08-07T16:44:43.674281+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor's AI Goes Google: Full Workflow Control!",
-      "hook_style": "Open with a bold contrarian take, then justify it.",
-      "title_variants": [
-        "Cursor + Google Workspace: AI Power!",
-        "Your AI Editor Just Conquered Google!"
-      ],
-      "active_title": "Your AI Editor Just Conquered Google!",
-      "title_variant": 2,
-      "thumb_variant": 1,
-      "video_id": "-_t7jhkr75Y",
-      "published_at": "2026-08-07T05:31:17.933830+00:00"
     }
   ]
 }
