@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "claude",
+      "title": "Claude's Mind-Bending AI: Riemann & Black Holes Solved!",
+      "hook_style": "Open with a sharp question the viewer is already wondering.",
+      "title_variants": [
+        "Claude's Scientific Breakthroughs Are HERE!",
+        "AI Proves Riemann? Claude Just Did!"
+      ],
+      "active_title": "Claude's Scientific Breakthroughs Are HERE!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "zY4HjS3_p5k",
+      "published_at": "2026-11-22T11:24:26.861628+00:00"
+    },
+    {
       "topic": "copilot",
       "title": "GitHub Copilot's Azure DevOps AI Takeover!",
       "hook_style": "Open with a surprising one-line stat or claim.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "qFtVX7vlbpo",
       "published_at": "2026-08-09T05:04:11.277939+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "OpenAI HALTS Astra AI: Too Dangerous for Release!",
-      "hook_style": "Open with a surprising one-line stat or claim.",
-      "title_variants": [
-        "OpenAI's Astra AI PAUSED: Hacking Too Powerful!",
-        "AI Too Smart? OpenAI Stops New Model!"
-      ],
-      "active_title": "OpenAI HALTS Astra AI: Too Dangerous for Release!",
-      "title_variant": 0,
-      "thumb_variant": 0,
-      "video_id": "jvM1b0be6lw",
-      "published_at": "2026-08-08T16:19:39.902917+00:00"
     }
   ]
 }
