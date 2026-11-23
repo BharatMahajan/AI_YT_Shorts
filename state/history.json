@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "cursor",
+      "title": "Cursor's AI Future: A Strategic Shift is Coming!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "Cursor's AI Models: Major Strategic Update!",
+        "Big News for Cursor: AI Model Shift Announced!"
+      ],
+      "active_title": "Big News for Cursor: AI Model Shift Announced!",
+      "title_variant": 2,
+      "thumb_variant": 1,
+      "video_id": "GdV_je5vuXg",
+      "published_at": "2026-11-23T21:19:53.736465+00:00"
+    },
+    {
+      "topic": "cursor",
       "title": "Cursor Subagents: Your AI Coding Partner Just Went Autonomous!",
       "hook_style": "Open with a surprising one-line stat or claim.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "IF_l1WUQ3TU",
       "published_at": "2026-08-10T05:25:31.747823+00:00"
-    },
-    {
-      "topic": "copilot",
-      "title": "Copilot's ROI & Smart Reviews: Unleash AI's True Impact!",
-      "hook_style": "Open with a sharp question the viewer is already wondering.",
-      "title_variants": [
-        "GitHub Copilot: New ROI Dashboard & Review Control!",
-        "AI Just Got Smarter: Copilot's ROI & Effort Levels!"
-      ],
-      "active_title": "GitHub Copilot: New ROI Dashboard & Review Control!",
-      "title_variant": 1,
-      "thumb_variant": 1,
-      "video_id": "cVfUHt8FmkY",
-      "published_at": "2026-08-09T16:12:00.186555+00:00"
     }
   ]
 }
