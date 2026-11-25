@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "GitHub Copilot is now a FULLY AUTONOMOUS AGENT! Big Azure DevOps Update!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Copilot Just Got Agentic! Azure DevOps Power-Up!",
+        "Your Code Reviews are NOW AI-Powered! Copilot Levels Up!"
+      ],
+      "active_title": "Copilot Just Got Agentic! Azure DevOps Power-Up!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "FfthXEjcz-o",
+      "published_at": "2026-11-25T12:42:56.230352+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot's HUGE AI Brain & Azure DevOps Power Up!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "rUSWBvcOD7E",
       "published_at": "2026-08-12T05:33:43.727337+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor's New Leap: Workspace AI & iPad Power!",
-      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
-      "title_variants": [
-        "Cursor Unleashed: Google AI & Mobile Dev!",
-        "Code Smarter: Cursor's Workspace + iPad!"
-      ],
-      "active_title": "Cursor's New Leap: Workspace AI & iPad Power!",
-      "title_variant": 0,
-      "thumb_variant": 1,
-      "video_id": "Xe21mix-2_M",
-      "published_at": "2026-08-11T16:35:43.220956+00:00"
     }
   ]
 }
