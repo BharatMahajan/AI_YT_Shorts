@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "copilot",
+      "title": "Copilot's Brain Boost & Azure DevOps Workflow Power-Up!",
+      "hook_style": "Open with a surprising one-line stat or claim.",
+      "title_variants": [
+        "GitHub Copilot: AI Brain Upgrade & Azure DevOps Deep Dive!",
+        "Massive GitHub Copilot Update: Smarter AI, Azure DevOps Control!"
+      ],
+      "active_title": "GitHub Copilot: AI Brain Upgrade & Azure DevOps Deep Dive!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "NC6GiglYfFI",
+      "published_at": "2026-11-25T22:37:19.235379+00:00"
+    },
+    {
+      "topic": "copilot",
       "title": "GitHub Copilot is now a FULLY AUTONOMOUS AGENT! Big Azure DevOps Update!",
       "hook_style": "Open by busting a common misconception.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "N0cjianRjjg",
       "published_at": "2026-08-12T16:47:21.847261+00:00"
-    },
-    {
-      "topic": "ai_news",
-      "title": "NVIDIA Just Unlocked $500 Billion for AI Factories!",
-      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
-      "title_variants": [
-        "AI's HALF-TRILLION Dollar Power Play Just Dropped!",
-        "NVIDIA & Wall Street: $500B for AI Compute!"
-      ],
-      "active_title": "AI's HALF-TRILLION Dollar Power Play Just Dropped!",
-      "title_variant": 1,
-      "thumb_variant": 0,
-      "video_id": "rUSWBvcOD7E",
-      "published_at": "2026-08-12T05:33:43.727337+00:00"
     }
   ]
 }
