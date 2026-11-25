@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "copilot",
+      "title": "GitHub Copilot's HUGE AI Brain & Azure DevOps Power Up!",
+      "hook_style": "Open with 'Here's what just changed and why it matters'.",
+      "title_variants": [
+        "Copilot Gets Smarter! New AI Models & Azure Reviews!",
+        "Massive Copilot Upgrade: Brains & Azure Integration!"
+      ],
+      "active_title": "Copilot Gets Smarter! New AI Models & Azure Reviews!",
+      "title_variant": 1,
+      "thumb_variant": 1,
+      "video_id": "c81Gys9xxGY",
+      "published_at": "2026-11-25T02:23:38.851421+00:00"
+    },
+    {
       "topic": "ai_news",
       "title": "Meta AI in Your Instagram DMs: Muse is HERE!",
       "hook_style": "Open by busting a common misconception.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "Xe21mix-2_M",
       "published_at": "2026-08-11T16:35:43.220956+00:00"
-    },
-    {
-      "topic": "cursor",
-      "title": "Cursor Shatters Limits: iPad App & Google Workspace Power-Up!",
-      "hook_style": "Open with a bold contrarian take, then justify it.",
-      "title_variants": [
-        "Cursor Unleashed: Code on iPad, Rule Google Workspace!",
-        "Your Code Anywhere: Cursor's iPad & Workspace Revolution!"
-      ],
-      "active_title": "Cursor Shatters Limits: iPad App & Google Workspace Power-Up!",
-      "title_variant": 0,
-      "thumb_variant": 1,
-      "video_id": "co2z3-1t-4g",
-      "published_at": "2026-08-11T05:04:43.169666+00:00"
     }
   ]
 }
