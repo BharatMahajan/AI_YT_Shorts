@@ -2,6 +2,20 @@
   "entries": [
     {
       "topic": "claude",
+      "title": "Anthropic Unleashes AI Apps & Dev Tools!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "Claude Levels Up: Desktop Apps & GitHub AI!",
+        "Claude's Double Drop: AI Apps & Dev Supercharger!"
+      ],
+      "active_title": "Claude's Double Drop: AI Apps & Dev Supercharger!",
+      "title_variant": 2,
+      "thumb_variant": 0,
+      "video_id": "XVZ7RoWG-ZU",
+      "published_at": "2026-11-26T23:57:17.628049+00:00"
+    },
+    {
+      "topic": "claude",
       "title": "Claude's NEW AI Animations & Desktop Apps!",
       "hook_style": "Open with 'Here's what just changed and why it matters'.",
       "title_variants": [
@@ -2785,20 +2799,6 @@
       "thumb_variant": 1,
       "video_id": "ekjjxY4dvHg",
       "published_at": "2026-08-13T16:45:21.559711+00:00"
-    },
-    {
-      "topic": "copilot",
-      "title": "Copilot Sees: GitHub's New Vision & Agent AI!",
-      "hook_style": "Open with a surprising one-line stat or claim.",
-      "title_variants": [
-        "GitHub Copilot: Vision AI & Agent Plugins Unleashed!",
-        "New Copilot Features: Vision + Customizable AI Agents!"
-      ],
-      "active_title": "New Copilot Features: Vision + Customizable AI Agents!",
-      "title_variant": 2,
-      "thumb_variant": 1,
-      "video_id": "WYjFOar5DEo",
-      "published_at": "2026-08-13T05:32:03.167230+00:00"
     }
   ]
 }
