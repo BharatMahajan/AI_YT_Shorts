@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "topic": "ai_news",
+      "title": "OpenAI vs. Apple: AI Feud HEATS UP!",
+      "hook_style": "Open by busting a common misconception.",
+      "title_variants": [
+        "OpenAI Countersues Apple: Trade Secret WAR!",
+        "Apple & OpenAI: The AI Lawsuit EXPLODES!"
+      ],
+      "active_title": "OpenAI Countersues Apple: Trade Secret WAR!",
+      "title_variant": 1,
+      "thumb_variant": 0,
+      "video_id": "sr9nTQfTyFk",
+      "published_at": "2026-11-28T02:03:20.148292+00:00"
+    },
+    {
       "topic": "cursor",
       "title": "Cursor: Deploy & Build AR Lenses, All In One Editor!",
       "hook_style": "Open with a surprising one-line stat or claim.",
@@ -2785,20 +2799,6 @@
       "thumb_variant": 0,
       "video_id": "Ajhd_yqNjG8",
       "published_at": "2026-08-14T16:44:19.926856+00:00"
-    },
-    {
-      "topic": "claude",
-      "title": "Claude's Wild Week: AI Agent Hacks Gym & New Invisible Watermarks!",
-      "hook_style": "Open mid-action, like you're continuing an exciting thought.",
-      "title_variants": [
-        "Claude Unleashed: AI Agent Hacks & Watermark Tech!",
-        "AI Agent Breakthroughs: Claude Hacks & Watermarks!"
-      ],
-      "active_title": "Claude's Wild Week: AI Agent Hacks Gym & New Invisible Watermarks!",
-      "title_variant": 0,
-      "thumb_variant": 0,
-      "video_id": "nMSNRM9grsA",
-      "published_at": "2026-08-14T05:34:49.549728+00:00"
     }
   ]
 }
